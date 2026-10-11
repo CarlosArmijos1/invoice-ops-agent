@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     log_json: bool = False
 
-    database_url: str = "postgresql+psycopg://opsagent:opsagent@localhost:5432/opsagent"
+    database_url: str = "postgresql+psycopg://opsagent:opsagent@localhost:5433/opsagent"
 
     groq_api_key: SecretStr | None = None
     vision_model: str = "qwen/qwen3.8-27b"
