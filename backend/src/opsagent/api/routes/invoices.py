@@ -14,7 +14,13 @@ from fastapi import (
 )
 from pydantic import BaseModel, Field
 
-from opsagent.api.deps import ContainerDep, SessionDep, require_operator, upload_limiter
+from opsagent.api.deps import (
+    ContainerDep,
+    SessionDep,
+    is_operator,
+    require_operator,
+    upload_limiter,
+)
 from opsagent.domain.schemas import DecisionAction, InvoiceSource, InvoiceStatus, ReviewOutcome
 from opsagent.extraction.documents import (
     MAX_FILE_BYTES,
@@ -115,8 +121,9 @@ async def upload(
     background: BackgroundTasks,
     container: ContainerDep,
 ) -> UploadResponse:
-    client = request.client.host if request.client else "unknown"
-    upload_limiter.check(client, container.settings.upload_limit_per_hour)
+    if not is_operator(container, request.headers.get("x-admin-token")):
+        client = request.client.host if request.client else "unknown"
+        upload_limiter.check(client, container.settings.upload_limit_per_hour)
     content = await file.read(MAX_FILE_BYTES + 1)
     try:
         with container.session_factory() as session, session.begin():

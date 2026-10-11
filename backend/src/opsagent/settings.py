@@ -66,6 +66,15 @@ class Settings(BaseSettings):
     upload_limit_per_hour: int = 20  # per client IP, protects the LLM quota in the demo
     cors_origins: list[str] = ["http://localhost:5173"]
 
+    # --- Supplier portal (mock portal served by this app + Playwright robot) ---
+    portal_enabled: bool = True  # serve the demo supplier portal at /portal
+    portal_sync_enabled: bool = False  # scheduler job; needs Chromium (worker image)
+    portal_sync_interval_minutes: int = 15
+    portal_url: str = "http://localhost:8000/portal"
+    portal_username: str = "compras@cooperativa.example"
+    # Demo-only credentials of the mock portal above; override in any real setup.
+    portal_password: SecretStr = SecretStr("portal-demo-2026")
+
     # --- Agent ---
     investigate: bool = True  # tool-calling investigator for non-approved invoices
     max_processing_attempts: int = 5  # after this, an invoice stays FAILED for a human

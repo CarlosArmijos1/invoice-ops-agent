@@ -96,6 +96,10 @@ def create_app(settings: Settings | None = None, container: Container | None = N
 
     app.include_router(invoices.router)
     app.include_router(operations.router)
+    if settings.portal_enabled:
+        from opsagent.portal.mock_portal import build_portal_router
+
+        app.include_router(build_portal_router(settings))
     if FRONTEND_DIST.is_dir():
         app.mount("/", SPAStaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")
     return app

@@ -29,14 +29,18 @@ def get_session(container: ContainerDep) -> Iterator[Session]:
 SessionDep = Annotated[Session, Depends(get_session)]
 
 
+def is_operator(container: Container, token: str | None) -> bool:
+    expected = container.settings.admin_token
+    if expected is None:
+        return True  # local development: no token configured
+    return bool(token) and secrets.compare_digest(token or "", expected.get_secret_value())
+
+
 def require_operator(
     container: ContainerDep, x_admin_token: Annotated[str | None, Header()] = None
 ) -> None:
     """Operator-only endpoints. Open when no ADMIN_TOKEN is configured (local development)."""
-    expected = container.settings.admin_token
-    if expected is None:
-        return
-    if not x_admin_token or not secrets.compare_digest(x_admin_token, expected.get_secret_value()):
+    if not is_operator(container, x_admin_token):
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Operator token required")
 
 
