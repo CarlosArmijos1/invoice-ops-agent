@@ -17,7 +17,7 @@ from alembic.config import Config
 from sqlalchemy import Engine, create_engine, text
 from sqlalchemy.engine import make_url
 from sqlalchemy.exc import OperationalError
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, sessionmaker
 
 from opsagent.settings import get_settings
 
@@ -73,5 +73,23 @@ def db_session(db_engine: Engine) -> Iterator[Session]:
         yield session
     finally:
         session.close()
+        transaction.rollback()
+        connection.close()
+
+
+@pytest.fixture
+def session_factory(db_engine: Engine) -> Iterator[sessionmaker[Session]]:
+    """Sessions that commit into savepoints of one outer transaction, rolled back at the end.
+
+    Lets code under test use its own sessions and `session.begin()` blocks
+    exactly as in production, while each test still starts from a clean DB.
+    """
+    connection = db_engine.connect()
+    transaction = connection.begin()
+    try:
+        yield sessionmaker(
+            bind=connection, join_transaction_mode="create_savepoint", expire_on_commit=False
+        )
+    finally:
         transaction.rollback()
         connection.close()
