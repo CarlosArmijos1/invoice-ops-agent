@@ -143,3 +143,25 @@ def test_operator_endpoints_require_the_token(client: TestClient, llm: ScriptedL
     assert report["summary"]["processed"] == 1
     assert "Reporte diario" in report["markdown"]
     assert client.get("/api/reports").json()[0]["date"] == today
+
+
+def test_demo_reset_is_refused_outside_demo_environments(client: TestClient) -> None:
+    response = client.post("/api/admin/reset-demo", headers={"X-Admin-Token": TOKEN})
+    assert response.status_code == 403
+
+
+def test_demo_reset_restores_the_initial_dataset(
+    session_factory: sessionmaker[Session], llm: ScriptedLLM
+) -> None:
+    settings = Settings(environment=Environment.DEMO, admin_token=SecretStr(TOKEN))
+    container = build_test_container(session_factory, llm, settings)
+    llm.fail_extraction_with = RuntimeError("keep the reset test offline")
+    with TestClient(create_app(settings, container)) as demo:
+        _upload(demo, llm, truth_for("clean_paid"))
+        assert (
+            demo.post("/api/admin/reset-demo", headers={"X-Admin-Token": TOKEN}).status_code == 202
+        )
+        listing = demo.get("/api/invoices", params={"limit": 200}).json()
+
+    assert listing["total"] == 50  # the folder-channel invoices; portal ones come via the robot
+    assert {item["source"] for item in listing["items"]} == {"folder"}

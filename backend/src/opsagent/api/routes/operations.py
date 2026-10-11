@@ -9,6 +9,7 @@ from sqlalchemy import select
 from opsagent.api.deps import ContainerDep, SessionDep, require_operator
 from opsagent.infra.db.models import DailyReport
 from opsagent.scheduler.jobs import process_tick
+from opsagent.services.demo import DemoResetNotAllowedError, reset_demo
 from opsagent.services.reporting import generate_daily_report
 from opsagent.services.views import AgentRunView, Stats, recent_runs, stats
 
@@ -48,6 +49,21 @@ def get_report(day: date, session: SessionDep) -> dict[str, Any]:
     if report is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "No hay reporte para esa fecha")
     return {"date": day.isoformat(), "summary": report.summary, "markdown": report.markdown}
+
+
+@router.post(
+    "/admin/reset-demo",
+    dependencies=[Depends(require_operator)],
+    status_code=status.HTTP_202_ACCEPTED,
+)
+def reset_demo_data(background: BackgroundTasks, container: ContainerDep) -> dict[str, str]:
+    """Back to the initial demo state, then let the agent process everything again."""
+    try:
+        reset_demo(container)
+    except DemoResetNotAllowedError as exc:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, str(exc)) from exc
+    background.add_task(process_tick, container, "api")
+    return {"status": "reset"}
 
 
 @router.post("/reports/daily", dependencies=[Depends(require_operator)])
