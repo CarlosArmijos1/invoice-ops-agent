@@ -2,6 +2,9 @@
 
 - record: call the real provider and save each response under a hash of the request.
 - replay: never touch the network; a request with no recording raises CassetteMissError.
+- hybrid: use a recording when there is one, otherwise call the provider (without
+  saving). This is what the public demo runs: the bundled dataset costs nothing,
+  new uploads are processed live.
 
 The key covers model, messages (including image bytes), JSON mode and
 temperature, so editing a prompt invalidates exactly the affected recordings.
@@ -21,6 +24,7 @@ from opsagent.llm.errors import CassetteMissError
 class CassetteMode(StrEnum):
     RECORD = "record"
     REPLAY = "replay"
+    HYBRID = "hybrid"
 
 
 def request_key(request: CompletionRequest) -> str:
@@ -43,6 +47,7 @@ class CassetteLLMClient:
     def __init__(self, directory: Path, mode: CassetteMode, inner: LLMClient | None = None):
         if mode is CassetteMode.RECORD and inner is None:
             raise ValueError("record mode needs a real client to record from")
+        # In hybrid mode `inner` may be None (no API key): recordings still work.
         self.directory = directory
         self.mode = mode
         self.inner = inner
@@ -61,10 +66,12 @@ class CassetteLLMClient:
         if self.mode is CassetteMode.REPLAY or self.inner is None:
             raise CassetteMissError(
                 f"No recording for request {path.stem} (model={request.model}). "
-                "Re-record with LLM_MODE=record."
+                "Set GROQ_API_KEY and LLM_MODE=hybrid/live, or re-record with LLM_MODE=record."
             )
 
         response = self.inner.complete(request)
+        if self.mode is CassetteMode.HYBRID:
+            return response
         self.directory.mkdir(parents=True, exist_ok=True)
         record = asdict(response) | {"cost_usd": str(response.cost_usd)}
         path.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

@@ -34,3 +34,26 @@ def test_replay_miss_is_an_explicit_error(tmp_path: Path) -> None:
 def test_changing_the_prompt_changes_the_key() -> None:
     assert request_key(_req("a")) != request_key(_req("b"))
     assert request_key(_req("a")) == request_key(_req("a"))
+
+
+def test_hybrid_uses_recordings_and_falls_back_to_live_without_saving(tmp_path: Path) -> None:
+    CassetteLLMClient(tmp_path, CassetteMode.RECORD, inner=FakeLLMClient(['"rec"'])).complete(
+        _req("known")
+    )
+    live = FakeLLMClient(['"live"'])
+    hybrid = CassetteLLMClient(tmp_path, CassetteMode.HYBRID, inner=live)
+
+    assert hybrid.complete(_req("known")).cached is True
+    assert hybrid.complete(_req("new")).content == '"live"'
+    assert len(live.requests) == 1
+    assert len(list(tmp_path.iterdir())) == 1  # the live answer was not recorded
+
+
+def test_hybrid_without_api_key_still_serves_recordings(tmp_path: Path) -> None:
+    CassetteLLMClient(tmp_path, CassetteMode.RECORD, inner=FakeLLMClient(['"rec"'])).complete(
+        _req()
+    )
+    offline = CassetteLLMClient(tmp_path, CassetteMode.HYBRID)
+    assert offline.complete(_req()).content == '"rec"'
+    with pytest.raises(CassetteMissError):
+        offline.complete(_req("other"))
