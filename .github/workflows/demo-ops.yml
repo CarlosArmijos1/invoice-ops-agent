@@ -1,0 +1,78 @@
+name: Demo operations
+
+# The public demo runs on a free instance that sleeps when idle. These scheduled
+# jobs wake it and exercise the unattended features end to end: the agent run,
+# the Playwright robot against the supplier portal, the daily report, and a
+# weekly reset so visitors always find a clean demo.
+# Requires repository secrets DEMO_URL (https://...onrender.com) and ADMIN_TOKEN.
+
+on:
+  schedule:
+    - cron: "0 12-23/3 * * *" # every 3 h, 07:00-19:00 Ecuador: wake + run the agent
+    - cron: "30 12 * * *" # 07:30 Ecuador: portal robot + daily report
+    - cron: "0 6 * * 0" # Sunday 01:00 Ecuador: reset the demo
+  workflow_dispatch:
+    inputs:
+      task:
+        type: choice
+        options: [run-agent, portal-and-report, reset]
+        default: run-agent
+
+concurrency:
+  group: demo-ops
+  cancel-in-progress: false
+
+jobs:
+  ops:
+    runs-on: ubuntu-latest
+    env:
+      DEMO_URL: ${{ secrets.DEMO_URL }}
+      ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+      TASK: >-
+        ${{ github.event.inputs.task
+            || (github.event.schedule == '30 12 * * *' && 'portal-and-report')
+            || (github.event.schedule == '0 6 * * 0' && 'reset')
+            || 'run-agent' }}
+    steps:
+      - name: Skip when the demo is not configured
+        if: env.DEMO_URL == ''
+        run: echo "::notice::DEMO_URL secret not set; nothing to do"
+
+      - name: Wake the instance (cold start can take ~1 min)
+        if: env.DEMO_URL != ''
+        run: |
+          for i in $(seq 1 18); do
+            curl -sf "$DEMO_URL/health" && exit 0
+            sleep 10
+          done
+          echo "Demo did not answer" && exit 1
+
+      - name: Run the agent
+        if: env.DEMO_URL != '' && env.TASK == 'run-agent'
+        run: curl -sf -X POST -H "X-Admin-Token: $ADMIN_TOKEN" "$DEMO_URL/api/agent/run"
+
+      - uses: actions/checkout@v4
+        if: env.DEMO_URL != '' && env.TASK == 'portal-and-report'
+      - uses: astral-sh/setup-uv@v6
+        if: env.DEMO_URL != '' && env.TASK == 'portal-and-report'
+        with:
+          version: "0.13.0"
+      - name: Playwright robot collects invoices from the supplier portal
+        if: env.DEMO_URL != '' && env.TASK == 'portal-and-report'
+        working-directory: backend
+        env:
+          PORTAL_URL: ${{ secrets.DEMO_URL }}/portal
+        run: |
+          uv sync --frozen --extra portal
+          uv run playwright install --with-deps chromium
+          uv run python -m opsagent portal-sync --api "$DEMO_URL" --token "$ADMIN_TOKEN"
+          curl -sf -X POST -H "X-Admin-Token: $ADMIN_TOKEN" "$DEMO_URL/api/agent/run"
+      - name: Daily report for yesterday
+        if: env.DEMO_URL != '' && env.TASK == 'portal-and-report'
+        run: |
+          day=$(TZ=America/Guayaquil date -d yesterday +%F)
+          curl -sf -X POST -H "X-Admin-Token: $ADMIN_TOKEN" "$DEMO_URL/api/reports/daily?day=$day"
+
+      - name: Reset the demo
+        if: env.DEMO_URL != '' && env.TASK == 'reset'
+        run: curl -sf -X POST -H "X-Admin-Token: $ADMIN_TOKEN" "$DEMO_URL/api/admin/reset-demo"

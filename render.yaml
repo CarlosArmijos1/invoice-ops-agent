@@ -1,0 +1,33 @@
+# Render Blueprint: New > Blueprint > this repository.
+# Free web service (Docker). Postgres lives on Neon's free tier (Render's free
+# Postgres expires); paste its connection string into DATABASE_URL.
+services:
+  - type: web
+    name: invoice-ops-agent
+    runtime: docker
+    plan: free
+    region: ohio
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL # Neon connection string (postgresql://...?sslmode=require)
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ADMIN_TOKEN # same value as the GitHub secret ADMIN_TOKEN
+        sync: false
+      - key: ENVIRONMENT
+        value: demo
+      - key: LLM_MODE
+        value: hybrid # recorded answers for the dataset, live Groq for new uploads
+      - key: BOOTSTRAP_DEMO
+        value: "true"
+      - key: SCHEDULER_ENABLED
+        value: "true" # single instance: the scheduler runs inside the web process
+      - key: LOG_JSON
+        value: "true"
+      - key: UPLOAD_LIMIT_PER_HOUR
+        value: "5"
+      - key: INVESTIGATE
+        value: "true"
