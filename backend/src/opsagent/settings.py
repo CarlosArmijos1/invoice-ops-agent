@@ -1,5 +1,6 @@
 """Application settings, loaded from environment variables (and `.env` in development)."""
 
+from decimal import Decimal
 from enum import StrEnum
 from functools import lru_cache
 from pathlib import Path
@@ -48,8 +49,17 @@ class Settings(BaseSettings):
     llm_max_attempts: int = 4  # transport-level retries (timeouts, 429, 5xx)
     extraction_max_attempts: int = 3  # self-correction rounds on invalid JSON
 
-    # --- Business ---
+    # --- Agent ---
+    investigate: bool = True  # tool-calling investigator for non-approved invoices
+    max_processing_attempts: int = 5  # after this, an invoice stays FAILED for a human
+    claim_timeout_minutes: int = 15  # a claim older than this belongs to a crashed worker
+
+    # --- Business policy ---
     own_tax_id: str = "1191734929001"  # the buying company (demo); never a vendor
+    amount_tolerance_abs: Decimal = Decimal("1.00")
+    amount_tolerance_pct: Decimal = Decimal("0.005")
+    auto_approval_limit: Decimal = Decimal("5000.00")
+    min_quality_score: float = 0.7
 
 
 @lru_cache
