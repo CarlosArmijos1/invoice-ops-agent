@@ -6,6 +6,8 @@ Design notes:
   adds a new decision row instead of editing the agent's; the latest row wins.
 - `invoices.file_sha256` is UNIQUE: the database itself guarantees the same
   file is never ingested twice, even with concurrent workers.
+- File bytes live in Postgres (`invoice_files`): free hosting tiers have
+  ephemeral disks. With real volume this would move to object storage (S3/GCS).
 """
 
 import uuid
@@ -15,12 +17,15 @@ from typing import Any
 
 from sqlalchemy import (
     JSON,
+    Boolean,
     Date,
     DateTime,
     Enum,
     ForeignKey,
     Index,
     Integer,
+    LargeBinary,
+    MetaData,
     Numeric,
     String,
     Text,
@@ -48,7 +53,15 @@ def _enum(cls: type[Any]) -> Enum:
 
 
 class Base(DeclarativeBase):
-    pass
+    # Same names Postgres would pick, so migrations can always drop what they create.
+    metadata = MetaData(
+        naming_convention={
+            "ix": "ix_%(column_0_label)s",
+            "uq": "%(table_name)s_%(column_0_name)s_key",
+            "fk": "%(table_name)s_%(column_0_name)s_fkey",
+            "pk": "%(table_name)s_pkey",
+        }
+    )
 
 
 class TimestampMixin:
@@ -127,13 +140,23 @@ class Payment(TimestampMixin, Base):
 # --------------------------------------------------------------------------- processing
 
 
+class InvoiceFile(TimestampMixin, Base):
+    __tablename__ = "invoice_files"
+
+    sha256: Mapped[str] = mapped_column(String(64), primary_key=True)
+    media_type: Mapped[str] = mapped_column(String(100))
+    size_bytes: Mapped[int] = mapped_column(Integer)
+    content: Mapped[bytes] = mapped_column(LargeBinary)
+
+
 class Invoice(TimestampMixin, Base):
     __tablename__ = "invoices"
 
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
-    file_sha256: Mapped[str] = mapped_column(String(64), unique=True)
+    file_sha256: Mapped[str] = mapped_column(
+        String(64), ForeignKey("invoice_files.sha256"), unique=True
+    )
     original_filename: Mapped[str] = mapped_column(String(255))
-    storage_path: Mapped[str] = mapped_column(String(500))
     media_type: Mapped[str] = mapped_column(String(100))
     source: Mapped[InvoiceSource] = mapped_column(_enum(InvoiceSource))
     status: Mapped[InvoiceStatus] = mapped_column(
@@ -141,7 +164,14 @@ class Invoice(TimestampMixin, Base):
     )
     attempts: Mapped[int] = mapped_column(Integer, default=0)
     last_error: Mapped[str | None] = mapped_column(Text)
+    # Set when a worker claims the invoice; a stale claim (crashed worker) can be reclaimed.
+    claimed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     processed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+    # Current state of the decision (the full history lives in `decisions`).
+    current_action: Mapped[DecisionAction | None] = mapped_column(_enum(DecisionAction), index=True)
+    approved: Mapped[bool | None] = mapped_column(Boolean)  # None = not settled yet
+    matched_po_id: Mapped[int | None] = mapped_column(ForeignKey("purchase_orders.id"))
 
     # Denormalised from the accepted extraction, for filtering and duplicate lookups.
     vendor_id: Mapped[int | None] = mapped_column(ForeignKey("vendors.id"))
