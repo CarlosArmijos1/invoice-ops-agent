@@ -10,6 +10,9 @@ RUN npm run build
 
 # ---------- Backend dependencies ----------
 FROM python:3.12-slim AS backend-deps
+# WITH_BROWSER=true adds Playwright + Chromium for the supplier-portal robot (worker
+# image only: ~400 MB more, which the free web instance does not need).
+ARG WITH_BROWSER=false
 COPY --from=ghcr.io/astral-sh/uv:0.13.0 /uv /usr/local/bin/uv
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
@@ -18,15 +21,17 @@ WORKDIR /app/backend
 # Install third-party deps first so this layer is cached across code changes.
 COPY backend/pyproject.toml backend/uv.lock backend/.python-version ./
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --frozen --no-dev --no-install-project
+    uv sync --frozen --no-dev --no-install-project $([ "$WITH_BROWSER" = "true" ] && echo --extra portal)
 COPY backend/src ./src
 COPY backend/alembic.ini ./
 COPY backend/migrations ./migrations
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --frozen --no-dev
+    uv sync --frozen --no-dev $([ "$WITH_BROWSER" = "true" ] && echo --extra portal)
 
 # ---------- Runtime ----------
 FROM python:3.12-slim AS runtime
+ARG WITH_BROWSER=false
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 ENV PATH="/opt/venv/bin:$PATH" \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -34,6 +39,8 @@ ENV PATH="/opt/venv/bin:$PATH" \
 RUN useradd --create-home --uid 1000 app
 WORKDIR /app/backend
 COPY --from=backend-deps /opt/venv /opt/venv
+RUN if [ "$WITH_BROWSER" = "true" ]; then /opt/venv/bin/playwright install --with-deps chromium \
+    && rm -rf /var/lib/apt/lists/*; fi
 COPY --from=backend-deps /app/backend /app/backend
 # Synthetic dataset (demo bootstrap) and recorded LLM responses (replay/hybrid modes).
 COPY data/synthetic /app/data/synthetic

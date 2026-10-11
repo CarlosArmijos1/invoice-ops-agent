@@ -1,7 +1,8 @@
 # Levanta todo el sistema con un solo comando:  docker compose up --build
 #   - db:     Postgres 17
 #   - api:    FastAPI + panel web en http://localhost:8000 (aplica migraciones y carga la demo)
-#   - worker: scheduler autónomo; procesa ./inbox y genera el reporte diario
+#   - worker: scheduler autónomo; procesa ./inbox, descarga del portal del proveedor
+#             con Playwright y genera el reporte diario
 x-app: &app
   build: .
   env_file:
@@ -41,11 +42,17 @@ services:
 
   worker:
     <<: *app
+    build:
+      context: .
+      args:
+        WITH_BROWSER: "true"  # Chromium for the supplier-portal robot
     command: ["python", "-m", "opsagent.worker"]
     environment:
       <<: *app-env
       SCHEDULER_ENABLED: "true"
       INBOX_DIR: /inbox
+      PORTAL_SYNC_ENABLED: "true"
+      PORTAL_URL: http://api:8000/portal
       PROCESS_INTERVAL_MINUTES: ${PROCESS_INTERVAL_MINUTES:-2}
     volumes:
       - ./inbox:/inbox
