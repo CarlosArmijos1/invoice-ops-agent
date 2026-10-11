@@ -7,7 +7,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from opsagent.domain.schemas import DecisionAction, InvoiceSource, InvoiceStatus
-from opsagent.infra.db.models import Decision, Invoice, PurchaseOrder, Vendor
+from opsagent.infra.db.models import Decision, Invoice, InvoiceFile, PurchaseOrder, Vendor
 
 pytestmark = pytest.mark.integration
 
@@ -16,13 +16,20 @@ def _invoice(sha: str = "a" * 64) -> Invoice:
     return Invoice(
         file_sha256=sha,
         original_filename="factura.pdf",
-        storage_path="inbox/factura.pdf",
         media_type="application/pdf",
         source=InvoiceSource.FOLDER,
     )
 
 
+def _file(db_session: Session, sha: str = "a" * 64) -> None:
+    db_session.add(
+        InvoiceFile(sha256=sha, media_type="application/pdf", size_bytes=4, content=b"%PDF")
+    )
+    db_session.flush()
+
+
 def test_same_file_cannot_be_ingested_twice(db_session: Session) -> None:
+    _file(db_session)
     db_session.add(_invoice())
     db_session.flush()
 
@@ -51,6 +58,7 @@ def test_money_round_trips_as_exact_decimal(db_session: Session) -> None:
 
 
 def test_decisions_are_append_only_and_enums_stored_by_value(db_session: Session) -> None:
+    _file(db_session)
     invoice = _invoice()
     invoice.status = InvoiceStatus.DECIDED
     invoice.decisions = [
