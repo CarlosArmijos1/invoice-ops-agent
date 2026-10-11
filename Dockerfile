@@ -1,5 +1,13 @@
 # syntax=docker/dockerfile:1.7
 
+# ---------- Frontend build ----------
+FROM node:24-alpine AS frontend-build
+WORKDIR /app/frontend
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY frontend ./
+RUN npm run build
+
 # ---------- Backend dependencies ----------
 FROM python:3.12-slim AS backend-deps
 COPY --from=ghcr.io/astral-sh/uv:0.13.0 /uv /usr/local/bin/uv
@@ -30,6 +38,8 @@ COPY --from=backend-deps /app/backend /app/backend
 # Synthetic dataset (demo bootstrap) and recorded LLM responses (replay/hybrid modes).
 COPY data/synthetic /app/data/synthetic
 COPY evals/cassettes /app/evals/cassettes
+# The panel is served by FastAPI itself: one container, one origin, no CORS in production.
+COPY --from=frontend-build /app/frontend/dist /app/frontend/dist
 USER app
 EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
