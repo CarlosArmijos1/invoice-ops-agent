@@ -19,7 +19,8 @@ class Environment(StrEnum):
 class LLMMode(StrEnum):
     LIVE = "live"  # call the provider
     RECORD = "record"  # call the provider and save responses as cassettes
-    REPLAY = "replay"  # only use saved cassettes (CI, evals, public demo)
+    REPLAY = "replay"  # only use saved cassettes (CI, evals)
+    HYBRID = "hybrid"  # saved cassette if any, else live (docker compose, public demo)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -48,6 +49,21 @@ class Settings(BaseSettings):
     llm_timeout_s: float = 60.0
     llm_max_attempts: int = 4  # transport-level retries (timeouts, 429, 5xx)
     extraction_max_attempts: int = 3  # self-correction rounds on invalid JSON
+
+    # --- Demo bootstrap ---
+    bootstrap_demo: bool = False  # on start: seed catalog and preload the synthetic invoices
+    demo_dataset_dir: Path = REPO_ROOT / "data" / "synthetic"
+
+    # --- Scheduler ---
+    scheduler_enabled: bool = False  # true in the worker (or in the single web instance)
+    process_interval_minutes: int = 5
+    daily_report_hour: int = 7  # local time, America/Guayaquil
+    inbox_dir: Path | None = None  # folder watched for new invoices
+
+    # --- API / demo safety ---
+    admin_token: SecretStr | None = None  # required for operator endpoints when set
+    upload_limit_per_hour: int = 20  # per client IP, protects the LLM quota in the demo
+    cors_origins: list[str] = ["http://localhost:5173"]
 
     # --- Agent ---
     investigate: bool = True  # tool-calling investigator for non-approved invoices
