@@ -66,12 +66,13 @@ def resolve_vendor(invoice: ExtractedInvoice, ledger: Ledger) -> VendorRef | Non
     return best[1] if best[0] >= NAME_SIMILARITY_THRESHOLD else None
 
 
-def _payment_matches(payment: PaymentRef, invoice: ExtractedInvoice, normalized: str) -> bool:
+def payment_matches(payment: PaymentRef, number_normalized: str, po_number: str | None) -> bool:
+    """Does a bank payment refer to this invoice? Used by reconciliation and the daily report."""
     if payment.invoice_number:
         memo = normalize_invoice_number(payment.invoice_number)
         # Bank memos often carry only the sequential part ("4567" for 001-001-000004567).
-        return memo == normalized or memo == normalized.rsplit("-", 1)[-1]
-    return bool(invoice.po_number) and payment.po_number == invoice.po_number
+        return memo == number_normalized or memo == number_normalized.rsplit("-", 1)[-1]
+    return bool(po_number) and payment.po_number == po_number
 
 
 def reconcile(
@@ -192,7 +193,7 @@ def reconcile(
         matched = [
             p
             for p in ledger.payments_for_vendor(vendor.id)
-            if _payment_matches(p, invoice, normalized)
+            if payment_matches(p, normalized, invoice.po_number)
         ]
         result.payments = matched
         paid = sum((p.amount for p in matched), Decimal(0))
