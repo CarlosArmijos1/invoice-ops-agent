@@ -12,6 +12,8 @@ COPY backend/pyproject.toml backend/uv.lock backend/.python-version ./
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev --no-install-project
 COPY backend/src ./src
+COPY backend/alembic.ini ./
+COPY backend/migrations ./migrations
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev
 
@@ -29,4 +31,6 @@ USER app
 EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
     CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health').status == 200 else 1)"
-CMD ["uvicorn", "opsagent.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Migrations run on start-up: simple and safe for a single instance. With several
+# replicas this would move to a one-off release job (e.g. Render pre-deploy command).
+CMD ["sh", "-c", "alembic upgrade head && exec uvicorn opsagent.api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
