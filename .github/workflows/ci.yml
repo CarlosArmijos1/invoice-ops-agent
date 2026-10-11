@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   backend:
-    name: Backend · lint, types, tests
+    name: Backend Â· lint, types, tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -29,6 +29,7 @@ jobs:
           --health-interval 5s --health-timeout 3s --health-retries 10
     env:
       ENVIRONMENT: test
+      REQUIRE_DB: "1"
       DATABASE_URL: postgresql+psycopg://opsagent:opsagent@localhost:5432/opsagent
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +44,10 @@ jobs:
           uv run ruff format --check .
       - name: Mypy
         run: uv run mypy src tests
+      - name: Migrations apply cleanly and match the models
+        run: |
+          uv run alembic upgrade head
+          uv run alembic check
       - name: Pytest
         run: uv run pytest
 
