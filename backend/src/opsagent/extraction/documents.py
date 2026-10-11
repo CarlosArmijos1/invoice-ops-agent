@@ -70,6 +70,28 @@ def render_pdf_pages(content: bytes) -> list[bytes]:
     ]
 
 
+def page_count(content: bytes) -> int:
+    if sniff_media_type(content) != "application/pdf":
+        return 1
+    return len(pdfium.PdfDocument(content))
+
+
+def render_page_png(content: bytes, page: int, dpi: int = 110) -> bytes:
+    """One page as PNG for previews (images are re-encoded as they are)."""
+    if sniff_media_type(content) != "application/pdf":
+        if page != 0:
+            raise IndexError(page)
+        image = Image.open(io.BytesIO(content))
+    else:
+        doc = pdfium.PdfDocument(content)
+        if not 0 <= page < len(doc):
+            raise IndexError(page)
+        image = doc[page].render(scale=dpi / 72).to_pil()
+    out = io.BytesIO()
+    ImageOps.exif_transpose(image).convert("RGB").save(out, format="PNG", optimize=True)
+    return out.getvalue()
+
+
 def prepare_document(content: bytes) -> PreparedDocument:
     if len(content) > MAX_FILE_BYTES:
         raise UnsupportedDocumentError(f"File larger than {MAX_FILE_BYTES // 1024 // 1024} MB")

@@ -10,15 +10,20 @@ from sqlalchemy import case, func, select
 from sqlalchemy.orm import Session
 
 from opsagent.domain.schemas import DecisionAction, InvoiceSource, InvoiceStatus, ReviewOutcome
+from opsagent.extraction.documents import page_count
 from opsagent.infra.db.models import (
     AgentRun,
     AuditEvent,
     Decision,
     Extraction,
     Invoice,
+    InvoiceFile,
     LlmCall,
     PurchaseOrder,
 )
+
+# Informational findings present on almost every invoice; not interesting to rank or badge.
+_CONTEXT_CODES = {"paid", "unpaid", "po_matched", "amount_within_tolerance"}
 
 
 class _View(BaseModel):
@@ -28,6 +33,7 @@ class _View(BaseModel):
 class InvoiceSummary(_View):
     id: uuid.UUID
     original_filename: str
+    media_type: str
     source: InvoiceSource
     status: InvoiceStatus
     current_action: DecisionAction | None
@@ -95,6 +101,7 @@ class InvoiceDetail(InvoiceSummary):
     events: list[EventView]
     matched_po_number: str | None = None
     matched_po_total: Decimal | None = None
+    page_count: int = 1
 
 
 class AgentRunView(_View):
@@ -118,6 +125,7 @@ class Stats(BaseModel):
     latency_p95_ms: int | None
     cost_by_model: dict[str, Decimal]
     daily: list[dict[str, Any]]
+    top_findings: list[dict[str, Any]] = []
 
 
 def _latest_decisions(session: Session, ids: list[uuid.UUID]) -> dict[uuid.UUID, Decision]:
@@ -133,9 +141,7 @@ def _summary(invoice: Invoice, decision: Decision | None) -> InvoiceSummary:
     view = InvoiceSummary.model_validate(invoice)
     if decision:
         view.finding_codes = [
-            f["code"]
-            for f in decision.findings
-            if f["code"] not in ("paid", "unpaid", "po_matched")
+            f["code"] for f in decision.findings if f["code"] not in _CONTEXT_CODES
         ]
     return view
 
@@ -206,6 +212,7 @@ def invoice_detail(session: Session, invoice_id: uuid.UUID) -> InvoiceDetail | N
         events=[EventView.model_validate(e) for e in events],
         matched_po_number=po.po_number if po else None,
         matched_po_total=po.total if po else None,
+        page_count=page_count(session.get_one(InvoiceFile, invoice.file_sha256).content),
     )
 
 
@@ -273,7 +280,17 @@ def stats(session: Session, *, days: int = 14) -> Stats:
         .group_by(day)
         .order_by(day)
     ).all()
+    finding_counts: dict[str, int] = {}
+    for findings in session.scalars(select(Decision.findings).where(Decision.actor == "agent")):
+        for finding in findings:
+            code = finding["code"]
+            if code not in _CONTEXT_CODES:
+                finding_counts[code] = finding_counts.get(code, 0) + 1
     return Stats(
+        top_findings=[
+            {"code": code, "count": count}
+            for code, count in sorted(finding_counts.items(), key=lambda kv: -kv[1])[:8]
+        ],
         invoices_total=sum(by_status.values()),
         by_status={k.value: v for k, v in by_status.items()},
         by_action={k.value: v for k, v in by_action.items() if k is not None},

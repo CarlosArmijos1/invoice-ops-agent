@@ -66,6 +66,12 @@ def test_upload_is_processed_and_visible_with_its_decision(
     assert again["created"] is False
     assert again["invoice_id"] == uploaded["invoice_id"]
 
+    preview = client.get(f"/api/invoices/{uploaded['invoice_id']}/pages/0")
+    assert preview.status_code == 200
+    assert preview.headers["content-type"] == "image/png"
+    assert client.get(f"/api/invoices/{uploaded['invoice_id']}/pages/9").status_code == 404
+    assert detail["page_count"] >= 1
+
     file = client.get(f"/api/invoices/{uploaded['invoice_id']}/file")
     assert file.status_code == 200
     assert file.content == (DATA / "invoices" / truth.file).read_bytes()

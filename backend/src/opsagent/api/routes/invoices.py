@@ -16,7 +16,11 @@ from pydantic import BaseModel, Field
 
 from opsagent.api.deps import ContainerDep, SessionDep, require_operator, upload_limiter
 from opsagent.domain.schemas import DecisionAction, InvoiceSource, InvoiceStatus, ReviewOutcome
-from opsagent.extraction.documents import MAX_FILE_BYTES, UnsupportedDocumentError
+from opsagent.extraction.documents import (
+    MAX_FILE_BYTES,
+    UnsupportedDocumentError,
+    render_page_png,
+)
 from opsagent.infra.db.models import Invoice, InvoiceFile
 from opsagent.services.ingestion import ingest_bytes
 from opsagent.services.reviews import ReviewError, review_invoice
@@ -85,6 +89,22 @@ def file(invoice_id: uuid.UUID, session: SessionDep) -> Response:
             "Content-Disposition": f'inline; filename="{invoice.original_filename}"',
             "Cache-Control": "private, max-age=3600",
         },
+    )
+
+
+@router.get("/{invoice_id}/pages/{page}")
+def page_preview(invoice_id: uuid.UUID, page: int, session: SessionDep) -> Response:
+    """PNG preview of one page. Browsers (especially mobile) render PDFs inline unreliably."""
+    invoice = session.get(Invoice, invoice_id)
+    if invoice is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Factura no encontrada")
+    stored = session.get_one(InvoiceFile, invoice.file_sha256)
+    try:
+        png = render_page_png(stored.content, page)
+    except IndexError as exc:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Página inexistente") from exc
+    return Response(
+        content=png, media_type="image/png", headers={"Cache-Control": "public, max-age=86400"}
     )
 
 
