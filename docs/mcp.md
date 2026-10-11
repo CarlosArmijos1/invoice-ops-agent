@@ -28,7 +28,7 @@ uv run --directory backend python -m opsagent.mcp_server --http --port 8765   # 
 
 ## Herramientas
 
-| Herramienta | Tipo | Para qué |
+| Herramienta (14) | Tipo | Para qué |
 |---|---|---|
 | `list_invoices` | lectura | Lista facturas; `needs_review=true` devuelve la cola de revisión |
 | `get_invoice` | lectura | Extracción, hallazgos, decisiones y auditoría de una factura |
@@ -43,6 +43,7 @@ uv run --directory backend python -m opsagent.mcp_server --http --port 8765   # 
 | `process_pending` | escritura | Corre el agente sobre todo lo pendiente |
 | `review_invoice` | escritura | Registra la decisión **humana** sobre una factura marcada |
 | `generate_daily_report` | escritura | Genera o actualiza el reporte de un día |
+| `sync_supplier_portal` | escritura | Corre el robot Playwright sobre el portal del proveedor |
 
 Las de lectura llevan `readOnlyHint=true`, así el cliente puede autorizarlas sin
 preguntar. Las de escritura no, y el cliente pide confirmación al usuario. Además,

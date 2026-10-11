@@ -33,6 +33,7 @@ WRITE_TOOLS = {
     "process_pending",
     "review_invoice",
     "generate_daily_report",
+    "sync_supplier_portal",
 }
 
 
