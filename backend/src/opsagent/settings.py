@@ -5,7 +5,7 @@ from enum import StrEnum
 from functools import lru_cache
 from pathlib import Path
 
-from pydantic import SecretStr
+from pydantic import SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -86,6 +86,15 @@ class Settings(BaseSettings):
     amount_tolerance_pct: Decimal = Decimal("0.005")
     auto_approval_limit: Decimal = Decimal("5000.00")
     min_quality_score: float = 0.7
+
+    @field_validator("database_url")
+    @classmethod
+    def _use_psycopg_driver(cls, value: str) -> str:
+        """Hosted Postgres (Neon, Render) gives postgres:// URLs; SQLAlchemy needs the driver."""
+        for prefix in ("postgres://", "postgresql://"):
+            if value.startswith(prefix):
+                return "postgresql+psycopg://" + value.removeprefix(prefix)
+        return value
 
 
 @lru_cache
