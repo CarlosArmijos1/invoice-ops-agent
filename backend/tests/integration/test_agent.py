@@ -2,8 +2,6 @@
 
 import json
 import uuid
-from datetime import date
-from pathlib import Path
 from typing import Any
 
 import pytest
@@ -11,52 +9,18 @@ from langgraph.checkpoint.memory import InMemorySaver
 from sqlalchemy import select
 from sqlalchemy.orm import Session, sessionmaker
 
-from opsagent.agent.deps import AgentDeps
 from opsagent.datagen.records import GroundTruth
 from opsagent.domain.findings import FindingCode
 from opsagent.domain.schemas import DecisionAction, InvoiceSource, InvoiceStatus
-from opsagent.extraction.extractor import InvoiceExtractor
 from opsagent.infra.db.models import AuditEvent, Decision, Extraction, Invoice, LlmCall
-from opsagent.infra.seed import load_catalog, seed_catalog
 from opsagent.llm.base import CompletionRequest, ToolCall
 from opsagent.llm.errors import LLMServerError
-from opsagent.llm.fake import FakeLLMClient, Outcome
+from opsagent.llm.fake import Outcome
 from opsagent.services.ingestion import ingest_bytes
 from opsagent.services.processing import InvoiceProcessor
+from tests.integration.scripted import DATA, TRUTHS, ScriptedLLM, build_test_container, truth_for
 
 pytestmark = pytest.mark.integration
-
-DATA = Path(__file__).resolve().parents[3] / "data" / "synthetic"
-TRUTHS = {
-    t["file"]: GroundTruth.model_validate(t)
-    for t in json.loads((DATA / "ground_truth.json").read_text(encoding="utf-8"))
-}
-
-
-def _truth(scenario: str, render: str | None = None) -> GroundTruth:
-    return next(
-        t for t in TRUTHS.values() if t.scenario == scenario and render in (None, t.render.value)
-    )
-
-
-class ScriptedLLM(FakeLLMClient):
-    """Answers extraction with the ground truth of the file being processed."""
-
-    def __init__(self) -> None:
-        self.current: GroundTruth | None = None
-        self.investigation: list[Outcome] = []
-        self.fail_extraction_with: Exception | None = None
-        super().__init__(self._respond)
-
-    def _respond(self, request: CompletionRequest) -> Outcome:
-        if request.tools is not None or "investigator" in str(request.messages[0]["content"]):
-            if self.investigation:
-                return self.investigation.pop(0)
-            return json.dumps({"summary": "Resumen.", "recommendation": "Revisar."})
-        if self.fail_extraction_with is not None:
-            return self.fail_extraction_with
-        assert self.current is not None
-        return self.current.extraction.model_dump_json()
 
 
 @pytest.fixture
@@ -66,16 +30,7 @@ def llm() -> ScriptedLLM:
 
 @pytest.fixture
 def processor(session_factory: sessionmaker[Session], llm: ScriptedLLM) -> InvoiceProcessor:
-    with session_factory() as session, session.begin():
-        seed_catalog(session, load_catalog(DATA / "catalog.json"))
-    deps = AgentDeps(
-        session_factory=session_factory,
-        llm=llm,
-        extractor=InvoiceExtractor(llm, text_model="text-m", vision_model="vision-m"),
-        reasoning_model="text-m",
-        today=lambda: date(2026, 10, 11),
-    )
-    return InvoiceProcessor(deps, InMemorySaver())
+    return build_test_container(session_factory, llm).processor
 
 
 def _ingest(factory: sessionmaker[Session], truth: GroundTruth) -> uuid.UUID:
@@ -99,7 +54,7 @@ def _decisions(factory: sessionmaker[Session], invoice_id: uuid.UUID) -> list[De
 def test_clean_invoice_is_auto_approved_with_full_audit_trail(
     processor: InvoiceProcessor, llm: ScriptedLLM
 ) -> None:
-    truth = _truth("clean_unpaid", render="pdf_text")
+    truth = truth_for("clean_unpaid", render="pdf_text")
     invoice_id = _run(processor, llm, truth)
 
     factory = processor.deps.session_factory
@@ -127,7 +82,7 @@ def test_clean_invoice_is_auto_approved_with_full_audit_trail(
 
 
 def test_same_file_twice_is_ingested_once(processor: InvoiceProcessor) -> None:
-    truth = _truth("clean_paid")
+    truth = truth_for("clean_paid")
     first = _ingest(processor.deps.session_factory, truth)
     second = _ingest(processor.deps.session_factory, truth)
     assert first == second
@@ -136,7 +91,7 @@ def test_same_file_twice_is_ingested_once(processor: InvoiceProcessor) -> None:
 def test_resent_invoice_in_another_format_is_flagged_as_duplicate(
     processor: InvoiceProcessor, llm: ScriptedLLM
 ) -> None:
-    duplicate = _truth("duplicate_resend")
+    duplicate = truth_for("duplicate_resend")
     original = TRUTHS[duplicate.duplicate_of or ""]
 
     _run(processor, llm, original)
@@ -150,7 +105,7 @@ def test_resent_invoice_in_another_format_is_flagged_as_duplicate(
 def test_investigator_calls_tools_and_its_summary_reaches_the_reviewer(
     processor: InvoiceProcessor, llm: ScriptedLLM
 ) -> None:
-    truth = _truth("amount_mismatch")
+    truth = truth_for("amount_mismatch")
     llm.investigation = [
         (
             ToolCall(
@@ -187,7 +142,7 @@ def test_investigator_failure_does_not_block_the_decision(
     processor: InvoiceProcessor, llm: ScriptedLLM
 ) -> None:
     llm.investigation = [LLMServerError("down")]
-    invoice_id = _run(processor, llm, _truth("vendor_mismatch"))
+    invoice_id = _run(processor, llm, truth_for("vendor_mismatch"))
 
     [decision] = _decisions(processor.deps.session_factory, invoice_id)
     assert decision.action is DecisionAction.HUMAN_REVIEW
@@ -197,7 +152,7 @@ def test_investigator_failure_does_not_block_the_decision(
 def test_unreadable_invoice_requests_a_better_copy(
     processor: InvoiceProcessor, llm: ScriptedLLM
 ) -> None:
-    truth = _truth("clean_unpaid", render="jpg")
+    truth = truth_for("clean_unpaid", render="jpg")
     invoice_id = _ingest(processor.deps.session_factory, truth)
     llm.current = truth
     llm.fail_extraction_with = None
@@ -218,7 +173,7 @@ def test_unreadable_invoice_requests_a_better_copy(
 def test_provider_outage_leaves_invoice_failed_then_backs_off_then_recovers(
     processor: InvoiceProcessor, llm: ScriptedLLM
 ) -> None:
-    truth = _truth("clean_paid")
+    truth = truth_for("clean_paid")
     invoice_id = _ingest(processor.deps.session_factory, truth)
     llm.current = truth
     llm.fail_extraction_with = LLMServerError("503 from provider")
@@ -242,7 +197,7 @@ def test_provider_outage_leaves_invoice_failed_then_backs_off_then_recovers(
 def test_crash_after_extraction_resumes_without_paying_the_llm_again(
     processor: InvoiceProcessor, llm: ScriptedLLM, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    truth = _truth("clean_unpaid", render="pdf_text")
+    truth = truth_for("clean_unpaid", render="pdf_text")
     invoice_id = _ingest(processor.deps.session_factory, truth)
     llm.current = truth
 
