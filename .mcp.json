@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "invoice-ops": {
+      "command": "uv",
+      "args": ["run", "--directory", "backend", "python", "-m", "opsagent.mcp_server"],
+      "env": {
+        "DATABASE_URL": "postgresql+psycopg://opsagent:opsagent@localhost:5433/opsagent",
+        "LLM_MODE": "hybrid"
+      }
+    }
+  }
+}
