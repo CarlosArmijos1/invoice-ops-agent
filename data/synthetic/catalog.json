@@ -1,0 +1,1890 @@
+{
+  "vendors": [
+    {
+      "name": "Distribuidora Andina del Sur S.A.",
+      "tax_id": "1197654321001",
+      "email": "facturacion@andinadelsur.example",
+      "aliases": [
+        "DIST. ANDINA DEL SUR",
+        "DISTRIBUIDORA ANDINA DEL SUR SA"
+      ]
+    },
+    {
+      "name": "TecnoLoja Soluciones S.A.S.",
+      "tax_id": "1192233441001",
+      "email": "ventas@tecnoloja.example",
+      "aliases": [
+        "TECNOLOJA SOLUCIONES",
+        "TecnoLoja"
+      ]
+    },
+    {
+      "name": "Ferretería Zamora Hermanos Cía. Ltda.",
+      "tax_id": "1998877667001",
+      "email": "contabilidad@ferrezamora.example",
+      "aliases": [
+        "FERRETERIA ZAMORA HNOS",
+        "Ferretería Zamora"
+      ]
+    },
+    {
+      "name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
+      "tax_id": "1195544332001",
+      "email": "admin@limpiezavilcabamba.example",
+      "aliases": [
+        "LIMPIEZA VILCABAMBA",
+        "Serv. Limpieza Vilcabamba"
+      ]
+    },
+    {
+      "name": "Transportes Catamayo Express S.A.",
+      "tax_id": "1199080705001",
+      "email": "cobros@catamayoexpress.example",
+      "aliases": [
+        "TRANSPORTES CATAMAYO",
+        "Catamayo Express"
+      ]
+    },
+    {
+      "name": "Imprenta Saraguro Gráficas",
+      "tax_id": "1113456782001",
+      "email": "imprenta.saraguro@example.com",
+      "aliases": [
+        "IMPRENTA SARAGURO",
+        "Saraguro Gráficas"
+      ]
+    },
+    {
+      "name": "Café Podocarpus Catering S.A.",
+      "tax_id": "1191122336001",
+      "email": "eventos@podocarpuscatering.example",
+      "aliases": [
+        "PODOCARPUS CATERING",
+        "Café Podocarpus"
+      ]
+    },
+    {
+      "name": "Constructora Malacatos Ingeniería S.A.",
+      "tax_id": "1196677883001",
+      "email": "facturas@malacatosing.example",
+      "aliases": [
+        "CONSTRUCTORA MALACATOS",
+        "Malacatos Ingeniería"
+      ]
+    }
+  ],
+  "purchase_orders": [
+    {
+      "po_number": "OC-2026-0103",
+      "vendor_tax_id": "1197654321001",
+      "issue_date": "2026-08-22",
+      "subtotal": "340.70",
+      "tax": "51.11",
+      "total": "391.81",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "3",
+          "unit_price": "38.90",
+          "total": "116.70"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "1",
+          "unit_price": "1.95",
+          "total": "1.95"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "3",
+          "unit_price": "4.85",
+          "total": "14.55"
+        },
+        {
+          "description": "Archivador lomo ancho",
+          "quantity": "3",
+          "unit_price": "3.20",
+          "total": "9.60"
+        },
+        {
+          "description": "Caja de esferos azules x12",
+          "quantity": "3",
+          "unit_price": "5.75",
+          "total": "17.25"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "3",
+          "unit_price": "1.95",
+          "total": "5.85"
+        },
+        {
+          "description": "Caja de esferos azules x12",
+          "quantity": "2",
+          "unit_price": "5.75",
+          "total": "11.50"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "1",
+          "unit_price": "4.85",
+          "total": "4.85"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "2",
+          "unit_price": "4.85",
+          "total": "9.70"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "3",
+          "unit_price": "4.85",
+          "total": "14.55"
+        },
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "2",
+          "unit_price": "38.90",
+          "total": "77.80"
+        },
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "1",
+          "unit_price": "38.90",
+          "total": "38.90"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "1",
+          "unit_price": "1.95",
+          "total": "1.95"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "3",
+          "unit_price": "1.95",
+          "total": "5.85"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "2",
+          "unit_price": "4.85",
+          "total": "9.70"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0105",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-08-11",
+      "subtotal": "1906.50",
+      "tax": "285.98",
+      "total": "2192.48",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Mano de obra especializada (día)",
+          "quantity": "2",
+          "unit_price": "55.00",
+          "total": "110.00"
+        },
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "3",
+          "unit_price": "68.00",
+          "total": "204.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "2",
+          "unit_price": "24.50",
+          "total": "49.00"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "3",
+          "unit_price": "42.00",
+          "total": "126.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "2",
+          "unit_price": "24.50",
+          "total": "49.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "3",
+          "unit_price": "24.50",
+          "total": "73.50"
+        },
+        {
+          "description": "Mano de obra especializada (día)",
+          "quantity": "1",
+          "unit_price": "55.00",
+          "total": "55.00"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "3",
+          "unit_price": "42.00",
+          "total": "126.00"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "3",
+          "unit_price": "42.00",
+          "total": "126.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "1",
+          "unit_price": "24.50",
+          "total": "24.50"
+        },
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "3",
+          "unit_price": "68.00",
+          "total": "204.00"
+        },
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "3",
+          "unit_price": "68.00",
+          "total": "204.00"
+        },
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "2",
+          "unit_price": "68.00",
+          "total": "136.00"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "3",
+          "unit_price": "42.00",
+          "total": "126.00"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "2",
+          "unit_price": "42.00",
+          "total": "84.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "1",
+          "unit_price": "24.50",
+          "total": "24.50"
+        },
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "2",
+          "unit_price": "68.00",
+          "total": "136.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "2",
+          "unit_price": "24.50",
+          "total": "49.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0112",
+      "vendor_tax_id": "1199080705001",
+      "issue_date": "2026-09-09",
+      "subtotal": "2097.50",
+      "tax": "314.63",
+      "total": "2412.13",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Seguro de carga",
+          "quantity": "3",
+          "unit_price": "18.50",
+          "total": "55.50"
+        },
+        {
+          "description": "Flete Loja - Quito (tonelada)",
+          "quantity": "1",
+          "unit_price": "110.00",
+          "total": "110.00"
+        },
+        {
+          "description": "Estiba y desestiba",
+          "quantity": "1",
+          "unit_price": "35.00",
+          "total": "35.00"
+        },
+        {
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "1",
+          "unit_price": "85.00",
+          "total": "85.00"
+        },
+        {
+          "description": "Flete Loja - Quito (tonelada)",
+          "quantity": "3",
+          "unit_price": "110.00",
+          "total": "330.00"
+        },
+        {
+          "description": "Seguro de carga",
+          "quantity": "1",
+          "unit_price": "18.50",
+          "total": "18.50"
+        },
+        {
+          "description": "Flete Loja - Quito (tonelada)",
+          "quantity": "3",
+          "unit_price": "110.00",
+          "total": "330.00"
+        },
+        {
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "1",
+          "unit_price": "85.00",
+          "total": "85.00"
+        },
+        {
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "2",
+          "unit_price": "85.00",
+          "total": "170.00"
+        },
+        {
+          "description": "Seguro de carga",
+          "quantity": "1",
+          "unit_price": "18.50",
+          "total": "18.50"
+        },
+        {
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "3",
+          "unit_price": "85.00",
+          "total": "255.00"
+        },
+        {
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "1",
+          "unit_price": "85.00",
+          "total": "85.00"
+        },
+        {
+          "description": "Estiba y desestiba",
+          "quantity": "3",
+          "unit_price": "35.00",
+          "total": "105.00"
+        },
+        {
+          "description": "Flete Loja - Quito (tonelada)",
+          "quantity": "3",
+          "unit_price": "110.00",
+          "total": "330.00"
+        },
+        {
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "1",
+          "unit_price": "85.00",
+          "total": "85.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0115",
+      "vendor_tax_id": "1998877667001",
+      "issue_date": "2026-08-08",
+      "subtotal": "108.80",
+      "tax": "16.32",
+      "total": "125.12",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Tubo PVC 110 mm x 3 m",
+          "quantity": "9",
+          "unit_price": "9.60",
+          "total": "86.40"
+        },
+        {
+          "description": "Juego de brocas para concreto",
+          "quantity": "1",
+          "unit_price": "22.40",
+          "total": "22.40"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0116",
+      "vendor_tax_id": "1197654321001",
+      "issue_date": "2026-08-03",
+      "subtotal": "221.75",
+      "tax": "33.26",
+      "total": "255.01",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Archivador lomo ancho",
+          "quantity": "7",
+          "unit_price": "3.20",
+          "total": "22.40"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "10",
+          "unit_price": "1.95",
+          "total": "19.50"
+        },
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "4",
+          "unit_price": "38.90",
+          "total": "155.60"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "5",
+          "unit_price": "4.85",
+          "total": "24.25"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0120",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-09-14",
+      "subtotal": "4073.60",
+      "tax": "611.04",
+      "total": "4684.64",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "2",
+          "unit_price": "64.30",
+          "total": "128.60"
+        },
+        {
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "7",
+          "unit_price": "420.00",
+          "total": "2940.00"
+        },
+        {
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "4",
+          "unit_price": "180.00",
+          "total": "720.00"
+        },
+        {
+          "description": "Desinfección de áreas comunes",
+          "quantity": "3",
+          "unit_price": "95.00",
+          "total": "285.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0122",
+      "vendor_tax_id": "1191122336001",
+      "issue_date": "2026-09-13",
+      "subtotal": "216.30",
+      "tax": "32.45",
+      "total": "248.75",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Almuerzo ejecutivo por persona",
+          "quantity": "1",
+          "unit_price": "7.80",
+          "total": "7.80"
+        },
+        {
+          "description": "Bebidas y agua (paquete)",
+          "quantity": "7",
+          "unit_price": "15.00",
+          "total": "105.00"
+        },
+        {
+          "description": "Servicio de meseros (hora)",
+          "quantity": "6",
+          "unit_price": "9.00",
+          "total": "54.00"
+        },
+        {
+          "description": "Coffee break por persona",
+          "quantity": "11",
+          "unit_price": "4.50",
+          "total": "49.50"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0124",
+      "vendor_tax_id": "1113456782001",
+      "issue_date": "2026-09-10",
+      "subtotal": "481.00",
+      "tax": "72.15",
+      "total": "553.15",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Volantes full color x1000",
+          "quantity": "2",
+          "unit_price": "45.00",
+          "total": "90.00"
+        },
+        {
+          "description": "Tarjetas de presentación x500",
+          "quantity": "7",
+          "unit_price": "28.00",
+          "total": "196.00"
+        },
+        {
+          "description": "Banner lona 2 x 1 m",
+          "quantity": "6",
+          "unit_price": "32.50",
+          "total": "195.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0127",
+      "vendor_tax_id": "1113456782001",
+      "issue_date": "2026-08-08",
+      "subtotal": "722.00",
+      "tax": "108.30",
+      "total": "830.30",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Banner lona 2 x 1 m",
+          "quantity": "2",
+          "unit_price": "32.50",
+          "total": "65.00"
+        },
+        {
+          "description": "Tarjetas de presentación x500",
+          "quantity": "12",
+          "unit_price": "28.00",
+          "total": "336.00"
+        },
+        {
+          "description": "Talonarios de recibos",
+          "quantity": "4",
+          "unit_price": "12.75",
+          "total": "51.00"
+        },
+        {
+          "description": "Volantes full color x1000",
+          "quantity": "6",
+          "unit_price": "45.00",
+          "total": "270.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0128",
+      "vendor_tax_id": "1197654321001",
+      "issue_date": "2026-08-11",
+      "subtotal": "434.30",
+      "tax": "65.15",
+      "total": "499.45",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "11",
+          "unit_price": "38.90",
+          "total": "427.90"
+        },
+        {
+          "description": "Archivador lomo ancho",
+          "quantity": "2",
+          "unit_price": "3.20",
+          "total": "6.40"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0131",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-08-31",
+      "subtotal": "306.00",
+      "tax": "45.90",
+      "total": "351.90",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "8",
+          "unit_price": "24.50",
+          "total": "196.00"
+        },
+        {
+          "description": "Mano de obra especializada (día)",
+          "quantity": "2",
+          "unit_price": "55.00",
+          "total": "110.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0133",
+      "vendor_tax_id": "1191122336001",
+      "issue_date": "2026-09-20",
+      "subtotal": "78.30",
+      "tax": "11.75",
+      "total": "90.05",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Coffee break por persona",
+          "quantity": "7",
+          "unit_price": "4.50",
+          "total": "31.50"
+        },
+        {
+          "description": "Almuerzo ejecutivo por persona",
+          "quantity": "6",
+          "unit_price": "7.80",
+          "total": "46.80"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0137",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-08-24",
+      "subtotal": "442.50",
+      "tax": "66.38",
+      "total": "508.88",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "1",
+          "unit_price": "68.00",
+          "total": "68.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "5",
+          "unit_price": "24.50",
+          "total": "122.50"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "6",
+          "unit_price": "42.00",
+          "total": "252.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0138",
+      "vendor_tax_id": "1998877667001",
+      "issue_date": "2026-08-03",
+      "subtotal": "142.40",
+      "tax": "21.36",
+      "total": "163.76",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Pintura látex galón blanco",
+          "quantity": "8",
+          "unit_price": "17.80",
+          "total": "142.40"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0142",
+      "vendor_tax_id": "1998877667001",
+      "issue_date": "2026-09-09",
+      "subtotal": "342.60",
+      "tax": "51.39",
+      "total": "393.99",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Pintura látex galón blanco",
+          "quantity": "7",
+          "unit_price": "17.80",
+          "total": "124.60"
+        },
+        {
+          "description": "Tubo PVC 110 mm x 3 m",
+          "quantity": "11",
+          "unit_price": "9.60",
+          "total": "105.60"
+        },
+        {
+          "description": "Juego de brocas para concreto",
+          "quantity": "2",
+          "unit_price": "22.40",
+          "total": "44.80"
+        },
+        {
+          "description": "Cemento Portland saco 50 kg",
+          "quantity": "8",
+          "unit_price": "8.45",
+          "total": "67.60"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0150",
+      "vendor_tax_id": "1199080705001",
+      "issue_date": "2026-08-26",
+      "subtotal": "680.00",
+      "tax": "102.00",
+      "total": "782.00",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "8",
+          "unit_price": "85.00",
+          "total": "680.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0151",
+      "vendor_tax_id": "1191122336001",
+      "issue_date": "2026-08-10",
+      "subtotal": "178.20",
+      "tax": "26.73",
+      "total": "204.93",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Servicio de meseros (hora)",
+          "quantity": "10",
+          "unit_price": "9.00",
+          "total": "90.00"
+        },
+        {
+          "description": "Almuerzo ejecutivo por persona",
+          "quantity": "9",
+          "unit_price": "7.80",
+          "total": "70.20"
+        },
+        {
+          "description": "Coffee break por persona",
+          "quantity": "4",
+          "unit_price": "4.50",
+          "total": "18.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0154",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-09-08",
+      "subtotal": "294.00",
+      "tax": "44.10",
+      "total": "338.10",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "7",
+          "unit_price": "42.00",
+          "total": "294.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0157",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-08-12",
+      "subtotal": "3105.00",
+      "tax": "465.75",
+      "total": "3570.75",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Desinfección de áreas comunes",
+          "quantity": "3",
+          "unit_price": "95.00",
+          "total": "285.00"
+        },
+        {
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "5",
+          "unit_price": "420.00",
+          "total": "2100.00"
+        },
+        {
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "4",
+          "unit_price": "180.00",
+          "total": "720.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0160",
+      "vendor_tax_id": "1113456782001",
+      "issue_date": "2026-09-13",
+      "subtotal": "576.00",
+      "tax": "86.40",
+      "total": "662.40",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Talonarios de recibos",
+          "quantity": "2",
+          "unit_price": "12.75",
+          "total": "25.50"
+        },
+        {
+          "description": "Tarjetas de presentación x500",
+          "quantity": "6",
+          "unit_price": "28.00",
+          "total": "168.00"
+        },
+        {
+          "description": "Volantes full color x1000",
+          "quantity": "2",
+          "unit_price": "45.00",
+          "total": "90.00"
+        },
+        {
+          "description": "Banner lona 2 x 1 m",
+          "quantity": "9",
+          "unit_price": "32.50",
+          "total": "292.50"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0162",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-09-13",
+      "subtotal": "472.00",
+      "tax": "70.80",
+      "total": "542.80",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Mano de obra especializada (día)",
+          "quantity": "4",
+          "unit_price": "55.00",
+          "total": "220.00"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "6",
+          "unit_price": "42.00",
+          "total": "252.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0163",
+      "vendor_tax_id": "1191122336001",
+      "issue_date": "2026-09-10",
+      "subtotal": "99.30",
+      "tax": "14.90",
+      "total": "114.20",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Almuerzo ejecutivo por persona",
+          "quantity": "1",
+          "unit_price": "7.80",
+          "total": "7.80"
+        },
+        {
+          "description": "Bebidas y agua (paquete)",
+          "quantity": "4",
+          "unit_price": "15.00",
+          "total": "60.00"
+        },
+        {
+          "description": "Coffee break por persona",
+          "quantity": "7",
+          "unit_price": "4.50",
+          "total": "31.50"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0166",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-08-23",
+      "subtotal": "210.00",
+      "tax": "31.50",
+      "total": "241.50",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "5",
+          "unit_price": "42.00",
+          "total": "210.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0169",
+      "vendor_tax_id": "1113456782001",
+      "issue_date": "2026-08-16",
+      "subtotal": "790.25",
+      "tax": "118.54",
+      "total": "908.79",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Volantes full color x1000",
+          "quantity": "7",
+          "unit_price": "45.00",
+          "total": "315.00"
+        },
+        {
+          "description": "Banner lona 2 x 1 m",
+          "quantity": "6",
+          "unit_price": "32.50",
+          "total": "195.00"
+        },
+        {
+          "description": "Talonarios de recibos",
+          "quantity": "11",
+          "unit_price": "12.75",
+          "total": "140.25"
+        },
+        {
+          "description": "Tarjetas de presentación x500",
+          "quantity": "5",
+          "unit_price": "28.00",
+          "total": "140.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0173",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-08-04",
+      "subtotal": "1123.00",
+      "tax": "168.45",
+      "total": "1291.45",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "3",
+          "unit_price": "42.00",
+          "total": "126.00"
+        },
+        {
+          "description": "Mano de obra especializada (día)",
+          "quantity": "7",
+          "unit_price": "55.00",
+          "total": "385.00"
+        },
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "9",
+          "unit_price": "68.00",
+          "total": "612.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0177",
+      "vendor_tax_id": "1113456782001",
+      "issue_date": "2026-08-21",
+      "subtotal": "318.00",
+      "tax": "47.70",
+      "total": "365.70",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Banner lona 2 x 1 m",
+          "quantity": "9",
+          "unit_price": "32.50",
+          "total": "292.50"
+        },
+        {
+          "description": "Talonarios de recibos",
+          "quantity": "2",
+          "unit_price": "12.75",
+          "total": "25.50"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0178",
+      "vendor_tax_id": "1199080705001",
+      "issue_date": "2026-09-05",
+      "subtotal": "1170.00",
+      "tax": "175.50",
+      "total": "1345.50",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "6",
+          "unit_price": "85.00",
+          "total": "510.00"
+        },
+        {
+          "description": "Flete Loja - Quito (tonelada)",
+          "quantity": "6",
+          "unit_price": "110.00",
+          "total": "660.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0182",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-09-03",
+      "subtotal": "6327.30",
+      "tax": "949.10",
+      "total": "7276.40",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "9",
+          "unit_price": "420.00",
+          "total": "3780.00"
+        },
+        {
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "6",
+          "unit_price": "180.00",
+          "total": "1080.00"
+        },
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "11",
+          "unit_price": "64.30",
+          "total": "707.30"
+        },
+        {
+          "description": "Desinfección de áreas comunes",
+          "quantity": "8",
+          "unit_price": "95.00",
+          "total": "760.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0184",
+      "vendor_tax_id": "1192233441001",
+      "issue_date": "2026-08-27",
+      "subtotal": "75.00",
+      "tax": "11.25",
+      "total": "86.25",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Soporte técnico (hora)",
+          "quantity": "3",
+          "unit_price": "25.00",
+          "total": "75.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0185",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-09-07",
+      "subtotal": "3316.50",
+      "tax": "497.48",
+      "total": "3813.98",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "5",
+          "unit_price": "64.30",
+          "total": "321.50"
+        },
+        {
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "6",
+          "unit_price": "420.00",
+          "total": "2520.00"
+        },
+        {
+          "description": "Desinfección de áreas comunes",
+          "quantity": "5",
+          "unit_price": "95.00",
+          "total": "475.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0189",
+      "vendor_tax_id": "1197654321001",
+      "issue_date": "2026-09-07",
+      "subtotal": "229.45",
+      "tax": "34.42",
+      "total": "263.87",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "1",
+          "unit_price": "4.85",
+          "total": "4.85"
+        },
+        {
+          "description": "Caja de esferos azules x12",
+          "quantity": "12",
+          "unit_price": "5.75",
+          "total": "69.00"
+        },
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "4",
+          "unit_price": "38.90",
+          "total": "155.60"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0191",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-08-15",
+      "subtotal": "734.50",
+      "tax": "110.18",
+      "total": "844.68",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "9",
+          "unit_price": "68.00",
+          "total": "612.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "5",
+          "unit_price": "24.50",
+          "total": "122.50"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0195",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-08-13",
+      "subtotal": "560.00",
+      "tax": "84.00",
+      "total": "644.00",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "1",
+          "unit_price": "180.00",
+          "total": "180.00"
+        },
+        {
+          "description": "Desinfección de áreas comunes",
+          "quantity": "4",
+          "unit_price": "95.00",
+          "total": "380.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0196",
+      "vendor_tax_id": "1197654321001",
+      "issue_date": "2026-08-27",
+      "subtotal": "4.85",
+      "tax": "0.73",
+      "total": "5.58",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "1",
+          "unit_price": "4.85",
+          "total": "4.85"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0199",
+      "vendor_tax_id": "1191122336001",
+      "issue_date": "2026-09-05",
+      "subtotal": "331.20",
+      "tax": "49.68",
+      "total": "380.88",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Coffee break por persona",
+          "quantity": "4",
+          "unit_price": "4.50",
+          "total": "18.00"
+        },
+        {
+          "description": "Bebidas y agua (paquete)",
+          "quantity": "9",
+          "unit_price": "15.00",
+          "total": "135.00"
+        },
+        {
+          "description": "Servicio de meseros (hora)",
+          "quantity": "12",
+          "unit_price": "9.00",
+          "total": "108.00"
+        },
+        {
+          "description": "Almuerzo ejecutivo por persona",
+          "quantity": "9",
+          "unit_price": "7.80",
+          "total": "70.20"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0201",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-08-21",
+      "subtotal": "4705.80",
+      "tax": "705.87",
+      "total": "5411.67",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "9",
+          "unit_price": "420.00",
+          "total": "3780.00"
+        },
+        {
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "3",
+          "unit_price": "180.00",
+          "total": "540.00"
+        },
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "6",
+          "unit_price": "64.30",
+          "total": "385.80"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0203",
+      "vendor_tax_id": "1998877667001",
+      "issue_date": "2026-09-08",
+      "subtotal": "147.25",
+      "tax": "22.09",
+      "total": "169.34",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Pintura látex galón blanco",
+          "quantity": "4",
+          "unit_price": "17.80",
+          "total": "71.20"
+        },
+        {
+          "description": "Cemento Portland saco 50 kg",
+          "quantity": "9",
+          "unit_price": "8.45",
+          "total": "76.05"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0207",
+      "vendor_tax_id": "1998877667001",
+      "issue_date": "2026-08-08",
+      "subtotal": "96.00",
+      "tax": "14.40",
+      "total": "110.40",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Cemento Portland saco 50 kg",
+          "quantity": "2",
+          "unit_price": "8.45",
+          "total": "16.90"
+        },
+        {
+          "description": "Varilla corrugada 12 mm x 12 m",
+          "quantity": "7",
+          "unit_price": "11.30",
+          "total": "79.10"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0209",
+      "vendor_tax_id": "1192233441001",
+      "issue_date": "2026-08-30",
+      "subtotal": "7156.50",
+      "tax": "1073.48",
+      "total": "8229.98",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Monitor 24\" IPS Full HD",
+          "quantity": "11",
+          "unit_price": "149.50",
+          "total": "1644.50"
+        },
+        {
+          "description": "Laptop 14\" Core i5 16 GB RAM",
+          "quantity": "8",
+          "unit_price": "689.00",
+          "total": "5512.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0216",
+      "vendor_tax_id": "1192233441001",
+      "issue_date": "2026-08-30",
+      "subtotal": "8924.50",
+      "tax": "1338.68",
+      "total": "10263.18",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Monitor 24\" IPS Full HD",
+          "quantity": "9",
+          "unit_price": "149.50",
+          "total": "1345.50"
+        },
+        {
+          "description": "Laptop 14\" Core i5 16 GB RAM",
+          "quantity": "11",
+          "unit_price": "689.00",
+          "total": "7579.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0220",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-08-12",
+      "subtotal": "6505.00",
+      "tax": "975.75",
+      "total": "7480.75",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "13",
+          "unit_price": "420.00",
+          "total": "5460.00"
+        },
+        {
+          "description": "Desinfección de áreas comunes",
+          "quantity": "11",
+          "unit_price": "95.00",
+          "total": "1045.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0222",
+      "vendor_tax_id": "1998877667001",
+      "issue_date": "2026-08-23",
+      "subtotal": "482.40",
+      "tax": "72.36",
+      "total": "554.76",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Juego de brocas para concreto",
+          "quantity": "12",
+          "unit_price": "22.40",
+          "total": "268.80"
+        },
+        {
+          "description": "Pintura látex galón blanco",
+          "quantity": "12",
+          "unit_price": "17.80",
+          "total": "213.60"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0223",
+      "vendor_tax_id": "1191122336001",
+      "issue_date": "2026-09-06",
+      "subtotal": "201.00",
+      "tax": "30.15",
+      "total": "231.15",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Servicio de meseros (hora)",
+          "quantity": "4",
+          "unit_price": "9.00",
+          "total": "36.00"
+        },
+        {
+          "description": "Bebidas y agua (paquete)",
+          "quantity": "11",
+          "unit_price": "15.00",
+          "total": "165.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0227",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-08-26",
+      "subtotal": "210.00",
+      "tax": "31.50",
+      "total": "241.50",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "5",
+          "unit_price": "42.00",
+          "total": "210.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0228",
+      "vendor_tax_id": "1192233441001",
+      "issue_date": "2026-08-12",
+      "subtotal": "2039.20",
+      "tax": "305.88",
+      "total": "2345.08",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Licencia antivirus anual",
+          "quantity": "10",
+          "unit_price": "32.00",
+          "total": "320.00"
+        },
+        {
+          "description": "Switch 24 puertos gigabit",
+          "quantity": "8",
+          "unit_price": "214.90",
+          "total": "1719.20"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0231",
+      "vendor_tax_id": "1199080705001",
+      "issue_date": "2026-09-08",
+      "subtotal": "458.50",
+      "tax": "68.78",
+      "total": "527.28",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Flete Loja - Quito (tonelada)",
+          "quantity": "4",
+          "unit_price": "110.00",
+          "total": "440.00"
+        },
+        {
+          "description": "Seguro de carga",
+          "quantity": "1",
+          "unit_price": "18.50",
+          "total": "18.50"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0235",
+      "vendor_tax_id": "1191122336001",
+      "issue_date": "2026-09-01",
+      "subtotal": "57.00",
+      "tax": "8.55",
+      "total": "65.55",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Servicio de meseros (hora)",
+          "quantity": "3",
+          "unit_price": "9.00",
+          "total": "27.00"
+        },
+        {
+          "description": "Bebidas y agua (paquete)",
+          "quantity": "2",
+          "unit_price": "15.00",
+          "total": "30.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0237",
+      "vendor_tax_id": "1197654321001",
+      "issue_date": "2026-09-11",
+      "subtotal": "38.40",
+      "tax": "5.76",
+      "total": "44.16",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Archivador lomo ancho",
+          "quantity": "12",
+          "unit_price": "3.20",
+          "total": "38.40"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0241",
+      "vendor_tax_id": "1113456782001",
+      "issue_date": "2026-08-26",
+      "subtotal": "418.50",
+      "tax": "62.78",
+      "total": "481.28",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Volantes full color x1000",
+          "quantity": "3",
+          "unit_price": "45.00",
+          "total": "135.00"
+        },
+        {
+          "description": "Tarjetas de presentación x500",
+          "quantity": "2",
+          "unit_price": "28.00",
+          "total": "56.00"
+        },
+        {
+          "description": "Banner lona 2 x 1 m",
+          "quantity": "7",
+          "unit_price": "32.50",
+          "total": "227.50"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0244",
+      "vendor_tax_id": "1196677883001",
+      "issue_date": "2026-08-11",
+      "subtotal": "1448.50",
+      "tax": "217.28",
+      "total": "1665.78",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "3",
+          "unit_price": "24.50",
+          "total": "73.50"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "12",
+          "unit_price": "42.00",
+          "total": "504.00"
+        },
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "12",
+          "unit_price": "68.00",
+          "total": "816.00"
+        },
+        {
+          "description": "Mano de obra especializada (día)",
+          "quantity": "1",
+          "unit_price": "55.00",
+          "total": "55.00"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0248",
+      "vendor_tax_id": "1192233441001",
+      "issue_date": "2026-09-16",
+      "subtotal": "4632.50",
+      "tax": "694.88",
+      "total": "5327.38",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Soporte técnico (hora)",
+          "quantity": "6",
+          "unit_price": "25.00",
+          "total": "150.00"
+        },
+        {
+          "description": "Switch 24 puertos gigabit",
+          "quantity": "10",
+          "unit_price": "214.90",
+          "total": "2149.00"
+        },
+        {
+          "description": "Laptop 14\" Core i5 16 GB RAM",
+          "quantity": "1",
+          "unit_price": "689.00",
+          "total": "689.00"
+        },
+        {
+          "description": "Monitor 24\" IPS Full HD",
+          "quantity": "11",
+          "unit_price": "149.50",
+          "total": "1644.50"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0252",
+      "vendor_tax_id": "1998877667001",
+      "issue_date": "2026-08-01",
+      "subtotal": "323.60",
+      "tax": "48.54",
+      "total": "372.14",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Cemento Portland saco 50 kg",
+          "quantity": "2",
+          "unit_price": "8.45",
+          "total": "16.90"
+        },
+        {
+          "description": "Tubo PVC 110 mm x 3 m",
+          "quantity": "5",
+          "unit_price": "9.60",
+          "total": "48.00"
+        },
+        {
+          "description": "Varilla corrugada 12 mm x 12 m",
+          "quantity": "11",
+          "unit_price": "11.30",
+          "total": "124.30"
+        },
+        {
+          "description": "Juego de brocas para concreto",
+          "quantity": "6",
+          "unit_price": "22.40",
+          "total": "134.40"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0255",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-09-16",
+      "subtotal": "707.30",
+      "tax": "106.10",
+      "total": "813.40",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "11",
+          "unit_price": "64.30",
+          "total": "707.30"
+        }
+      ]
+    },
+    {
+      "po_number": "OC-2026-0259",
+      "vendor_tax_id": "1195544332001",
+      "issue_date": "2026-09-02",
+      "subtotal": "5224.30",
+      "tax": "783.65",
+      "total": "6007.95",
+      "status": "open",
+      "lines": [
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "1",
+          "unit_price": "64.30",
+          "total": "64.30"
+        },
+        {
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "11",
+          "unit_price": "420.00",
+          "total": "4620.00"
+        },
+        {
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "3",
+          "unit_price": "180.00",
+          "total": "540.00"
+        }
+      ]
+    }
+  ],
+  "payments": [
+    {
+      "reference": "TRF-005003",
+      "vendor_tax_id": "1197654321001",
+      "amount": "391.81",
+      "paid_on": "2026-09-10",
+      "invoice_number": null,
+      "po_number": "OC-2026-0103"
+    },
+    {
+      "reference": "TRF-005004",
+      "vendor_tax_id": "1199080705001",
+      "amount": "2412.13",
+      "paid_on": "2026-09-16",
+      "invoice_number": null,
+      "po_number": "OC-2026-0112"
+    },
+    {
+      "reference": "TRF-005005",
+      "vendor_tax_id": "1197654321001",
+      "amount": "255.01",
+      "paid_on": "2026-09-04",
+      "invoice_number": null,
+      "po_number": "OC-2026-0116"
+    },
+    {
+      "reference": "TRF-005008",
+      "vendor_tax_id": "1191122336001",
+      "amount": "248.75",
+      "paid_on": "2026-10-12",
+      "invoice_number": null,
+      "po_number": "OC-2026-0122"
+    },
+    {
+      "reference": "TRF-005012",
+      "vendor_tax_id": "1113456782001",
+      "amount": "830.30",
+      "paid_on": "2026-09-17",
+      "invoice_number": "7000",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005016",
+      "vendor_tax_id": "1196677883001",
+      "amount": "351.90",
+      "paid_on": "2026-10-01",
+      "invoice_number": null,
+      "po_number": "OC-2026-0131"
+    },
+    {
+      "reference": "TRF-005021",
+      "vendor_tax_id": "1196677883001",
+      "amount": "508.88",
+      "paid_on": "2026-10-02",
+      "invoice_number": "1241",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005027",
+      "vendor_tax_id": "1998877667001",
+      "amount": "393.99",
+      "paid_on": "2026-10-12",
+      "invoice_number": "001-002-000008441",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005032",
+      "vendor_tax_id": "1191122336001",
+      "amount": "204.93",
+      "paid_on": "2026-09-10",
+      "invoice_number": "001-002-7138",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005036",
+      "vendor_tax_id": "1195544332001",
+      "amount": "3570.75",
+      "paid_on": "2026-09-06",
+      "invoice_number": null,
+      "po_number": "OC-2026-0157"
+    },
+    {
+      "reference": "TRF-005043",
+      "vendor_tax_id": "1196677883001",
+      "amount": "542.80",
+      "paid_on": "2026-10-23",
+      "invoice_number": "001002000001253",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005048",
+      "vendor_tax_id": "1196677883001",
+      "amount": "241.50",
+      "paid_on": "2026-09-17",
+      "invoice_number": "001-002-000001259",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005053",
+      "vendor_tax_id": "1196677883001",
+      "amount": "1291.45",
+      "paid_on": "2026-08-22",
+      "invoice_number": "001002000001262",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005057",
+      "vendor_tax_id": "1199080705001",
+      "amount": "263.64",
+      "paid_on": "2026-09-29",
+      "invoice_number": "001001000004663",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005058",
+      "vendor_tax_id": "1191122336001",
+      "amount": "32.78",
+      "paid_on": "2026-09-23",
+      "invoice_number": "001002000007162",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005065",
+      "vendor_tax_id": "1197654321001",
+      "amount": "44.16",
+      "paid_on": "2026-09-21",
+      "invoice_number": null,
+      "po_number": "OC-2026-0237"
+    },
+    {
+      "reference": "TRF-005066",
+      "vendor_tax_id": "1197654321001",
+      "amount": "44.16",
+      "paid_on": "2026-09-20",
+      "invoice_number": "001-001-000002509",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005069",
+      "vendor_tax_id": "1196677883001",
+      "amount": "699.90",
+      "paid_on": "2026-09-06",
+      "invoice_number": "001-001-000000176",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005072",
+      "vendor_tax_id": "1196677883001",
+      "amount": "470.26",
+      "paid_on": "2026-09-08",
+      "invoice_number": "001-001-000000438",
+      "po_number": null
+    },
+    {
+      "reference": "TRF-005075",
+      "vendor_tax_id": "1199080705001",
+      "amount": "115.99",
+      "paid_on": "2026-09-17",
+      "invoice_number": "001-001-000000328",
+      "po_number": null
+    }
+  ]
+}
