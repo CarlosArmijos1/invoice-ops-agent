@@ -8,6 +8,7 @@ authors = [{ name = "Carlos Armijos" }]
 dependencies = [
     "alembic>=1.20.0",
     "fastapi>=0.143.0",
+    "httpx>=0.28.1",
     "pillow>=12.3.0",
     "psycopg[binary]>=3.3.6",
     "pydantic>=2.14.0",
@@ -15,6 +16,7 @@ dependencies = [
     "pypdfium2>=5.14.0",
     "sqlalchemy>=2.1.4",
     "structlog>=26.1.0",
+    "tenacity>=9.2.1",
     "uvicorn[standard]>=0.54.0",
 ]
 
