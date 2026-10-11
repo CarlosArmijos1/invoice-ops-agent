@@ -1,0 +1,2278 @@
+{
+  "mode": "oracle",
+  "models": {
+    "text": "openai/gpt-oss-120b",
+    "vision": "qwen/qwen3.8-27b"
+  },
+  "all": {
+    "invoices": 60,
+    "extraction": {
+      "success_rate": 1.0,
+      "critical_fields_ok": 1.0,
+      "field_accuracy": {
+        "vendor_name": 1.0,
+        "vendor_tax_id": 1.0,
+        "invoice_number": 1.0,
+        "issue_date": 1.0,
+        "po_number": 1.0,
+        "subtotal": 1.0,
+        "tax": 1.0,
+        "total": 1.0,
+        "line_items": 1.0
+      },
+      "by_render": {
+        "jpg": {
+          "n": 19,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        },
+        "pdf_scan": {
+          "n": 12,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        },
+        "pdf_text": {
+          "n": 25,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        },
+        "png": {
+          "n": 4,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        }
+      }
+    },
+    "decisions": {
+      "accuracy": 1.0,
+      "auto_approve_precision": 1.0,
+      "auto_approve_recall": 1.0,
+      "false_approvals": [],
+      "findings_recall": 1.0,
+      "confusion": {
+        "auto_approve": {
+          "auto_approve": 29,
+          "human_review": 0,
+          "request_info": 0
+        },
+        "human_review": {
+          "auto_approve": 0,
+          "human_review": 23,
+          "request_info": 0
+        },
+        "request_info": {
+          "auto_approve": 0,
+          "human_review": 0,
+          "request_info": 8
+        }
+      },
+      "per_scenario": {
+        "amount_mismatch": 1.0,
+        "arithmetic_error": 1.0,
+        "clean_paid": 1.0,
+        "clean_unpaid": 1.0,
+        "double_payment": 1.0,
+        "duplicate_resend": 1.0,
+        "missing_po": 1.0,
+        "missing_po_inferable": 1.0,
+        "missing_tax_id": 1.0,
+        "over_limit": 1.0,
+        "payment_mismatch": 1.0,
+        "unknown_po": 1.0,
+        "unknown_vendor": 1.0,
+        "vendor_mismatch": 1.0,
+        "within_tolerance": 1.0
+      }
+    },
+    "cost": {
+      "total_usd": "0",
+      "per_invoice_usd": "0.000000",
+      "latency_p50_ms": null,
+      "latency_p95_ms": null,
+      "llm_calls": 0
+    },
+    "errors": {}
+  },
+  "test": {
+    "invoices": 40,
+    "extraction": {
+      "success_rate": 1.0,
+      "critical_fields_ok": 1.0,
+      "field_accuracy": {
+        "vendor_name": 1.0,
+        "vendor_tax_id": 1.0,
+        "invoice_number": 1.0,
+        "issue_date": 1.0,
+        "po_number": 1.0,
+        "subtotal": 1.0,
+        "tax": 1.0,
+        "total": 1.0,
+        "line_items": 1.0
+      },
+      "by_render": {
+        "jpg": {
+          "n": 13,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        },
+        "pdf_scan": {
+          "n": 7,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        },
+        "pdf_text": {
+          "n": 16,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        },
+        "png": {
+          "n": 4,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        }
+      }
+    },
+    "decisions": {
+      "accuracy": 1.0,
+      "auto_approve_precision": 1.0,
+      "auto_approve_recall": 1.0,
+      "false_approvals": [],
+      "findings_recall": 1.0,
+      "confusion": {
+        "auto_approve": {
+          "auto_approve": 19,
+          "human_review": 0,
+          "request_info": 0
+        },
+        "human_review": {
+          "auto_approve": 0,
+          "human_review": 16,
+          "request_info": 0
+        },
+        "request_info": {
+          "auto_approve": 0,
+          "human_review": 0,
+          "request_info": 5
+        }
+      },
+      "per_scenario": {
+        "amount_mismatch": 1.0,
+        "arithmetic_error": 1.0,
+        "clean_paid": 1.0,
+        "clean_unpaid": 1.0,
+        "double_payment": 1.0,
+        "duplicate_resend": 1.0,
+        "missing_po": 1.0,
+        "missing_po_inferable": 1.0,
+        "missing_tax_id": 1.0,
+        "over_limit": 1.0,
+        "payment_mismatch": 1.0,
+        "unknown_po": 1.0,
+        "unknown_vendor": 1.0,
+        "vendor_mismatch": 1.0,
+        "within_tolerance": 1.0
+      }
+    },
+    "cost": {
+      "total_usd": "0",
+      "per_invoice_usd": "0.000000",
+      "latency_p50_ms": null,
+      "latency_p95_ms": null,
+      "llm_calls": 0
+    },
+    "errors": {}
+  },
+  "dev": {
+    "invoices": 20,
+    "extraction": {
+      "success_rate": 1.0,
+      "critical_fields_ok": 1.0,
+      "field_accuracy": {
+        "vendor_name": 1.0,
+        "vendor_tax_id": 1.0,
+        "invoice_number": 1.0,
+        "issue_date": 1.0,
+        "po_number": 1.0,
+        "subtotal": 1.0,
+        "tax": 1.0,
+        "total": 1.0,
+        "line_items": 1.0
+      },
+      "by_render": {
+        "jpg": {
+          "n": 6,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        },
+        "pdf_scan": {
+          "n": 5,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        },
+        "pdf_text": {
+          "n": 9,
+          "critical_fields_ok": 1.0,
+          "decision_accuracy": 1.0
+        }
+      }
+    },
+    "decisions": {
+      "accuracy": 1.0,
+      "auto_approve_precision": 1.0,
+      "auto_approve_recall": 1.0,
+      "false_approvals": [],
+      "findings_recall": 1.0,
+      "confusion": {
+        "auto_approve": {
+          "auto_approve": 10,
+          "human_review": 0,
+          "request_info": 0
+        },
+        "human_review": {
+          "auto_approve": 0,
+          "human_review": 7,
+          "request_info": 0
+        },
+        "request_info": {
+          "auto_approve": 0,
+          "human_review": 0,
+          "request_info": 3
+        }
+      },
+      "per_scenario": {
+        "amount_mismatch": 1.0,
+        "arithmetic_error": 1.0,
+        "clean_paid": 1.0,
+        "clean_unpaid": 1.0,
+        "duplicate_resend": 1.0,
+        "missing_po": 1.0,
+        "missing_tax_id": 1.0,
+        "over_limit": 1.0,
+        "payment_mismatch": 1.0,
+        "unknown_po": 1.0,
+        "vendor_mismatch": 1.0,
+        "within_tolerance": 1.0
+      }
+    },
+    "cost": {
+      "total_usd": "0",
+      "per_invoice_usd": "0.000000",
+      "latency_p50_ms": null,
+      "latency_p95_ms": null,
+      "llm_calls": 0
+    },
+    "errors": {}
+  },
+  "gates": {
+    "max_false_approvals": 0,
+    "min_decision_accuracy": 0.8,
+    "min_critical_fields_ok": 0.8
+  },
+  "invoices": [
+    {
+      "file": "INV-001.pdf",
+      "split": "dev",
+      "scenario": "clean_paid",
+      "render": "pdf_scan",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-002.pdf",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-003.pdf",
+      "split": "test",
+      "scenario": "clean_paid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-004.jpg",
+      "split": "dev",
+      "scenario": "clean_unpaid",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-005.pdf",
+      "split": "test",
+      "scenario": "clean_paid",
+      "render": "pdf_scan",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-006.pdf",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-007.jpg",
+      "split": "dev",
+      "scenario": "clean_paid",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-008.jpg",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-009.pdf",
+      "split": "test",
+      "scenario": "clean_paid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-010.pdf",
+      "split": "dev",
+      "scenario": "clean_unpaid",
+      "render": "pdf_scan",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-011.pdf",
+      "split": "test",
+      "scenario": "clean_paid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-012.jpg",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-013.jpg",
+      "split": "dev",
+      "scenario": "clean_paid",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-014.pdf",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-015.pdf",
+      "split": "test",
+      "scenario": "clean_paid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-016.pdf",
+      "split": "dev",
+      "scenario": "clean_unpaid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-017.pdf",
+      "split": "test",
+      "scenario": "clean_paid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-018.pdf",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-019.pdf",
+      "split": "dev",
+      "scenario": "clean_paid",
+      "render": "pdf_scan",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-020.jpg",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-021.jpg",
+      "split": "test",
+      "scenario": "clean_paid",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-022.pdf",
+      "split": "dev",
+      "scenario": "clean_unpaid",
+      "render": "pdf_scan",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-023.jpg",
+      "split": "test",
+      "scenario": "clean_paid",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-024.png",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "png",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-025.pdf",
+      "split": "dev",
+      "scenario": "clean_paid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-026.pdf",
+      "split": "test",
+      "scenario": "clean_unpaid",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "po_matched"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-027.pdf",
+      "split": "test",
+      "scenario": "within_tolerance",
+      "render": "pdf_scan",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "amount_within_tolerance"
+      ],
+      "findings": [
+        "po_matched",
+        "amount_within_tolerance",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-028.jpg",
+      "split": "dev",
+      "scenario": "within_tolerance",
+      "render": "jpg",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "amount_within_tolerance"
+      ],
+      "findings": [
+        "po_matched",
+        "amount_within_tolerance",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-029.pdf",
+      "split": "test",
+      "scenario": "within_tolerance",
+      "render": "pdf_text",
+      "expected_action": "auto_approve",
+      "action": "auto_approve",
+      "expected_findings": [
+        "amount_within_tolerance"
+      ],
+      "findings": [
+        "po_matched",
+        "amount_within_tolerance",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-030.pdf",
+      "split": "test",
+      "scenario": "amount_mismatch",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "amount_mismatch"
+      ],
+      "findings": [
+        "po_matched",
+        "amount_mismatch",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-031.pdf",
+      "split": "dev",
+      "scenario": "amount_mismatch",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "amount_mismatch"
+      ],
+      "findings": [
+        "po_matched",
+        "amount_mismatch",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-032.jpg",
+      "split": "test",
+      "scenario": "amount_mismatch",
+      "render": "jpg",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "amount_mismatch"
+      ],
+      "findings": [
+        "po_matched",
+        "amount_mismatch",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-033.pdf",
+      "split": "test",
+      "scenario": "amount_mismatch",
+      "render": "pdf_scan",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "amount_mismatch"
+      ],
+      "findings": [
+        "po_matched",
+        "amount_mismatch",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-034.pdf",
+      "split": "dev",
+      "scenario": "amount_mismatch",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "amount_mismatch"
+      ],
+      "findings": [
+        "po_matched",
+        "amount_mismatch",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-035.pdf",
+      "split": "test",
+      "scenario": "missing_po",
+      "render": "pdf_text",
+      "expected_action": "request_info",
+      "action": "request_info",
+      "expected_findings": [
+        "po_missing"
+      ],
+      "findings": [
+        "po_missing",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-036.jpg",
+      "split": "test",
+      "scenario": "missing_po",
+      "render": "jpg",
+      "expected_action": "request_info",
+      "action": "request_info",
+      "expected_findings": [
+        "po_missing"
+      ],
+      "findings": [
+        "po_missing",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-037.pdf",
+      "split": "dev",
+      "scenario": "missing_po",
+      "render": "pdf_text",
+      "expected_action": "request_info",
+      "action": "request_info",
+      "expected_findings": [
+        "po_missing"
+      ],
+      "findings": [
+        "po_missing",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-038.pdf",
+      "split": "test",
+      "scenario": "missing_po_inferable",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "po_inferred"
+      ],
+      "findings": [
+        "po_inferred",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-039.pdf",
+      "split": "test",
+      "scenario": "missing_po_inferable",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "po_inferred"
+      ],
+      "findings": [
+        "po_inferred",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-040.jpg",
+      "split": "dev",
+      "scenario": "unknown_po",
+      "render": "jpg",
+      "expected_action": "request_info",
+      "action": "request_info",
+      "expected_findings": [
+        "po_not_found"
+      ],
+      "findings": [
+        "po_not_found",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-041.jpg",
+      "split": "test",
+      "scenario": "unknown_po",
+      "render": "jpg",
+      "expected_action": "request_info",
+      "action": "request_info",
+      "expected_findings": [
+        "po_not_found"
+      ],
+      "findings": [
+        "po_not_found",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-042.pdf",
+      "split": "test",
+      "scenario": "unknown_po",
+      "render": "pdf_scan",
+      "expected_action": "request_info",
+      "action": "request_info",
+      "expected_findings": [
+        "po_not_found"
+      ],
+      "findings": [
+        "po_not_found",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-043.pdf",
+      "split": "dev",
+      "scenario": "vendor_mismatch",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "po_vendor_mismatch"
+      ],
+      "findings": [
+        "po_vendor_mismatch",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-044.jpg",
+      "split": "test",
+      "scenario": "vendor_mismatch",
+      "render": "jpg",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "po_vendor_mismatch"
+      ],
+      "findings": [
+        "po_vendor_mismatch",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-045.pdf",
+      "split": "test",
+      "scenario": "over_limit",
+      "render": "pdf_scan",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "over_auto_approval_limit"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid",
+        "over_auto_approval_limit"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-046.pdf",
+      "split": "dev",
+      "scenario": "over_limit",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "over_auto_approval_limit"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid",
+        "over_auto_approval_limit"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-047.pdf",
+      "split": "test",
+      "scenario": "over_limit",
+      "render": "pdf_scan",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "over_auto_approval_limit"
+      ],
+      "findings": [
+        "po_matched",
+        "unpaid",
+        "over_auto_approval_limit"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-048.jpg",
+      "split": "test",
+      "scenario": "arithmetic_error",
+      "render": "jpg",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "arithmetic_mismatch"
+      ],
+      "findings": [
+        "arithmetic_mismatch",
+        "po_matched",
+        "amount_within_tolerance",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-049.pdf",
+      "split": "dev",
+      "scenario": "arithmetic_error",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "arithmetic_mismatch"
+      ],
+      "findings": [
+        "arithmetic_mismatch",
+        "po_matched",
+        "amount_within_tolerance",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-050.jpg",
+      "split": "test",
+      "scenario": "unknown_vendor",
+      "render": "jpg",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "vendor_unknown"
+      ],
+      "findings": [
+        "vendor_unknown",
+        "po_not_found"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-051.png",
+      "split": "test",
+      "scenario": "unknown_vendor",
+      "render": "png",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "vendor_unknown"
+      ],
+      "findings": [
+        "vendor_unknown",
+        "po_not_found"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-052.pdf",
+      "split": "dev",
+      "scenario": "missing_tax_id",
+      "render": "pdf_scan",
+      "expected_action": "request_info",
+      "action": "request_info",
+      "expected_findings": [
+        "tax_id_missing"
+      ],
+      "findings": [
+        "tax_id_missing",
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-053.jpg",
+      "split": "test",
+      "scenario": "missing_tax_id",
+      "render": "jpg",
+      "expected_action": "request_info",
+      "action": "request_info",
+      "expected_findings": [
+        "tax_id_missing"
+      ],
+      "findings": [
+        "tax_id_missing",
+        "po_matched",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-054.png",
+      "split": "test",
+      "scenario": "payment_mismatch",
+      "render": "png",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "payment_amount_mismatch"
+      ],
+      "findings": [
+        "po_matched",
+        "payment_amount_mismatch"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-055.jpg",
+      "split": "dev",
+      "scenario": "payment_mismatch",
+      "render": "jpg",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "payment_amount_mismatch"
+      ],
+      "findings": [
+        "po_matched",
+        "payment_amount_mismatch"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-056.jpg",
+      "split": "test",
+      "scenario": "double_payment",
+      "render": "jpg",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "multiple_payments"
+      ],
+      "findings": [
+        "po_matched",
+        "multiple_payments"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-057.pdf",
+      "split": "test",
+      "scenario": "duplicate_resend",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "duplicate_invoice"
+      ],
+      "findings": [
+        "duplicate_invoice",
+        "po_matched",
+        "po_overbilled",
+        "paid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-058.pdf",
+      "split": "dev",
+      "scenario": "duplicate_resend",
+      "render": "pdf_text",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "duplicate_invoice"
+      ],
+      "findings": [
+        "duplicate_invoice",
+        "po_matched",
+        "po_overbilled",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-059.pdf",
+      "split": "test",
+      "scenario": "duplicate_resend",
+      "render": "pdf_scan",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "duplicate_invoice"
+      ],
+      "findings": [
+        "duplicate_invoice",
+        "po_matched",
+        "po_overbilled",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    },
+    {
+      "file": "INV-060.png",
+      "split": "test",
+      "scenario": "duplicate_resend",
+      "render": "png",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "expected_findings": [
+        "duplicate_invoice"
+      ],
+      "findings": [
+        "duplicate_invoice",
+        "po_matched",
+        "po_overbilled",
+        "unpaid"
+      ],
+      "extracted": true,
+      "method": "oracle",
+      "field_hits": {
+        "vendor_name": true,
+        "vendor_tax_id": true,
+        "invoice_number": true,
+        "issue_date": true,
+        "po_number": true,
+        "subtotal": true,
+        "tax": true,
+        "total": true,
+        "line_items": true
+      },
+      "cost_usd": "0",
+      "latency_ms": 0,
+      "llm_calls": 0,
+      "error": null,
+      "critical_ok": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+name: Evals (live LLM)
+
+# Manual run against the real provider. Re-records the cassettes and uploads them
+# as an artifact so they can be reviewed and committed deliberately.
+on:
+  workflow_dispatch:
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.0"
+      - run: uv sync --frozen
+      - name: Record and evaluate
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: uv run python -m opsagent.evals --llm record
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-evals
+          path: |
+            evals/results/
+            evals/cassettes/

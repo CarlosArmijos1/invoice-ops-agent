@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   backend:
-    name: Backend Ã‚Â· lint, types, tests
+    name: Backend Ãƒâ€šÃ‚Â· lint, types, tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -52,7 +52,7 @@ jobs:
         run: uv run pytest
 
   frontend:
-    name: Frontend · lint, types, build
+    name: Frontend Â· lint, types, build
     runs-on: ubuntu-latest
     defaults:
       run:
