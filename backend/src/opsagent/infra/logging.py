@@ -10,7 +10,7 @@ import sys
 import structlog
 
 
-def configure_logging(level: str = "INFO", *, json: bool = False) -> None:
+def configure_logging(level: str = "INFO", *, json: bool = False, stream: str = "stdout") -> None:
     shared_processors: list[structlog.types.Processor] = [
         structlog.contextvars.merge_contextvars,
         structlog.processors.add_log_level,
@@ -24,7 +24,9 @@ def configure_logging(level: str = "INFO", *, json: bool = False) -> None:
     structlog.configure(
         processors=[*shared_processors, renderer],
         wrapper_class=structlog.make_filtering_bound_logger(logging.getLevelName(level)),
-        logger_factory=structlog.PrintLoggerFactory(file=sys.stdout),
+        logger_factory=structlog.PrintLoggerFactory(
+            file=sys.stderr if stream == "stderr" else sys.stdout
+        ),
         cache_logger_on_first_use=True,
     )
 

@@ -29,7 +29,7 @@ class Container:
 
 def build_container(settings: Settings | None = None, *, checkpoints: bool = True) -> Container:
     settings = settings or get_settings()
-    configure_logging(settings.log_level, json=settings.log_json)
+    configure_logging(settings.log_level, json=settings.log_json, stream=settings.log_stream)
     session_factory = get_sessionmaker(get_engine(settings.database_url))
     deps = build_deps(settings, session_factory)
 

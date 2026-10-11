@@ -36,6 +36,7 @@ class Settings(BaseSettings):
     environment: Environment = Environment.LOCAL
     log_level: str = "INFO"
     log_json: bool = False
+    log_stream: str = "stdout"  # "stderr" for the MCP stdio server
 
     database_url: str = "postgresql+psycopg://opsagent:opsagent@localhost:5433/opsagent"
 
