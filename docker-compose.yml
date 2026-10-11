@@ -1,4 +1,19 @@
 # Levanta todo el sistema con un solo comando:  docker compose up --build
+#   - db:     Postgres 17
+#   - api:    FastAPI + panel web en http://localhost:8000 (aplica migraciones y carga la demo)
+#   - worker: scheduler autónomo; procesa ./inbox y genera el reporte diario
+x-app: &app
+  build: .
+  env_file:
+    - path: .env
+      required: false
+  environment: &app-env
+    DATABASE_URL: postgresql+psycopg://opsagent:opsagent@db:5432/opsagent
+    LLM_MODE: ${LLM_MODE:-hybrid}
+  depends_on:
+    db:
+      condition: service_healthy
+
 services:
   db:
     image: postgres:17-alpine
@@ -17,16 +32,27 @@ services:
       retries: 10
 
   api:
-    build: .
-    env_file:
-      - path: .env
-        required: false
+    <<: *app
     environment:
-      DATABASE_URL: postgresql+psycopg://opsagent:opsagent@db:5432/opsagent
+      <<: *app-env
+      BOOTSTRAP_DEMO: "true"
     ports:
       - "8000:8000"
+
+  worker:
+    <<: *app
+    command: ["python", "-m", "opsagent.worker"]
+    environment:
+      <<: *app-env
+      SCHEDULER_ENABLED: "true"
+      INBOX_DIR: /inbox
+      PROCESS_INTERVAL_MINUTES: ${PROCESS_INTERVAL_MINUTES:-2}
+    volumes:
+      - ./inbox:/inbox
+    healthcheck:
+      disable: true
     depends_on:
-      db:
+      api:
         condition: service_healthy
 
 volumes:

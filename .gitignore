@@ -29,3 +29,7 @@ storage/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Local inbox contents (only the README is versioned)
+inbox/*
+!inbox/README.md
