@@ -1,5 +1,7 @@
 """First-start setup for demos: seed master data and preload the synthetic invoices once."""
 
+import json
+
 from sqlalchemy import func, select
 
 from opsagent.container import Container
@@ -20,8 +22,13 @@ def bootstrap_demo(container: Container) -> None:
             log.info("demo_catalog_seeded", **created)
         if session.scalar(select(func.count()).select_from(Invoice)):
             return
+        # Invoices of the "portal" channel are not preloaded: the Playwright robot fetches them.
+        truths = json.loads((dataset / "ground_truth.json").read_text(encoding="utf-8"))
+        portal_only = {t["file"] for t in truths if t.get("channel") == "portal"}
         files = sorted(
-            p for p in (dataset / "invoices").iterdir() if p.suffix.lower() in SUPPORTED_SUFFIXES
+            p
+            for p in (dataset / "invoices").iterdir()
+            if p.suffix.lower() in SUPPORTED_SUFFIXES and p.name not in portal_only
         )
         for path in files:
             ingest_bytes(session, path.read_bytes(), path.name, InvoiceSource.FOLDER)

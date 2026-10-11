@@ -1,4 +1,4 @@
-"""Unattended operation: poll the inbox, process pending invoices, publish the daily report.
+"""Unattended operation: inbox, supplier portal, agent runs and the daily report.
 
 Every job takes a Postgres advisory lock first. If two instances are running
 (a scaled web service, or the worker plus a manual trigger), only one of them
@@ -24,6 +24,7 @@ log = get_logger(__name__)
 
 LOCK_PROCESS = 7_310_001
 LOCK_REPORT = 7_310_002
+LOCK_PORTAL = 7_310_003
 
 
 @contextmanager
@@ -49,6 +50,24 @@ def process_tick(container: Container, trigger: str = "schedule") -> dict[str, o
             ingested = sum(r.created for r in ingest_folder(container.session_factory, inbox))
         summary = container.processor.process_pending(trigger=trigger)
         return {"ingested": ingested, **summary.as_dict()}
+
+
+def portal_tick(container: Container) -> dict[str, object]:
+    """Robot run against the supplier portal; new invoices are processed on the next tick."""
+    with advisory_lock(container, LOCK_PORTAL) as acquired:
+        if not acquired:
+            return {"skipped": True}
+        from opsagent.portal.robot import sync_portal
+        from opsagent.portal.sinks import database_sink
+
+        settings = container.settings
+        result = sync_portal(
+            settings.portal_url,
+            settings.portal_username,
+            settings.portal_password.get_secret_value(),
+            database_sink(container.session_factory),
+        )
+        return dict(result.__dict__)
 
 
 def report_tick(container: Container, day_offset: int = -1) -> str | None:
@@ -84,6 +103,15 @@ def build_scheduler(container: Container) -> BackgroundScheduler:
         coalesce=True,
         next_run_time=datetime.now(TZ) + timedelta(seconds=10),
     )
+    if settings.portal_sync_enabled:
+        scheduler.add_job(
+            _safe(lambda: portal_tick(container), "portal_sync"),
+            IntervalTrigger(minutes=settings.portal_sync_interval_minutes),
+            id="portal_sync",
+            max_instances=1,
+            coalesce=True,
+            next_run_time=datetime.now(TZ) + timedelta(seconds=30),
+        )
     scheduler.add_job(
         _safe(lambda: report_tick(container), "daily_report"),
         CronTrigger(hour=settings.daily_report_hour, minute=0),

@@ -158,6 +158,23 @@ def build_server(container: Container) -> MCPServer:
         except ReviewError as exc:
             return {"error": str(exc)}
 
+    @server.tool(annotations=WRITES)
+    def sync_supplier_portal() -> dict[str, Any]:
+        """Run the Playwright robot: log into the supplier portal and ingest new invoices."""
+        try:
+            from opsagent.portal.robot import sync_portal
+            from opsagent.portal.sinks import database_sink
+        except ImportError:
+            return {"error": "Playwright is not installed in this environment"}
+        settings = container.settings
+        result = sync_portal(
+            settings.portal_url,
+            settings.portal_username,
+            settings.portal_password.get_secret_value(),
+            database_sink(factory),
+        )
+        return dict(result.__dict__)
+
     # ------------------------------------------------------------- reports
 
     @server.tool(annotations=READ_ONLY)

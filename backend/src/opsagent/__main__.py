@@ -2,7 +2,8 @@
 
 python -m opsagent seed                    # load vendors, POs and payments
 python -m opsagent ingest ../data/synthetic/invoices --copy
-python -m opsagent run                     # process everything pending, once
+    python -m opsagent run                     # process everything pending, once
+    python -m opsagent portal-sync             # download invoices from the supplier portal
 python -m opsagent report --date 2026-10-10
 """
 
@@ -38,6 +39,10 @@ def main() -> None:
     run = sub.add_parser("run", help="process pending invoices once")
     run.add_argument("--limit", type=int, default=500)
 
+    portal = sub.add_parser("portal-sync", help="download invoices from the supplier portal")
+    portal.add_argument("--api", help="upload to this API instead of the local database")
+    portal.add_argument("--token", help="operator token for --api (or ADMIN_TOKEN)")
+
     report = sub.add_parser("report", help="generate (or refresh) the daily report")
     report.add_argument("--date", type=date.fromisoformat, default=None)
 
@@ -59,6 +64,24 @@ def main() -> None:
         elif args.command == "run":
             summary = container.processor.process_pending(trigger="cli", limit=args.limit)
             print(json.dumps(summary.as_dict(), indent=2))
+        elif args.command == "portal-sync":
+            from opsagent.portal.robot import sync_portal
+            from opsagent.portal.sinks import api_sink, database_sink
+
+            settings = container.settings
+            token = args.token or (
+                settings.admin_token.get_secret_value() if settings.admin_token else None
+            )
+            sink = (
+                api_sink(args.api, token) if args.api else database_sink(container.session_factory)
+            )
+            result = sync_portal(
+                settings.portal_url,
+                settings.portal_username,
+                settings.portal_password.get_secret_value(),
+                sink,
+            )
+            print(json.dumps(result.__dict__))
         elif args.command == "report":
             with container.session_factory() as session, session.begin():
                 print(generate_daily_report(session, args.date).markdown)
