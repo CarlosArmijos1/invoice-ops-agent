@@ -26,6 +26,32 @@ def image_part(png_bytes: bytes, media_type: str = "image/png") -> dict[str, Any
 
 
 @dataclass(frozen=True)
+class ToolCall:
+    id: str
+    name: str
+    arguments: str  # raw JSON string, validated by the tool's Pydantic model
+
+    def as_message_part(self) -> dict[str, Any]:
+        return {
+            "id": self.id,
+            "type": "function",
+            "function": {"name": self.name, "arguments": self.arguments},
+        }
+
+
+def assistant_tool_calls_message(content: str, calls: tuple[ToolCall, ...]) -> Message:
+    return {
+        "role": "assistant",
+        "content": content or None,
+        "tool_calls": [c.as_message_part() for c in calls],
+    }
+
+
+def tool_result_message(call: ToolCall, content: str) -> Message:
+    return {"role": "tool", "tool_call_id": call.id, "content": content}
+
+
+@dataclass(frozen=True)
 class CompletionRequest:
     model: str
     messages: list[Message]
@@ -34,6 +60,8 @@ class CompletionRequest:
     max_tokens: int = 2048
     # Provider-specific knobs, e.g. {"reasoning_effort": "low"} for gpt-oss.
     extra: dict[str, Any] = field(default_factory=dict)
+    # OpenAI-style function definitions; the model may answer with tool calls.
+    tools: list[dict[str, Any]] | None = None
 
 
 @dataclass(frozen=True)
@@ -45,6 +73,7 @@ class LLMResponse:
     completion_tokens: int
     latency_ms: int
     cost_usd: Decimal
+    tool_calls: tuple[ToolCall, ...] = ()
     cached: bool = False  # served from a cassette instead of the network
 
 

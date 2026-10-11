@@ -14,7 +14,7 @@ from decimal import Decimal
 from enum import StrEnum
 from pathlib import Path
 
-from opsagent.llm.base import CompletionRequest, LLMClient, LLMResponse
+from opsagent.llm.base import CompletionRequest, LLMClient, LLMResponse, ToolCall
 from opsagent.llm.errors import CassetteMissError
 
 
@@ -31,6 +31,7 @@ def request_key(request: CompletionRequest) -> str:
             "json_mode": request.json_mode,
             "temperature": request.temperature,
             "extra": request.extra,
+            "tools": request.tools,
         },
         sort_keys=True,
         ensure_ascii=False,
@@ -55,6 +56,7 @@ class CassetteLLMClient:
         if path.exists():
             data = json.loads(path.read_text(encoding="utf-8"))
             data["cost_usd"] = Decimal(data["cost_usd"])
+            data["tool_calls"] = tuple(ToolCall(**c) for c in data.get("tool_calls", []))
             return replace(LLMResponse(**data), cached=True)
         if self.mode is CassetteMode.REPLAY or self.inner is None:
             raise CassetteMissError(

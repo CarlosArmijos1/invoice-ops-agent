@@ -19,7 +19,7 @@ from tenacity import (
 )
 
 from opsagent.infra.logging import get_logger
-from opsagent.llm.base import CompletionRequest, LLMResponse
+from opsagent.llm.base import CompletionRequest, LLMResponse, ToolCall
 from opsagent.llm.errors import (
     LLMAuthError,
     LLMBadRequestError,
@@ -104,6 +104,9 @@ class GroqClient:
         }
         if request.json_mode:
             payload["response_format"] = {"type": "json_object"}
+        if request.tools:
+            payload["tools"] = request.tools
+            payload["tool_choice"] = "auto"
 
         started = time.perf_counter()
         try:
@@ -119,7 +122,16 @@ class GroqClient:
         usage = body.get("usage") or {}
         prompt_tokens = int(usage.get("prompt_tokens", 0))
         completion_tokens = int(usage.get("completion_tokens", 0))
-        content = body["choices"][0]["message"].get("content") or ""
+        message = body["choices"][0]["message"]
+        content = message.get("content") or ""
+        tool_calls = tuple(
+            ToolCall(
+                id=call["id"],
+                name=call["function"]["name"],
+                arguments=call["function"].get("arguments") or "{}",
+            )
+            for call in message.get("tool_calls") or []
+        )
         log.info(
             "llm_call",
             provider=self.provider,
@@ -136,6 +148,7 @@ class GroqClient:
             completion_tokens=completion_tokens,
             latency_ms=latency_ms,
             cost_usd=estimate_cost(request.model, prompt_tokens, completion_tokens),
+            tool_calls=tool_calls,
         )
 
     @staticmethod

@@ -110,3 +110,38 @@ def test_timeouts_and_dropped_connections_become_retryable_errors() -> None:
 def test_missing_api_key_fails_fast() -> None:
     with pytest.raises(LLMAuthError):
         GroqClient("")
+
+
+def test_tool_calls_are_sent_and_parsed() -> None:
+    sent: list[dict[str, object]] = []
+    body = {
+        "choices": [
+            {
+                "message": {
+                    "content": None,
+                    "tool_calls": [
+                        {
+                            "id": "call_1",
+                            "type": "function",
+                            "function": {"name": "get_purchase_order", "arguments": '{"a": 1}'},
+                        }
+                    ],
+                }
+            }
+        ],
+        "usage": {"prompt_tokens": 10, "completion_tokens": 5},
+    }
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        sent.append(json.loads(request.content))
+        return httpx.Response(200, json=body)
+
+    tools = [{"type": "function", "function": {"name": "get_purchase_order", "parameters": {}}}]
+    request = CompletionRequest(model="m", messages=[text_message("user", "x")], tools=tools)
+    response = _client(httpx.MockTransport(handler)).complete(request)
+
+    assert sent[0]["tools"] == tools
+    assert sent[0]["tool_choice"] == "auto"
+    assert response.content == ""
+    assert response.tool_calls[0].name == "get_purchase_order"
+    assert response.tool_calls[0].arguments == '{"a": 1}'
