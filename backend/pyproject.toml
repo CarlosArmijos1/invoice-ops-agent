@@ -8,9 +8,11 @@ authors = [{ name = "Carlos Armijos" }]
 dependencies = [
     "alembic>=1.20.0",
     "fastapi>=0.143.0",
+    "pillow>=12.3.0",
     "psycopg[binary]>=3.3.6",
     "pydantic>=2.14.0",
     "pydantic-settings>=2.15.0",
+    "pypdfium2>=5.14.0",
     "sqlalchemy>=2.1.4",
     "structlog>=26.1.0",
     "uvicorn[standard]>=0.54.0",
@@ -34,12 +36,17 @@ ignore = ["RUF001", "RUF002", "RUF003"]  # Spanish text uses accented characters
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S101", "S105", "S106"]
+"src/opsagent/datagen/**" = ["S311"]  # seeded, non-cryptographic randomness is the point
 
 [tool.mypy]
 python_version = "3.12"
 strict = true
 mypy_path = "src"
 plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["reportlab.*", "pypdfium2.*"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -53,6 +60,7 @@ dev = [
     "httpx2>=2.13.1",
     "mypy>=2.4.0",
     "pytest>=9.1.1",
+    "reportlab>=5.0.1",
     "ruff>=0.17.0",
 ]
 
