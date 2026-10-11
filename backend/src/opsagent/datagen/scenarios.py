@@ -28,6 +28,9 @@ from opsagent.domain.tax_id import make_ruc
 
 TAX_RATE = Decimal("0.15")
 AUTO_APPROVAL_LIMIT = Decimal("5000.00")
+# Ordinary invoices stay well below the limit so that only the `over_limit`
+# scenario exercises it (found by the oracle test: two labels were wrong).
+ORDINARY_MAX_TOTAL = Decimal("3500.00")
 
 F = FindingCode
 A = DecisionAction
@@ -79,7 +82,19 @@ class DatasetBuilder:
         return start + timedelta(days=self.rng.randint(min_days, max_days))
 
     def _lines(
-        self, vendor: VendorProfile, n: int, qty_range: tuple[int, int] = (1, 12)
+        self,
+        vendor: VendorProfile,
+        n: int,
+        qty_range: tuple[int, int] = (1, 12),
+        max_total: Decimal | None = ORDINARY_MAX_TOTAL,
+    ) -> list[LineRecord]:
+        while True:
+            lines = self._draw_lines(vendor, n, qty_range)
+            if max_total is None or self._totals(lines)[2] <= max_total:
+                return lines
+
+    def _draw_lines(
+        self, vendor: VendorProfile, n: int, qty_range: tuple[int, int]
     ) -> list[LineRecord]:
         products = self.rng.sample(vendor.products, k=min(n, len(vendor.products)))
         while len(products) < n:  # long invoices repeat products with different quantities
@@ -108,9 +123,10 @@ class DatasetBuilder:
         vendor: VendorProfile,
         n_lines: int | None = None,
         qty_range: tuple[int, int] = (1, 12),
+        max_total: Decimal | None = ORDINARY_MAX_TOTAL,
     ) -> PurchaseOrderRecord:
         self._po_seq += self.rng.randint(1, 4)
-        lines = self._lines(vendor, n_lines or self.rng.randint(1, 4), qty_range)
+        lines = self._lines(vendor, n_lines or self.rng.randint(1, 4), qty_range, max_total)
         subtotal, tax, total = self._totals(lines)
         po = PurchaseOrderRecord(
             po_number=f"OC-2026-{self._po_seq:04d}",
@@ -350,7 +366,7 @@ class DatasetBuilder:
 
     def over_limit(self) -> int:
         vendor = self.rng.choice([v for v in VENDORS if v.products[0][1] > 100] or VENDORS)
-        po = self.new_po(vendor, n_lines=2, qty_range=(8, 14))
+        po = self.new_po(vendor, n_lines=2, qty_range=(8, 14), max_total=None)
         if po.total <= AUTO_APPROVAL_LIMIT:
             self.purchase_orders.pop()
             return self.over_limit()

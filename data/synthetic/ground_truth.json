@@ -258,108 +258,108 @@
     "template": "clasica",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Catamayo Express",
-      "vendor_tax_id": "1199080705001",
-      "invoice_number": "001-002-4643",
-      "issue_date": "2026-09-13",
-      "due_date": "2026-10-13",
+      "vendor_name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
+      "vendor_tax_id": "1195544332001",
+      "invoice_number": "001-002-000006702",
+      "issue_date": "2026-08-18",
+      "due_date": "2026-09-17",
       "currency": "USD",
-      "po_number": "OC-2026-0112",
+      "po_number": "OC-2026-0106",
       "line_items": [
         {
-          "description": "Seguro de carga",
+          "description": "Desinfección de áreas comunes",
+          "quantity": "1",
+          "unit_price": "95.00",
+          "total": "95.00"
+        },
+        {
+          "description": "Suministro de insumos de aseo",
           "quantity": "3",
-          "unit_price": "18.50",
-          "total": "55.50"
+          "unit_price": "64.30",
+          "total": "192.90"
         },
         {
-          "description": "Flete Loja - Quito (tonelada)",
+          "description": "Limpieza de vidrios en altura",
           "quantity": "1",
-          "unit_price": "110.00",
-          "total": "110.00"
+          "unit_price": "180.00",
+          "total": "180.00"
         },
         {
-          "description": "Estiba y desestiba",
+          "description": "Servicio de limpieza de oficinas (mes)",
           "quantity": "1",
-          "unit_price": "35.00",
-          "total": "35.00"
+          "unit_price": "420.00",
+          "total": "420.00"
         },
         {
-          "description": "Flete Loja - Guayaquil (tonelada)",
-          "quantity": "1",
-          "unit_price": "85.00",
-          "total": "85.00"
-        },
-        {
-          "description": "Flete Loja - Quito (tonelada)",
-          "quantity": "3",
-          "unit_price": "110.00",
-          "total": "330.00"
-        },
-        {
-          "description": "Seguro de carga",
-          "quantity": "1",
-          "unit_price": "18.50",
-          "total": "18.50"
-        },
-        {
-          "description": "Flete Loja - Quito (tonelada)",
-          "quantity": "3",
-          "unit_price": "110.00",
-          "total": "330.00"
-        },
-        {
-          "description": "Flete Loja - Guayaquil (tonelada)",
-          "quantity": "1",
-          "unit_price": "85.00",
-          "total": "85.00"
-        },
-        {
-          "description": "Flete Loja - Guayaquil (tonelada)",
+          "description": "Desinfección de áreas comunes",
           "quantity": "2",
-          "unit_price": "85.00",
-          "total": "170.00"
+          "unit_price": "95.00",
+          "total": "190.00"
         },
         {
-          "description": "Seguro de carga",
-          "quantity": "1",
-          "unit_price": "18.50",
-          "total": "18.50"
-        },
-        {
-          "description": "Flete Loja - Guayaquil (tonelada)",
+          "description": "Suministro de insumos de aseo",
           "quantity": "3",
-          "unit_price": "85.00",
-          "total": "255.00"
+          "unit_price": "64.30",
+          "total": "192.90"
         },
         {
-          "description": "Flete Loja - Guayaquil (tonelada)",
+          "description": "Desinfección de áreas comunes",
           "quantity": "1",
-          "unit_price": "85.00",
-          "total": "85.00"
+          "unit_price": "95.00",
+          "total": "95.00"
         },
         {
-          "description": "Estiba y desestiba",
+          "description": "Desinfección de áreas comunes",
           "quantity": "3",
-          "unit_price": "35.00",
-          "total": "105.00"
+          "unit_price": "95.00",
+          "total": "285.00"
         },
         {
-          "description": "Flete Loja - Quito (tonelada)",
-          "quantity": "3",
-          "unit_price": "110.00",
-          "total": "330.00"
-        },
-        {
-          "description": "Flete Loja - Guayaquil (tonelada)",
+          "description": "Suministro de insumos de aseo",
           "quantity": "1",
-          "unit_price": "85.00",
-          "total": "85.00"
+          "unit_price": "64.30",
+          "total": "64.30"
+        },
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "3",
+          "unit_price": "64.30",
+          "total": "192.90"
+        },
+        {
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "1",
+          "unit_price": "420.00",
+          "total": "420.00"
+        },
+        {
+          "description": "Desinfección de áreas comunes",
+          "quantity": "2",
+          "unit_price": "95.00",
+          "total": "190.00"
+        },
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "2",
+          "unit_price": "64.30",
+          "total": "128.60"
+        },
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "1",
+          "unit_price": "64.30",
+          "total": "64.30"
+        },
+        {
+          "description": "Suministro de insumos de aseo",
+          "quantity": "2",
+          "unit_price": "64.30",
+          "total": "128.60"
         }
       ],
-      "subtotal": "2097.50",
-      "tax": "314.63",
-      "total": "2412.13"
+      "subtotal": "2839.50",
+      "tax": "425.93",
+      "total": "3265.43"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -369,36 +369,42 @@
     "notes": ""
   },
   {
-    "file": "INV-004.png",
+    "file": "INV-004.jpg",
     "scenario": "clean_unpaid",
     "split": "dev",
-    "template": "moderna",
-    "render": "png",
+    "template": "clasica",
+    "render": "jpg",
     "extraction": {
-      "vendor_name": "Ferretería Zamora Hermanos Cía. Ltda.",
-      "vendor_tax_id": "1998877667001",
-      "invoice_number": "001-001-8437",
-      "issue_date": "2026-08-12",
-      "due_date": "2026-09-11",
+      "vendor_name": "DISTRIBUIDORA ANDINA DEL SUR SA",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001-001-000002485",
+      "issue_date": "2026-10-05",
+      "due_date": "2026-11-04",
       "currency": "USD",
-      "po_number": "OC-2026-0115",
+      "po_number": "OC-2026-0108",
       "line_items": [
         {
-          "description": "Tubo PVC 110 mm x 3 m",
+          "description": "Resma papel bond A4 75 g",
           "quantity": "9",
-          "unit_price": "9.60",
-          "total": "86.40"
+          "unit_price": "4.85",
+          "total": "43.65"
         },
         {
-          "description": "Juego de brocas para concreto",
-          "quantity": "1",
-          "unit_price": "22.40",
-          "total": "22.40"
+          "description": "Archivador lomo ancho",
+          "quantity": "5",
+          "unit_price": "3.20",
+          "total": "16.00"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "3",
+          "unit_price": "1.95",
+          "total": "5.85"
         }
       ],
-      "subtotal": "108.80",
-      "tax": "16.32",
-      "total": "125.12"
+      "subtotal": "65.50",
+      "tax": "9.83",
+      "total": "75.33"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -411,45 +417,33 @@
     "file": "INV-005.pdf",
     "scenario": "clean_paid",
     "split": "test",
-    "template": "moderna",
+    "template": "ride",
     "render": "pdf_scan",
     "extraction": {
-      "vendor_name": "DISTRIBUIDORA ANDINA DEL SUR SA",
-      "vendor_tax_id": "1197654321001",
-      "invoice_number": "001-001-000002486",
-      "issue_date": "2026-08-18",
-      "due_date": null,
+      "vendor_name": "Café Podocarpus",
+      "vendor_tax_id": "1191122336001",
+      "invoice_number": "001-002-000006392",
+      "issue_date": "2026-09-02",
+      "due_date": "2026-10-02",
       "currency": "USD",
-      "po_number": "OC-2026-0116",
+      "po_number": "OC-2026-0112",
       "line_items": [
         {
-          "description": "Archivador lomo ancho",
+          "description": "Servicio de meseros (hora)",
           "quantity": "7",
-          "unit_price": "3.20",
-          "total": "22.40"
+          "unit_price": "9.00",
+          "total": "63.00"
         },
         {
-          "description": "Cuaderno universitario 100 hojas",
-          "quantity": "10",
-          "unit_price": "1.95",
-          "total": "19.50"
-        },
-        {
-          "description": "Tóner compatible HP 26A",
-          "quantity": "4",
-          "unit_price": "38.90",
-          "total": "155.60"
-        },
-        {
-          "description": "Resma papel bond A4 75 g",
-          "quantity": "5",
-          "unit_price": "4.85",
-          "total": "24.25"
+          "description": "Bebidas y agua (paquete)",
+          "quantity": "7",
+          "unit_price": "15.00",
+          "total": "105.00"
         }
       ],
-      "subtotal": "221.75",
-      "tax": "33.26",
-      "total": "255.01"
+      "subtotal": "168.00",
+      "tax": "25.20",
+      "total": "193.20"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -462,141 +456,93 @@
     "file": "INV-006.pdf",
     "scenario": "clean_unpaid",
     "split": "test",
-    "template": "ride",
-    "render": "pdf_text",
-    "extraction": {
-      "vendor_name": "LIMPIEZA VILCABAMBA",
-      "vendor_tax_id": "1195544332001",
-      "invoice_number": "001-001-5006",
-      "issue_date": "2026-10-02",
-      "due_date": null,
-      "currency": "USD",
-      "po_number": "OC-2026-0120",
-      "line_items": [
-        {
-          "description": "Suministro de insumos de aseo",
-          "quantity": "2",
-          "unit_price": "64.30",
-          "total": "128.60"
-        },
-        {
-          "description": "Servicio de limpieza de oficinas (mes)",
-          "quantity": "7",
-          "unit_price": "420.00",
-          "total": "2940.00"
-        },
-        {
-          "description": "Limpieza de vidrios en altura",
-          "quantity": "4",
-          "unit_price": "180.00",
-          "total": "720.00"
-        },
-        {
-          "description": "Desinfección de áreas comunes",
-          "quantity": "3",
-          "unit_price": "95.00",
-          "total": "285.00"
-        }
-      ],
-      "subtotal": "4073.60",
-      "tax": "611.04",
-      "total": "4684.64"
-    },
-    "expected_action": "auto_approve",
-    "expected_findings": [
-      "po_matched"
-    ],
-    "duplicate_of": null,
-    "notes": ""
-  },
-  {
-    "file": "INV-007.pdf",
-    "scenario": "clean_paid",
-    "split": "dev",
-    "template": "clasica",
-    "render": "pdf_text",
-    "extraction": {
-      "vendor_name": "Café Podocarpus Catering S.A.",
-      "vendor_tax_id": "1191122336001",
-      "invoice_number": "001-002-7135",
-      "issue_date": "2026-09-27",
-      "due_date": "2026-10-27",
-      "currency": "USD",
-      "po_number": "OC-2026-0122",
-      "line_items": [
-        {
-          "description": "Almuerzo ejecutivo por persona",
-          "quantity": "1",
-          "unit_price": "7.80",
-          "total": "7.80"
-        },
-        {
-          "description": "Bebidas y agua (paquete)",
-          "quantity": "7",
-          "unit_price": "15.00",
-          "total": "105.00"
-        },
-        {
-          "description": "Servicio de meseros (hora)",
-          "quantity": "6",
-          "unit_price": "9.00",
-          "total": "54.00"
-        },
-        {
-          "description": "Coffee break por persona",
-          "quantity": "11",
-          "unit_price": "4.50",
-          "total": "49.50"
-        }
-      ],
-      "subtotal": "216.30",
-      "tax": "32.45",
-      "total": "248.75"
-    },
-    "expected_action": "auto_approve",
-    "expected_findings": [
-      "po_matched"
-    ],
-    "duplicate_of": null,
-    "notes": ""
-  },
-  {
-    "file": "INV-008.pdf",
-    "scenario": "clean_unpaid",
-    "split": "test",
     "template": "moderna",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Imprenta Saraguro Gráficas",
-      "vendor_tax_id": "1113456782001",
-      "invoice_number": "001-002-000006997",
-      "issue_date": "2026-09-26",
-      "due_date": null,
+      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
+      "vendor_tax_id": "1196677883001",
+      "invoice_number": "001-001-000001233",
+      "issue_date": "2026-09-03",
+      "due_date": "2026-10-03",
       "currency": "USD",
-      "po_number": "OC-2026-0124",
+      "po_number": "OC-2026-0113",
       "line_items": [
         {
-          "description": "Volantes full color x1000",
+          "description": "Mano de obra especializada (día)",
           "quantity": "2",
-          "unit_price": "45.00",
-          "total": "90.00"
-        },
-        {
-          "description": "Tarjetas de presentación x500",
-          "quantity": "7",
-          "unit_price": "28.00",
-          "total": "196.00"
-        },
-        {
-          "description": "Banner lona 2 x 1 m",
-          "quantity": "6",
-          "unit_price": "32.50",
-          "total": "195.00"
+          "unit_price": "55.00",
+          "total": "110.00"
         }
       ],
-      "subtotal": "481.00",
-      "tax": "72.15",
-      "total": "553.15"
+      "subtotal": "110.00",
+      "tax": "16.50",
+      "total": "126.50"
+    },
+    "expected_action": "auto_approve",
+    "expected_findings": [
+      "po_matched"
+    ],
+    "duplicate_of": null,
+    "notes": ""
+  },
+  {
+    "file": "INV-007.jpg",
+    "scenario": "clean_paid",
+    "split": "dev",
+    "template": "moderna",
+    "render": "jpg",
+    "extraction": {
+      "vendor_name": "Malacatos Ingeniería",
+      "vendor_tax_id": "1196677883001",
+      "invoice_number": "001-002-000001240",
+      "issue_date": "2026-08-23",
+      "due_date": null,
+      "currency": "USD",
+      "po_number": "OC-2026-0114",
+      "line_items": [
+        {
+          "description": "Mano de obra especializada (día)",
+          "quantity": "6",
+          "unit_price": "55.00",
+          "total": "330.00"
+        }
+      ],
+      "subtotal": "330.00",
+      "tax": "49.50",
+      "total": "379.50"
+    },
+    "expected_action": "auto_approve",
+    "expected_findings": [
+      "po_matched"
+    ],
+    "duplicate_of": null,
+    "notes": ""
+  },
+  {
+    "file": "INV-008.jpg",
+    "scenario": "clean_unpaid",
+    "split": "test",
+    "template": "ticket",
+    "render": "jpg",
+    "extraction": {
+      "vendor_name": "Transportes Catamayo Express S.A.",
+      "vendor_tax_id": "1199080705001",
+      "invoice_number": "001-001-000001728",
+      "issue_date": "2026-09-05",
+      "due_date": "2026-10-05",
+      "currency": "USD",
+      "po_number": "OC-2026-0115",
+      "line_items": [
+        {
+          "description": "Seguro de carga",
+          "quantity": "7",
+          "unit_price": "18.50",
+          "total": "129.50"
+        }
+      ],
+      "subtotal": "129.50",
+      "tax": "19.43",
+      "total": "148.93"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -609,45 +555,39 @@
     "file": "INV-009.pdf",
     "scenario": "clean_paid",
     "split": "test",
-    "template": "clasica",
+    "template": "ride",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Imprenta Saraguro Gráficas",
-      "vendor_tax_id": "1113456782001",
-      "invoice_number": "001-001-000007000",
-      "issue_date": "2026-08-27",
+      "vendor_name": "Serv. Limpieza Vilcabamba",
+      "vendor_tax_id": "1195544332001",
+      "invoice_number": "001-001-6708",
+      "issue_date": "2026-08-11",
       "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0127",
+      "po_number": "OC-2026-0119",
       "line_items": [
         {
-          "description": "Banner lona 2 x 1 m",
-          "quantity": "2",
-          "unit_price": "32.50",
-          "total": "65.00"
+          "description": "Suministro de insumos de aseo",
+          "quantity": "3",
+          "unit_price": "64.30",
+          "total": "192.90"
         },
         {
-          "description": "Tarjetas de presentación x500",
-          "quantity": "12",
-          "unit_price": "28.00",
-          "total": "336.00"
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "1",
+          "unit_price": "420.00",
+          "total": "420.00"
         },
         {
-          "description": "Talonarios de recibos",
-          "quantity": "4",
-          "unit_price": "12.75",
-          "total": "51.00"
-        },
-        {
-          "description": "Volantes full color x1000",
-          "quantity": "6",
-          "unit_price": "45.00",
-          "total": "270.00"
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "7",
+          "unit_price": "180.00",
+          "total": "1260.00"
         }
       ],
-      "subtotal": "722.00",
-      "tax": "108.30",
-      "total": "830.30"
+      "subtotal": "1872.90",
+      "tax": "280.94",
+      "total": "2153.84"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -660,33 +600,33 @@
     "file": "INV-010.pdf",
     "scenario": "clean_unpaid",
     "split": "dev",
-    "template": "ticket",
-    "render": "pdf_text",
+    "template": "moderna",
+    "render": "pdf_scan",
     "extraction": {
-      "vendor_name": "Distribuidora Andina del Sur S.A.",
-      "vendor_tax_id": "1197654321001",
-      "invoice_number": "001-001-000002495",
-      "issue_date": "2026-08-20",
-      "due_date": null,
+      "vendor_name": "TecnoLoja Soluciones S.A.S.",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-001-3334",
+      "issue_date": "2026-09-24",
+      "due_date": "2026-10-24",
       "currency": "USD",
-      "po_number": "OC-2026-0128",
+      "po_number": "OC-2026-0120",
       "line_items": [
         {
-          "description": "Tóner compatible HP 26A",
-          "quantity": "11",
-          "unit_price": "38.90",
-          "total": "427.90"
+          "description": "Licencia antivirus anual",
+          "quantity": "9",
+          "unit_price": "32.00",
+          "total": "288.00"
         },
         {
-          "description": "Archivador lomo ancho",
-          "quantity": "2",
-          "unit_price": "3.20",
-          "total": "6.40"
+          "description": "Switch 24 puertos gigabit",
+          "quantity": "1",
+          "unit_price": "214.90",
+          "total": "214.90"
         }
       ],
-      "subtotal": "434.30",
-      "tax": "65.15",
-      "total": "499.45"
+      "subtotal": "502.90",
+      "tax": "75.44",
+      "total": "578.34"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -699,33 +639,39 @@
     "file": "INV-011.pdf",
     "scenario": "clean_paid",
     "split": "test",
-    "template": "ride",
-    "render": "pdf_scan",
+    "template": "moderna",
+    "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001002000001237",
-      "issue_date": "2026-09-13",
-      "due_date": "2026-10-13",
+      "vendor_name": "Distribuidora Andina del Sur S.A.",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001002000002486",
+      "issue_date": "2026-09-04",
+      "due_date": "2026-10-04",
       "currency": "USD",
-      "po_number": "OC-2026-0131",
+      "po_number": "OC-2026-0121",
       "line_items": [
         {
-          "description": "Cielo raso de gypsum (m2)",
-          "quantity": "8",
-          "unit_price": "24.50",
-          "total": "196.00"
+          "description": "Caja de esferos azules x12",
+          "quantity": "4",
+          "unit_price": "5.75",
+          "total": "23.00"
         },
         {
-          "description": "Mano de obra especializada (día)",
-          "quantity": "2",
-          "unit_price": "55.00",
-          "total": "110.00"
+          "description": "Tóner compatible HP 26A",
+          "quantity": "11",
+          "unit_price": "38.90",
+          "total": "427.90"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "9",
+          "unit_price": "1.95",
+          "total": "17.55"
         }
       ],
-      "subtotal": "306.00",
-      "tax": "45.90",
-      "total": "351.90"
+      "subtotal": "468.45",
+      "tax": "70.27",
+      "total": "538.72"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -735,36 +681,42 @@
     "notes": ""
   },
   {
-    "file": "INV-012.pdf",
+    "file": "INV-012.jpg",
     "scenario": "clean_unpaid",
     "split": "test",
-    "template": "clasica",
-    "render": "pdf_text",
+    "template": "ride",
+    "render": "jpg",
     "extraction": {
-      "vendor_name": "Café Podocarpus Catering S.A.",
-      "vendor_tax_id": "1191122336001",
-      "invoice_number": "001002000007136",
-      "issue_date": "2026-10-08",
-      "due_date": "2026-11-07",
+      "vendor_name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
+      "vendor_tax_id": "1195544332001",
+      "invoice_number": "001-002-6709",
+      "issue_date": "2026-08-16",
+      "due_date": "2026-09-15",
       "currency": "USD",
-      "po_number": "OC-2026-0133",
+      "po_number": "OC-2026-0123",
       "line_items": [
         {
-          "description": "Coffee break por persona",
-          "quantity": "7",
-          "unit_price": "4.50",
-          "total": "31.50"
+          "description": "Desinfección de áreas comunes",
+          "quantity": "12",
+          "unit_price": "95.00",
+          "total": "1140.00"
         },
         {
-          "description": "Almuerzo ejecutivo por persona",
-          "quantity": "6",
-          "unit_price": "7.80",
-          "total": "46.80"
+          "description": "Suministro de insumos de aseo",
+          "quantity": "12",
+          "unit_price": "64.30",
+          "total": "771.60"
+        },
+        {
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "5",
+          "unit_price": "180.00",
+          "total": "900.00"
         }
       ],
-      "subtotal": "78.30",
-      "tax": "11.75",
-      "total": "90.05"
+      "subtotal": "2811.60",
+      "tax": "421.74",
+      "total": "3233.34"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -777,39 +729,27 @@
     "file": "INV-013.jpg",
     "scenario": "clean_paid",
     "split": "dev",
-    "template": "ticket",
+    "template": "ride",
     "render": "jpg",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-002-000001241",
-      "issue_date": "2026-09-08",
-      "due_date": "2026-10-08",
+      "vendor_name": "Ferretería Zamora",
+      "vendor_tax_id": "1998877667001",
+      "invoice_number": "001-002-6972",
+      "issue_date": "2026-09-26",
+      "due_date": "2026-10-26",
       "currency": "USD",
-      "po_number": "OC-2026-0137",
+      "po_number": "OC-2026-0124",
       "line_items": [
         {
-          "description": "Adecuación de oficinas (m2)",
-          "quantity": "1",
-          "unit_price": "68.00",
-          "total": "68.00"
-        },
-        {
-          "description": "Cielo raso de gypsum (m2)",
-          "quantity": "5",
-          "unit_price": "24.50",
-          "total": "122.50"
-        },
-        {
-          "description": "Instalación eléctrica (punto)",
-          "quantity": "6",
-          "unit_price": "42.00",
-          "total": "252.00"
+          "description": "Pintura látex galón blanco",
+          "quantity": "10",
+          "unit_price": "17.80",
+          "total": "178.00"
         }
       ],
-      "subtotal": "442.50",
-      "tax": "66.38",
-      "total": "508.88"
+      "subtotal": "178.00",
+      "tax": "26.70",
+      "total": "204.70"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -822,27 +762,39 @@
     "file": "INV-014.pdf",
     "scenario": "clean_unpaid",
     "split": "test",
-    "template": "ride",
+    "template": "clasica",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Ferretería Zamora Hermanos Cía. Ltda.",
-      "vendor_tax_id": "1998877667001",
-      "invoice_number": "001-001-8440",
-      "issue_date": "2026-08-23",
-      "due_date": "2026-09-22",
+      "vendor_name": "TecnoLoja",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-002-000003343",
+      "issue_date": "2026-09-12",
+      "due_date": "2026-10-12",
       "currency": "USD",
-      "po_number": "OC-2026-0138",
+      "po_number": "OC-2026-0125",
       "line_items": [
         {
-          "description": "Pintura látex galón blanco",
-          "quantity": "8",
-          "unit_price": "17.80",
-          "total": "142.40"
+          "description": "Soporte técnico (hora)",
+          "quantity": "4",
+          "unit_price": "25.00",
+          "total": "100.00"
+        },
+        {
+          "description": "Switch 24 puertos gigabit",
+          "quantity": "9",
+          "unit_price": "214.90",
+          "total": "1934.10"
+        },
+        {
+          "description": "Licencia antivirus anual",
+          "quantity": "1",
+          "unit_price": "32.00",
+          "total": "32.00"
         }
       ],
-      "subtotal": "142.40",
-      "tax": "21.36",
-      "total": "163.76"
+      "subtotal": "2066.10",
+      "tax": "309.92",
+      "total": "2376.02"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -855,45 +807,27 @@
     "file": "INV-015.pdf",
     "scenario": "clean_paid",
     "split": "test",
-    "template": "moderna",
+    "template": "ride",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Ferretería Zamora Hermanos Cía. Ltda.",
-      "vendor_tax_id": "1998877667001",
-      "invoice_number": "001-002-000008441",
-      "issue_date": "2026-09-24",
-      "due_date": "2026-10-24",
+      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
+      "vendor_tax_id": "1196677883001",
+      "invoice_number": "001-001-000001247",
+      "issue_date": "2026-09-01",
+      "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0142",
+      "po_number": "OC-2026-0129",
       "line_items": [
         {
-          "description": "Pintura látex galón blanco",
-          "quantity": "7",
-          "unit_price": "17.80",
-          "total": "124.60"
-        },
-        {
-          "description": "Tubo PVC 110 mm x 3 m",
-          "quantity": "11",
-          "unit_price": "9.60",
-          "total": "105.60"
-        },
-        {
-          "description": "Juego de brocas para concreto",
-          "quantity": "2",
-          "unit_price": "22.40",
-          "total": "44.80"
-        },
-        {
-          "description": "Cemento Portland saco 50 kg",
-          "quantity": "8",
-          "unit_price": "8.45",
-          "total": "67.60"
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "5",
+          "unit_price": "42.00",
+          "total": "210.00"
         }
       ],
-      "subtotal": "342.60",
-      "tax": "51.39",
-      "total": "393.99"
+      "subtotal": "210.00",
+      "tax": "31.50",
+      "total": "241.50"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -906,27 +840,45 @@
     "file": "INV-016.pdf",
     "scenario": "clean_unpaid",
     "split": "dev",
-    "template": "ticket",
+    "template": "moderna",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Transportes Catamayo Express S.A.",
-      "vendor_tax_id": "1199080705001",
-      "invoice_number": "001002000004645",
-      "issue_date": "2026-09-10",
+      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
+      "vendor_tax_id": "1196677883001",
+      "invoice_number": "001-001-1250",
+      "issue_date": "2026-08-16",
       "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0150",
+      "po_number": "OC-2026-0131",
       "line_items": [
         {
-          "description": "Flete Loja - Guayaquil (tonelada)",
-          "quantity": "8",
-          "unit_price": "85.00",
-          "total": "680.00"
+          "description": "Mano de obra especializada (día)",
+          "quantity": "12",
+          "unit_price": "55.00",
+          "total": "660.00"
+        },
+        {
+          "description": "Instalación eléctrica (punto)",
+          "quantity": "12",
+          "unit_price": "42.00",
+          "total": "504.00"
+        },
+        {
+          "description": "Adecuación de oficinas (m2)",
+          "quantity": "2",
+          "unit_price": "68.00",
+          "total": "136.00"
+        },
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "5",
+          "unit_price": "24.50",
+          "total": "122.50"
         }
       ],
-      "subtotal": "680.00",
-      "tax": "102.00",
-      "total": "782.00"
+      "subtotal": "1422.50",
+      "tax": "213.38",
+      "total": "1635.88"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -939,39 +891,45 @@
     "file": "INV-017.pdf",
     "scenario": "clean_paid",
     "split": "test",
-    "template": "moderna",
+    "template": "clasica",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Café Podocarpus Catering S.A.",
-      "vendor_tax_id": "1191122336001",
-      "invoice_number": "001-002-7138",
-      "issue_date": "2026-08-27",
+      "vendor_name": "Ferretería Zamora",
+      "vendor_tax_id": "1998877667001",
+      "invoice_number": "001002000006976",
+      "issue_date": "2026-10-05",
       "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0151",
+      "po_number": "OC-2026-0132",
       "line_items": [
         {
-          "description": "Servicio de meseros (hora)",
+          "description": "Pintura látex galón blanco",
+          "quantity": "7",
+          "unit_price": "17.80",
+          "total": "124.60"
+        },
+        {
+          "description": "Juego de brocas para concreto",
+          "quantity": "12",
+          "unit_price": "22.40",
+          "total": "268.80"
+        },
+        {
+          "description": "Varilla corrugada 12 mm x 12 m",
+          "quantity": "1",
+          "unit_price": "11.30",
+          "total": "11.30"
+        },
+        {
+          "description": "Tubo PVC 110 mm x 3 m",
           "quantity": "10",
-          "unit_price": "9.00",
-          "total": "90.00"
-        },
-        {
-          "description": "Almuerzo ejecutivo por persona",
-          "quantity": "9",
-          "unit_price": "7.80",
-          "total": "70.20"
-        },
-        {
-          "description": "Coffee break por persona",
-          "quantity": "4",
-          "unit_price": "4.50",
-          "total": "18.00"
+          "unit_price": "9.60",
+          "total": "96.00"
         }
       ],
-      "subtotal": "178.20",
-      "tax": "26.73",
-      "total": "204.93"
+      "subtotal": "500.70",
+      "tax": "75.11",
+      "total": "575.81"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -987,24 +945,42 @@
     "template": "moderna",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-002-1245",
-      "issue_date": "2026-09-11",
+      "vendor_name": "DIST. ANDINA DEL SUR",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001-002-000002493",
+      "issue_date": "2026-09-12",
       "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0154",
+      "po_number": "OC-2026-0133",
       "line_items": [
         {
-          "description": "Instalación eléctrica (punto)",
-          "quantity": "7",
-          "unit_price": "42.00",
-          "total": "294.00"
+          "description": "Archivador lomo ancho",
+          "quantity": "8",
+          "unit_price": "3.20",
+          "total": "25.60"
+        },
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "2",
+          "unit_price": "38.90",
+          "total": "77.80"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "3",
+          "unit_price": "4.85",
+          "total": "14.55"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "10",
+          "unit_price": "1.95",
+          "total": "19.50"
         }
       ],
-      "subtotal": "294.00",
-      "tax": "44.10",
-      "total": "338.10"
+      "subtotal": "137.45",
+      "tax": "20.62",
+      "total": "158.07"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1017,39 +993,27 @@
     "file": "INV-019.pdf",
     "scenario": "clean_paid",
     "split": "dev",
-    "template": "moderna",
-    "render": "pdf_text",
+    "template": "ride",
+    "render": "pdf_scan",
     "extraction": {
-      "vendor_name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
-      "vendor_tax_id": "1195544332001",
-      "invoice_number": "001-001-5008",
-      "issue_date": "2026-08-18",
-      "due_date": "2026-09-17",
+      "vendor_name": "TecnoLoja Soluciones S.A.S.",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-001-000003351",
+      "issue_date": "2026-08-27",
+      "due_date": "2026-09-26",
       "currency": "USD",
-      "po_number": "OC-2026-0157",
+      "po_number": "OC-2026-0134",
       "line_items": [
         {
-          "description": "Desinfección de áreas comunes",
-          "quantity": "3",
-          "unit_price": "95.00",
-          "total": "285.00"
-        },
-        {
-          "description": "Servicio de limpieza de oficinas (mes)",
-          "quantity": "5",
-          "unit_price": "420.00",
-          "total": "2100.00"
-        },
-        {
-          "description": "Limpieza de vidrios en altura",
-          "quantity": "4",
-          "unit_price": "180.00",
-          "total": "720.00"
+          "description": "Switch 24 puertos gigabit",
+          "quantity": "7",
+          "unit_price": "214.90",
+          "total": "1504.30"
         }
       ],
-      "subtotal": "3105.00",
-      "tax": "465.75",
-      "total": "3570.75"
+      "subtotal": "1504.30",
+      "tax": "225.65",
+      "total": "1729.95"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1065,42 +1029,24 @@
     "template": "ride",
     "render": "jpg",
     "extraction": {
-      "vendor_name": "Imprenta Saraguro Gráficas",
-      "vendor_tax_id": "1113456782001",
-      "invoice_number": "001-001-000007005",
-      "issue_date": "2026-09-27",
-      "due_date": "2026-10-27",
+      "vendor_name": "PODOCARPUS CATERING",
+      "vendor_tax_id": "1191122336001",
+      "invoice_number": "001-002-6398",
+      "issue_date": "2026-08-16",
+      "due_date": "2026-09-15",
       "currency": "USD",
-      "po_number": "OC-2026-0160",
+      "po_number": "OC-2026-0135",
       "line_items": [
         {
-          "description": "Talonarios de recibos",
-          "quantity": "2",
-          "unit_price": "12.75",
-          "total": "25.50"
-        },
-        {
-          "description": "Tarjetas de presentación x500",
-          "quantity": "6",
-          "unit_price": "28.00",
-          "total": "168.00"
-        },
-        {
-          "description": "Volantes full color x1000",
-          "quantity": "2",
-          "unit_price": "45.00",
-          "total": "90.00"
-        },
-        {
-          "description": "Banner lona 2 x 1 m",
-          "quantity": "9",
-          "unit_price": "32.50",
-          "total": "292.50"
+          "description": "Coffee break por persona",
+          "quantity": "1",
+          "unit_price": "4.50",
+          "total": "4.50"
         }
       ],
-      "subtotal": "576.00",
-      "tax": "86.40",
-      "total": "662.40"
+      "subtotal": "4.50",
+      "tax": "0.68",
+      "total": "5.18"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1110,36 +1056,36 @@
     "notes": ""
   },
   {
-    "file": "INV-021.pdf",
+    "file": "INV-021.jpg",
     "scenario": "clean_paid",
     "split": "test",
-    "template": "clasica",
-    "render": "pdf_scan",
+    "template": "moderna",
+    "render": "jpg",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001002000001253",
-      "issue_date": "2026-10-03",
-      "due_date": "2026-11-02",
+      "vendor_name": "DIST. ANDINA DEL SUR",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001-002-2497",
+      "issue_date": "2026-08-22",
+      "due_date": "2026-09-21",
       "currency": "USD",
-      "po_number": "OC-2026-0162",
+      "po_number": "OC-2026-0136",
       "line_items": [
         {
-          "description": "Mano de obra especializada (día)",
-          "quantity": "4",
-          "unit_price": "55.00",
-          "total": "220.00"
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "8",
+          "unit_price": "1.95",
+          "total": "15.60"
         },
         {
-          "description": "Instalación eléctrica (punto)",
-          "quantity": "6",
-          "unit_price": "42.00",
-          "total": "252.00"
+          "description": "Caja de esferos azules x12",
+          "quantity": "3",
+          "unit_price": "5.75",
+          "total": "17.25"
         }
       ],
-      "subtotal": "472.00",
-      "tax": "70.80",
-      "total": "542.80"
+      "subtotal": "32.85",
+      "tax": "4.93",
+      "total": "37.78"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1152,39 +1098,39 @@
     "file": "INV-022.pdf",
     "scenario": "clean_unpaid",
     "split": "dev",
-    "template": "clasica",
-    "render": "pdf_text",
+    "template": "moderna",
+    "render": "pdf_scan",
     "extraction": {
       "vendor_name": "PODOCARPUS CATERING",
       "vendor_tax_id": "1191122336001",
-      "invoice_number": "001-002-000007140",
-      "issue_date": "2026-09-26",
+      "invoice_number": "001001000006404",
+      "issue_date": "2026-09-28",
       "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0163",
+      "po_number": "OC-2026-0137",
       "line_items": [
         {
           "description": "Almuerzo ejecutivo por persona",
-          "quantity": "1",
+          "quantity": "7",
           "unit_price": "7.80",
-          "total": "7.80"
-        },
-        {
-          "description": "Bebidas y agua (paquete)",
-          "quantity": "4",
-          "unit_price": "15.00",
-          "total": "60.00"
+          "total": "54.60"
         },
         {
           "description": "Coffee break por persona",
-          "quantity": "7",
+          "quantity": "4",
           "unit_price": "4.50",
-          "total": "31.50"
+          "total": "18.00"
+        },
+        {
+          "description": "Servicio de meseros (hora)",
+          "quantity": "8",
+          "unit_price": "9.00",
+          "total": "72.00"
         }
       ],
-      "subtotal": "99.30",
-      "tax": "14.90",
-      "total": "114.20"
+      "subtotal": "144.60",
+      "tax": "21.69",
+      "total": "166.29"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1194,30 +1140,48 @@
     "notes": ""
   },
   {
-    "file": "INV-023.pdf",
+    "file": "INV-023.jpg",
     "scenario": "clean_paid",
     "split": "test",
     "template": "ride",
-    "render": "pdf_text",
+    "render": "jpg",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-002-000001259",
-      "issue_date": "2026-08-26",
-      "due_date": null,
+      "vendor_name": "TecnoLoja Soluciones S.A.S.",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-001-000003352",
+      "issue_date": "2026-08-16",
+      "due_date": "2026-09-15",
       "currency": "USD",
-      "po_number": "OC-2026-0166",
+      "po_number": "OC-2026-0140",
       "line_items": [
         {
-          "description": "Instalación eléctrica (punto)",
-          "quantity": "5",
-          "unit_price": "42.00",
-          "total": "210.00"
+          "description": "Soporte técnico (hora)",
+          "quantity": "7",
+          "unit_price": "25.00",
+          "total": "175.00"
+        },
+        {
+          "description": "Switch 24 puertos gigabit",
+          "quantity": "1",
+          "unit_price": "214.90",
+          "total": "214.90"
+        },
+        {
+          "description": "Licencia antivirus anual",
+          "quantity": "9",
+          "unit_price": "32.00",
+          "total": "288.00"
+        },
+        {
+          "description": "Monitor 24\" IPS Full HD",
+          "quantity": "2",
+          "unit_price": "149.50",
+          "total": "299.00"
         }
       ],
-      "subtotal": "210.00",
-      "tax": "31.50",
-      "total": "241.50"
+      "subtotal": "976.90",
+      "tax": "146.54",
+      "total": "1123.44"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1227,48 +1191,36 @@
     "notes": ""
   },
   {
-    "file": "INV-024.pdf",
+    "file": "INV-024.png",
     "scenario": "clean_unpaid",
     "split": "test",
-    "template": "clasica",
-    "render": "pdf_scan",
+    "template": "ride",
+    "render": "png",
     "extraction": {
-      "vendor_name": "Imprenta Saraguro Gráficas",
-      "vendor_tax_id": "1113456782001",
-      "invoice_number": "001-002-000007008",
-      "issue_date": "2026-08-21",
-      "due_date": "2026-09-20",
+      "vendor_name": "Ferretería Zamora Hermanos Cía. Ltda.",
+      "vendor_tax_id": "1998877667001",
+      "invoice_number": "001-002-000006985",
+      "issue_date": "2026-09-23",
+      "due_date": "2026-10-23",
       "currency": "USD",
-      "po_number": "OC-2026-0169",
+      "po_number": "OC-2026-0141",
       "line_items": [
         {
-          "description": "Volantes full color x1000",
-          "quantity": "7",
-          "unit_price": "45.00",
-          "total": "315.00"
-        },
-        {
-          "description": "Banner lona 2 x 1 m",
-          "quantity": "6",
-          "unit_price": "32.50",
-          "total": "195.00"
-        },
-        {
-          "description": "Talonarios de recibos",
+          "description": "Pintura látex galón blanco",
           "quantity": "11",
-          "unit_price": "12.75",
-          "total": "140.25"
+          "unit_price": "17.80",
+          "total": "195.80"
         },
         {
-          "description": "Tarjetas de presentación x500",
-          "quantity": "5",
-          "unit_price": "28.00",
-          "total": "140.00"
+          "description": "Cemento Portland saco 50 kg",
+          "quantity": "10",
+          "unit_price": "8.45",
+          "total": "84.50"
         }
       ],
-      "subtotal": "790.25",
-      "tax": "118.54",
-      "total": "908.79"
+      "subtotal": "280.30",
+      "tax": "42.05",
+      "total": "322.35"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1281,39 +1233,33 @@
     "file": "INV-025.pdf",
     "scenario": "clean_paid",
     "split": "dev",
-    "template": "clasica",
+    "template": "moderna",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-002-000001262",
-      "issue_date": "2026-08-09",
-      "due_date": null,
+      "vendor_name": "Distribuidora Andina del Sur S.A.",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001-001-000002499",
+      "issue_date": "2026-09-19",
+      "due_date": "2026-10-19",
       "currency": "USD",
-      "po_number": "OC-2026-0173",
+      "po_number": "OC-2026-0142",
       "line_items": [
         {
-          "description": "Instalación eléctrica (punto)",
-          "quantity": "3",
-          "unit_price": "42.00",
-          "total": "126.00"
+          "description": "Tóner compatible HP 26A",
+          "quantity": "2",
+          "unit_price": "38.90",
+          "total": "77.80"
         },
         {
-          "description": "Mano de obra especializada (día)",
-          "quantity": "7",
-          "unit_price": "55.00",
-          "total": "385.00"
-        },
-        {
-          "description": "Adecuación de oficinas (m2)",
-          "quantity": "9",
-          "unit_price": "68.00",
-          "total": "612.00"
+          "description": "Caja de esferos azules x12",
+          "quantity": "4",
+          "unit_price": "5.75",
+          "total": "23.00"
         }
       ],
-      "subtotal": "1123.00",
-      "tax": "168.45",
-      "total": "1291.45"
+      "subtotal": "100.80",
+      "tax": "15.12",
+      "total": "115.92"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1329,30 +1275,30 @@
     "template": "moderna",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "IMPRENTA SARAGURO",
-      "vendor_tax_id": "1113456782001",
-      "invoice_number": "001-002-000007010",
-      "issue_date": "2026-08-30",
-      "due_date": "2026-09-29",
+      "vendor_name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
+      "vendor_tax_id": "1195544332001",
+      "invoice_number": "001-001-000006714",
+      "issue_date": "2026-08-18",
+      "due_date": "2026-09-17",
       "currency": "USD",
-      "po_number": "OC-2026-0177",
+      "po_number": "OC-2026-0145",
       "line_items": [
         {
-          "description": "Banner lona 2 x 1 m",
+          "description": "Suministro de insumos de aseo",
           "quantity": "9",
-          "unit_price": "32.50",
-          "total": "292.50"
+          "unit_price": "64.30",
+          "total": "578.70"
         },
         {
-          "description": "Talonarios de recibos",
-          "quantity": "2",
-          "unit_price": "12.75",
-          "total": "25.50"
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "3",
+          "unit_price": "180.00",
+          "total": "540.00"
         }
       ],
-      "subtotal": "318.00",
-      "tax": "47.70",
-      "total": "365.70"
+      "subtotal": "1118.70",
+      "tax": "167.81",
+      "total": "1286.51"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1366,32 +1312,32 @@
     "scenario": "within_tolerance",
     "split": "test",
     "template": "ride",
-    "render": "pdf_text",
+    "render": "pdf_scan",
     "extraction": {
-      "vendor_name": "TRANSPORTES CATAMAYO",
-      "vendor_tax_id": "1199080705001",
-      "invoice_number": "001-002-000004654",
-      "issue_date": "2026-09-11",
+      "vendor_name": "TecnoLoja Soluciones S.A.S.",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-001-3353",
+      "issue_date": "2026-09-14",
       "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0178",
+      "po_number": "OC-2026-0148",
       "line_items": [
         {
-          "description": "Flete Loja - Guayaquil (tonelada)",
+          "description": "Soporte técnico (hora)",
           "quantity": "1",
-          "unit_price": "510.02",
-          "total": "510.02"
+          "unit_price": "125.01",
+          "total": "125.01"
         },
         {
-          "description": "Flete Loja - Quito (tonelada)",
-          "quantity": "6",
-          "unit_price": "110.00",
-          "total": "660.00"
+          "description": "Monitor 24\" IPS Full HD",
+          "quantity": "12",
+          "unit_price": "149.50",
+          "total": "1794.00"
         }
       ],
-      "subtotal": "1170.02",
-      "tax": "175.50",
-      "total": "1345.52"
+      "subtotal": "1919.01",
+      "tax": "287.85",
+      "total": "2206.86"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1404,45 +1350,39 @@
     "file": "INV-028.jpg",
     "scenario": "within_tolerance",
     "split": "dev",
-    "template": "moderna",
+    "template": "ticket",
     "render": "jpg",
     "extraction": {
-      "vendor_name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
-      "vendor_tax_id": "1195544332001",
-      "invoice_number": "001-002-000005016",
-      "issue_date": "2026-09-15",
-      "due_date": null,
+      "vendor_name": "TecnoLoja",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-002-3358",
+      "issue_date": "2026-09-11",
+      "due_date": "2026-10-11",
       "currency": "USD",
-      "po_number": "OC-2026-0182",
+      "po_number": "OC-2026-0151",
       "line_items": [
         {
-          "description": "Servicio de limpieza de oficinas (mes)",
+          "description": "Soporte técnico (hora)",
           "quantity": "1",
-          "unit_price": "3780.02",
-          "total": "3780.02"
+          "unit_price": "275.03",
+          "total": "275.03"
         },
         {
-          "description": "Limpieza de vidrios en altura",
+          "description": "Monitor 24\" IPS Full HD",
+          "quantity": "7",
+          "unit_price": "149.50",
+          "total": "1046.50"
+        },
+        {
+          "description": "Switch 24 puertos gigabit",
           "quantity": "6",
-          "unit_price": "180.00",
-          "total": "1080.00"
-        },
-        {
-          "description": "Suministro de insumos de aseo",
-          "quantity": "11",
-          "unit_price": "64.30",
-          "total": "707.30"
-        },
-        {
-          "description": "Desinfección de áreas comunes",
-          "quantity": "8",
-          "unit_price": "95.00",
-          "total": "760.00"
+          "unit_price": "214.90",
+          "total": "1289.40"
         }
       ],
-      "subtotal": "6327.32",
-      "tax": "949.10",
-      "total": "7276.42"
+      "subtotal": "2610.93",
+      "tax": "391.64",
+      "total": "3002.57"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1458,24 +1398,30 @@
     "template": "clasica",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "TecnoLoja Soluciones S.A.S.",
-      "vendor_tax_id": "1192233441001",
-      "invoice_number": "001-002-000005115",
-      "issue_date": "2026-09-13",
-      "due_date": null,
+      "vendor_name": "Transportes Catamayo Express S.A.",
+      "vendor_tax_id": "1199080705001",
+      "invoice_number": "001001000001731",
+      "issue_date": "2026-08-26",
+      "due_date": "2026-09-25",
       "currency": "USD",
-      "po_number": "OC-2026-0184",
+      "po_number": "OC-2026-0152",
       "line_items": [
         {
-          "description": "Soporte técnico (hora)",
+          "description": "Estiba y desestiba",
           "quantity": "1",
-          "unit_price": "75.03",
-          "total": "75.03"
+          "unit_price": "280.01",
+          "total": "280.01"
+        },
+        {
+          "description": "Seguro de carga",
+          "quantity": "8",
+          "unit_price": "18.50",
+          "total": "148.00"
         }
       ],
-      "subtotal": "75.03",
-      "tax": "11.25",
-      "total": "86.28"
+      "subtotal": "428.01",
+      "tax": "64.20",
+      "total": "492.21"
     },
     "expected_action": "auto_approve",
     "expected_findings": [
@@ -1491,36 +1437,30 @@
     "template": "ride",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "LIMPIEZA VILCABAMBA",
-      "vendor_tax_id": "1195544332001",
-      "invoice_number": "001002000005021",
-      "issue_date": "2026-09-27",
-      "due_date": "2026-10-27",
+      "vendor_name": "Café Podocarpus Catering S.A.",
+      "vendor_tax_id": "1191122336001",
+      "invoice_number": "001002000006405",
+      "issue_date": "2026-09-11",
+      "due_date": "2026-10-11",
       "currency": "USD",
-      "po_number": "OC-2026-0185",
+      "po_number": "OC-2026-0155",
       "line_items": [
         {
-          "description": "Suministro de insumos de aseo",
-          "quantity": "8",
-          "unit_price": "64.30",
-          "total": "514.40"
+          "description": "Coffee break por persona",
+          "quantity": "15",
+          "unit_price": "4.50",
+          "total": "67.50"
         },
         {
-          "description": "Servicio de limpieza de oficinas (mes)",
-          "quantity": "6",
-          "unit_price": "420.00",
-          "total": "2520.00"
-        },
-        {
-          "description": "Desinfección de áreas comunes",
-          "quantity": "5",
-          "unit_price": "95.00",
-          "total": "475.00"
+          "description": "Servicio de meseros (hora)",
+          "quantity": "1",
+          "unit_price": "9.00",
+          "total": "9.00"
         }
       ],
-      "subtotal": "3509.40",
-      "tax": "526.41",
-      "total": "4035.81"
+      "subtotal": "76.50",
+      "tax": "11.48",
+      "total": "87.98"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -1533,39 +1473,45 @@
     "file": "INV-031.pdf",
     "scenario": "amount_mismatch",
     "split": "dev",
-    "template": "ride",
+    "template": "moderna",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "DIST. ANDINA DEL SUR",
+      "vendor_name": "Distribuidora Andina del Sur S.A.",
       "vendor_tax_id": "1197654321001",
-      "invoice_number": "001-001-000002501",
-      "issue_date": "2026-09-10",
+      "invoice_number": "001001000002503",
+      "issue_date": "2026-08-19",
       "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0189",
+      "po_number": "OC-2026-0159",
       "line_items": [
         {
-          "description": "Resma papel bond A4 75 g",
-          "quantity": "2",
-          "unit_price": "4.85",
-          "total": "9.70"
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "4",
+          "unit_price": "1.95",
+          "total": "7.80"
+        },
+        {
+          "description": "Archivador lomo ancho",
+          "quantity": "11",
+          "unit_price": "3.20",
+          "total": "35.20"
         },
         {
           "description": "Caja de esferos azules x12",
-          "quantity": "12",
+          "quantity": "8",
           "unit_price": "5.75",
-          "total": "69.00"
+          "total": "46.00"
         },
         {
-          "description": "Tóner compatible HP 26A",
-          "quantity": "4",
-          "unit_price": "38.90",
-          "total": "155.60"
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "8",
+          "unit_price": "4.85",
+          "total": "38.80"
         }
       ],
-      "subtotal": "234.30",
-      "tax": "35.15",
-      "total": "269.45"
+      "subtotal": "127.80",
+      "tax": "19.17",
+      "total": "146.97"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -1575,153 +1521,171 @@
     "notes": "Factura cobra 1 unidades más que la OC."
   },
   {
-    "file": "INV-032.pdf",
+    "file": "INV-032.jpg",
     "scenario": "amount_mismatch",
     "split": "test",
-    "template": "ticket",
+    "template": "ride",
+    "render": "jpg",
+    "extraction": {
+      "vendor_name": "Imprenta Saraguro Gráficas",
+      "vendor_tax_id": "1113456782001",
+      "invoice_number": "001-002-7760",
+      "issue_date": "2026-09-22",
+      "due_date": "2026-10-22",
+      "currency": "USD",
+      "po_number": "OC-2026-0163",
+      "line_items": [
+        {
+          "description": "Volantes full color x1000",
+          "quantity": "5",
+          "unit_price": "45.00",
+          "total": "225.00"
+        },
+        {
+          "description": "Tarjetas de presentación x500",
+          "quantity": "7",
+          "unit_price": "28.00",
+          "total": "196.00"
+        },
+        {
+          "description": "Talonarios de recibos",
+          "quantity": "11",
+          "unit_price": "12.75",
+          "total": "140.25"
+        },
+        {
+          "description": "Banner lona 2 x 1 m",
+          "quantity": "4",
+          "unit_price": "32.50",
+          "total": "130.00"
+        }
+      ],
+      "subtotal": "691.25",
+      "tax": "103.69",
+      "total": "794.94"
+    },
+    "expected_action": "human_review",
+    "expected_findings": [
+      "amount_mismatch"
+    ],
+    "duplicate_of": null,
+    "notes": "Factura cobra 3 unidades más que la OC."
+  },
+  {
+    "file": "INV-033.pdf",
+    "scenario": "amount_mismatch",
+    "split": "test",
+    "template": "moderna",
     "render": "pdf_scan",
     "extraction": {
-      "vendor_name": "CONSTRUCTORA MALACATOS",
+      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
       "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-001-000001268",
-      "issue_date": "2026-09-04",
-      "due_date": "2026-10-04",
+      "invoice_number": "001001000001251",
+      "issue_date": "2026-09-15",
+      "due_date": "2026-10-15",
       "currency": "USD",
-      "po_number": "OC-2026-0191",
+      "po_number": "OC-2026-0164",
       "line_items": [
+        {
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "10",
+          "unit_price": "24.50",
+          "total": "245.00"
+        },
+        {
+          "description": "Mano de obra especializada (día)",
+          "quantity": "2",
+          "unit_price": "55.00",
+          "total": "110.00"
+        },
         {
           "description": "Adecuación de oficinas (m2)",
           "quantity": "12",
           "unit_price": "68.00",
           "total": "816.00"
-        },
-        {
-          "description": "Cielo raso de gypsum (m2)",
-          "quantity": "5",
-          "unit_price": "24.50",
-          "total": "122.50"
         }
       ],
-      "subtotal": "938.50",
-      "tax": "140.78",
-      "total": "1079.28"
+      "subtotal": "1171.00",
+      "tax": "175.65",
+      "total": "1346.65"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "amount_mismatch"
     ],
     "duplicate_of": null,
-    "notes": "Factura cobra 3 unidades más que la OC."
-  },
-  {
-    "file": "INV-033.jpg",
-    "scenario": "amount_mismatch",
-    "split": "test",
-    "template": "ride",
-    "render": "jpg",
-    "extraction": {
-      "vendor_name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
-      "vendor_tax_id": "1195544332001",
-      "invoice_number": "001001000005029",
-      "issue_date": "2026-08-18",
-      "due_date": "2026-09-17",
-      "currency": "USD",
-      "po_number": "OC-2026-0195",
-      "line_items": [
-        {
-          "description": "Limpieza de vidrios en altura",
-          "quantity": "4",
-          "unit_price": "180.00",
-          "total": "720.00"
-        },
-        {
-          "description": "Desinfección de áreas comunes",
-          "quantity": "4",
-          "unit_price": "95.00",
-          "total": "380.00"
-        }
-      ],
-      "subtotal": "1100.00",
-      "tax": "165.00",
-      "total": "1265.00"
-    },
-    "expected_action": "human_review",
-    "expected_findings": [
-      "amount_mismatch"
-    ],
-    "duplicate_of": null,
-    "notes": "Factura cobra 3 unidades más que la OC."
+    "notes": "Factura cobra 2 unidades más que la OC."
   },
   {
     "file": "INV-034.pdf",
     "scenario": "amount_mismatch",
     "split": "dev",
-    "template": "ticket",
+    "template": "clasica",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Distribuidora Andina del Sur S.A.",
+      "vendor_name": "DIST. ANDINA DEL SUR",
       "vendor_tax_id": "1197654321001",
-      "invoice_number": "001-001-000002504",
-      "issue_date": "2026-09-05",
-      "due_date": "2026-10-05",
+      "invoice_number": "001-002-000002508",
+      "issue_date": "2026-09-12",
+      "due_date": "2026-10-12",
       "currency": "USD",
-      "po_number": "OC-2026-0196",
+      "po_number": "OC-2026-0166",
       "line_items": [
         {
+          "description": "Caja de esferos azules x12",
+          "quantity": "14",
+          "unit_price": "5.75",
+          "total": "80.50"
+        },
+        {
           "description": "Resma papel bond A4 75 g",
-          "quantity": "2",
+          "quantity": "6",
           "unit_price": "4.85",
-          "total": "9.70"
+          "total": "29.10"
+        },
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "5",
+          "unit_price": "38.90",
+          "total": "194.50"
         }
       ],
-      "subtotal": "9.70",
-      "tax": "1.46",
-      "total": "11.16"
+      "subtotal": "304.10",
+      "tax": "45.62",
+      "total": "349.72"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "amount_mismatch"
     ],
     "duplicate_of": null,
-    "notes": "Factura cobra 1 unidades más que la OC."
+    "notes": "Factura cobra 2 unidades más que la OC."
   },
   {
-    "file": "INV-035.jpg",
+    "file": "INV-035.pdf",
     "scenario": "missing_po",
     "split": "test",
-    "template": "moderna",
-    "render": "jpg",
+    "template": "clasica",
+    "render": "pdf_text",
     "extraction": {
-      "vendor_name": "TecnoLoja Soluciones S.A.S.",
-      "vendor_tax_id": "1192233441001",
-      "invoice_number": "001-002-5117",
-      "issue_date": "2026-08-25",
-      "due_date": "2026-09-24",
+      "vendor_name": "Distribuidora Andina del Sur S.A.",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001-001-000002513",
+      "issue_date": "2026-08-19",
+      "due_date": "2026-09-18",
       "currency": "USD",
       "po_number": null,
       "line_items": [
         {
-          "description": "Laptop 14\" Core i5 16 GB RAM",
-          "quantity": "12",
-          "unit_price": "689.00",
-          "total": "8268.00"
-        },
-        {
-          "description": "Monitor 24\" IPS Full HD",
-          "quantity": "10",
-          "unit_price": "149.50",
-          "total": "1495.00"
-        },
-        {
-          "description": "Soporte técnico (hora)",
-          "quantity": "8",
-          "unit_price": "25.00",
-          "total": "200.00"
+          "description": "Caja de esferos azules x12",
+          "quantity": "9",
+          "unit_price": "5.75",
+          "total": "51.75"
         }
       ],
-      "subtotal": "9963.00",
-      "tax": "1494.45",
-      "total": "11457.45"
+      "subtotal": "51.75",
+      "tax": "7.76",
+      "total": "59.51"
     },
     "expected_action": "request_info",
     "expected_findings": [
@@ -1734,39 +1698,33 @@
     "file": "INV-036.jpg",
     "scenario": "missing_po",
     "split": "test",
-    "template": "moderna",
+    "template": "ride",
     "render": "jpg",
     "extraction": {
-      "vendor_name": "Ferretería Zamora",
-      "vendor_tax_id": "1998877667001",
-      "invoice_number": "001-002-000008447",
-      "issue_date": "2026-08-26",
-      "due_date": "2026-09-25",
+      "vendor_name": "DISTRIBUIDORA ANDINA DEL SUR SA",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001-002-000002520",
+      "issue_date": "2026-08-28",
+      "due_date": null,
       "currency": "USD",
       "po_number": null,
       "line_items": [
         {
-          "description": "Tubo PVC 110 mm x 3 m",
-          "quantity": "2",
-          "unit_price": "9.60",
-          "total": "19.20"
-        },
-        {
-          "description": "Pintura látex galón blanco",
-          "quantity": "2",
-          "unit_price": "17.80",
-          "total": "35.60"
-        },
-        {
-          "description": "Varilla corrugada 12 mm x 12 m",
+          "description": "Archivador lomo ancho",
           "quantity": "1",
-          "unit_price": "11.30",
-          "total": "11.30"
+          "unit_price": "3.20",
+          "total": "3.20"
+        },
+        {
+          "description": "Tóner compatible HP 26A",
+          "quantity": "9",
+          "unit_price": "38.90",
+          "total": "350.10"
         }
       ],
-      "subtotal": "66.10",
-      "tax": "9.92",
-      "total": "76.02"
+      "subtotal": "353.30",
+      "tax": "53.00",
+      "total": "406.30"
     },
     "expected_action": "request_info",
     "expected_findings": [
@@ -1782,30 +1740,24 @@
     "template": "ticket",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-002-000001272",
-      "issue_date": "2026-08-26",
+      "vendor_name": "Ferretería Zamora Hermanos Cía. Ltda.",
+      "vendor_tax_id": "1998877667001",
+      "invoice_number": "001-001-000006993",
+      "issue_date": "2026-08-19",
       "due_date": null,
       "currency": "USD",
       "po_number": null,
       "line_items": [
         {
-          "description": "Cielo raso de gypsum (m2)",
-          "quantity": "10",
-          "unit_price": "24.50",
-          "total": "245.00"
-        },
-        {
-          "description": "Mano de obra especializada (día)",
-          "quantity": "3",
-          "unit_price": "55.00",
-          "total": "165.00"
+          "description": "Pintura látex galón blanco",
+          "quantity": "7",
+          "unit_price": "17.80",
+          "total": "124.60"
         }
       ],
-      "subtotal": "410.00",
-      "tax": "61.50",
-      "total": "471.50"
+      "subtotal": "124.60",
+      "tax": "18.69",
+      "total": "143.29"
     },
     "expected_action": "request_info",
     "expected_findings": [
@@ -1818,129 +1770,117 @@
     "file": "INV-038.pdf",
     "scenario": "missing_po_inferable",
     "split": "test",
-    "template": "moderna",
+    "template": "ride",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Café Podocarpus Catering S.A.",
-      "vendor_tax_id": "1191122336001",
-      "invoice_number": "001-002-000007144",
-      "issue_date": "2026-09-25",
+      "vendor_name": "Distribuidora Andina del Sur S.A.",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001-001-000002528",
+      "issue_date": "2026-09-18",
       "due_date": null,
       "currency": "USD",
       "po_number": null,
       "line_items": [
         {
-          "description": "Coffee break por persona",
+          "description": "Tóner compatible HP 26A",
+          "quantity": "8",
+          "unit_price": "38.90",
+          "total": "311.20"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
           "quantity": "4",
-          "unit_price": "4.50",
-          "total": "18.00"
+          "unit_price": "4.85",
+          "total": "19.40"
         },
         {
-          "description": "Bebidas y agua (paquete)",
-          "quantity": "9",
-          "unit_price": "15.00",
-          "total": "135.00"
-        },
-        {
-          "description": "Servicio de meseros (hora)",
-          "quantity": "12",
-          "unit_price": "9.00",
-          "total": "108.00"
-        },
-        {
-          "description": "Almuerzo ejecutivo por persona",
-          "quantity": "9",
-          "unit_price": "7.80",
-          "total": "70.20"
+          "description": "Caja de esferos azules x12",
+          "quantity": "6",
+          "unit_price": "5.75",
+          "total": "34.50"
         }
       ],
-      "subtotal": "331.20",
-      "tax": "49.68",
-      "total": "380.88"
+      "subtotal": "365.10",
+      "tax": "54.77",
+      "total": "419.87"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "po_inferred"
     ],
     "duplicate_of": null,
-    "notes": "Sin OC impresa; coincide con OC-2026-0199 por proveedor y monto."
+    "notes": "Sin OC impresa; coincide con OC-2026-0167 por proveedor y monto."
   },
   {
-    "file": "INV-039.png",
+    "file": "INV-039.pdf",
     "scenario": "missing_po_inferable",
     "split": "test",
     "template": "ticket",
-    "render": "png",
+    "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
-      "vendor_tax_id": "1195544332001",
-      "invoice_number": "001002000005031",
-      "issue_date": "2026-08-29",
+      "vendor_name": "TecnoLoja Soluciones S.A.S.",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001002000003359",
+      "issue_date": "2026-09-09",
       "due_date": null,
       "currency": "USD",
       "po_number": null,
       "line_items": [
         {
-          "description": "Servicio de limpieza de oficinas (mes)",
-          "quantity": "9",
-          "unit_price": "420.00",
-          "total": "3780.00"
+          "description": "Monitor 24\" IPS Full HD",
+          "quantity": "4",
+          "unit_price": "149.50",
+          "total": "598.00"
         },
         {
-          "description": "Limpieza de vidrios en altura",
-          "quantity": "3",
-          "unit_price": "180.00",
-          "total": "540.00"
-        },
-        {
-          "description": "Suministro de insumos de aseo",
-          "quantity": "6",
-          "unit_price": "64.30",
-          "total": "385.80"
+          "description": "Laptop 14\" Core i5 16 GB RAM",
+          "quantity": "2",
+          "unit_price": "689.00",
+          "total": "1378.00"
         }
       ],
-      "subtotal": "4705.80",
-      "tax": "705.87",
-      "total": "5411.67"
+      "subtotal": "1976.00",
+      "tax": "296.40",
+      "total": "2272.40"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "po_inferred"
     ],
     "duplicate_of": null,
-    "notes": "Sin OC impresa; coincide con OC-2026-0201 por proveedor y monto."
+    "notes": "Sin OC impresa; coincide con OC-2026-0168 por proveedor y monto."
   },
   {
-    "file": "INV-040.pdf",
+    "file": "INV-040.jpg",
     "scenario": "unknown_po",
     "split": "dev",
-    "template": "clasica",
-    "render": "pdf_text",
+    "template": "ride",
+    "render": "jpg",
     "extraction": {
       "vendor_name": "Malacatos Ingeniería",
       "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-001-000001273",
-      "issue_date": "2026-08-27",
-      "due_date": "2026-09-26",
+      "invoice_number": "001-001-000001257",
+      "issue_date": "2026-09-04",
+      "due_date": "2026-10-04",
       "currency": "USD",
-      "po_number": "OC-2026-9500",
+      "po_number": "OC-2026-9422",
       "line_items": [
         {
-          "description": "Cielo raso de gypsum (m2)",
-          "quantity": "12",
-          "unit_price": "24.50",
-          "total": "294.00"
+          "description": "Mano de obra especializada (día)",
+          "quantity": "6",
+          "unit_price": "55.00",
+          "total": "330.00"
         },
         {
-          "description": "Instalación eléctrica (punto)",
-          "quantity": "8",
-          "unit_price": "42.00",
-          "total": "336.00"
+          "description": "Cielo raso de gypsum (m2)",
+          "quantity": "6",
+          "unit_price": "24.50",
+          "total": "147.00"
         }
       ],
-      "subtotal": "630.00",
-      "tax": "94.50",
-      "total": "724.50"
+      "subtotal": "477.00",
+      "tax": "71.55",
+      "total": "548.55"
     },
     "expected_action": "request_info",
     "expected_findings": [
@@ -1950,30 +1890,30 @@
     "notes": ""
   },
   {
-    "file": "INV-041.pdf",
+    "file": "INV-041.jpg",
     "scenario": "unknown_po",
     "split": "test",
-    "template": "clasica",
-    "render": "pdf_text",
+    "template": "ride",
+    "render": "jpg",
     "extraction": {
-      "vendor_name": "TecnoLoja Soluciones S.A.S.",
-      "vendor_tax_id": "1192233441001",
-      "invoice_number": "001-001-000005120",
-      "issue_date": "2026-08-26",
-      "due_date": "2026-09-25",
+      "vendor_name": "Café Podocarpus Catering S.A.",
+      "vendor_tax_id": "1191122336001",
+      "invoice_number": "001001000006407",
+      "issue_date": "2026-09-04",
+      "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-9283",
+      "po_number": "OC-2026-9356",
       "line_items": [
         {
-          "description": "Switch 24 puertos gigabit",
-          "quantity": "1",
-          "unit_price": "214.90",
-          "total": "214.90"
+          "description": "Coffee break por persona",
+          "quantity": "6",
+          "unit_price": "4.50",
+          "total": "27.00"
         }
       ],
-      "subtotal": "214.90",
-      "tax": "32.24",
-      "total": "247.14"
+      "subtotal": "27.00",
+      "tax": "4.05",
+      "total": "31.05"
     },
     "expected_action": "request_info",
     "expected_findings": [
@@ -1986,27 +1926,39 @@
     "file": "INV-042.pdf",
     "scenario": "unknown_po",
     "split": "test",
-    "template": "moderna",
-    "render": "pdf_text",
+    "template": "ticket",
+    "render": "pdf_scan",
     "extraction": {
-      "vendor_name": "Transportes Catamayo Express S.A.",
-      "vendor_tax_id": "1199080705001",
-      "invoice_number": "001-001-000004657",
-      "issue_date": "2026-09-02",
+      "vendor_name": "Imprenta Saraguro Gráficas",
+      "vendor_tax_id": "1113456782001",
+      "invoice_number": "001-002-000007761",
+      "issue_date": "2026-09-01",
       "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-9084",
+      "po_number": "OC-2026-9195",
       "line_items": [
         {
-          "description": "Seguro de carga",
-          "quantity": "5",
-          "unit_price": "18.50",
-          "total": "92.50"
+          "description": "Volantes full color x1000",
+          "quantity": "7",
+          "unit_price": "45.00",
+          "total": "315.00"
+        },
+        {
+          "description": "Talonarios de recibos",
+          "quantity": "6",
+          "unit_price": "12.75",
+          "total": "76.50"
+        },
+        {
+          "description": "Tarjetas de presentación x500",
+          "quantity": "6",
+          "unit_price": "28.00",
+          "total": "168.00"
         }
       ],
-      "subtotal": "92.50",
-      "tax": "13.88",
-      "total": "106.38"
+      "subtotal": "559.50",
+      "tax": "83.93",
+      "total": "643.43"
     },
     "expected_action": "request_info",
     "expected_findings": [
@@ -2016,120 +1968,102 @@
     "notes": ""
   },
   {
-    "file": "INV-043.jpg",
+    "file": "INV-043.pdf",
     "scenario": "vendor_mismatch",
     "split": "dev",
-    "template": "moderna",
-    "render": "jpg",
+    "template": "clasica",
+    "render": "pdf_text",
     "extraction": {
-      "vendor_name": "PODOCARPUS CATERING",
-      "vendor_tax_id": "1191122336001",
-      "invoice_number": "001001000007153",
-      "issue_date": "2026-09-26",
-      "due_date": null,
+      "vendor_name": "Imprenta Saraguro Gráficas",
+      "vendor_tax_id": "1113456782001",
+      "invoice_number": "001-002-7767",
+      "issue_date": "2026-08-30",
+      "due_date": "2026-09-29",
       "currency": "USD",
-      "po_number": "OC-2026-0203",
+      "po_number": "OC-2026-0169",
       "line_items": [
         {
-          "description": "Servicio de meseros (hora)",
-          "quantity": "11",
-          "unit_price": "9.00",
-          "total": "99.00"
-        },
-        {
-          "description": "Bebidas y agua (paquete)",
-          "quantity": "5",
-          "unit_price": "15.00",
-          "total": "75.00"
-        },
-        {
-          "description": "Coffee break por persona",
-          "quantity": "4",
-          "unit_price": "4.50",
-          "total": "18.00"
+          "description": "Talonarios de recibos",
+          "quantity": "9",
+          "unit_price": "12.75",
+          "total": "114.75"
         }
       ],
-      "subtotal": "192.00",
-      "tax": "28.80",
-      "total": "220.80"
+      "subtotal": "114.75",
+      "tax": "17.21",
+      "total": "131.96"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "po_vendor_mismatch"
     ],
     "duplicate_of": null,
-    "notes": "La OC OC-2026-0203 pertenece a Ferretería Zamora Hermanos Cía. Ltda.."
+    "notes": "La OC OC-2026-0169 pertenece a Café Podocarpus Catering S.A.."
   },
   {
-    "file": "INV-044.pdf",
+    "file": "INV-044.jpg",
     "scenario": "vendor_mismatch",
     "split": "test",
     "template": "moderna",
-    "render": "pdf_text",
+    "render": "jpg",
     "extraction": {
-      "vendor_name": "TecnoLoja",
-      "vendor_tax_id": "1192233441001",
-      "invoice_number": "001001000005121",
-      "issue_date": "2026-08-15",
-      "due_date": "2026-09-14",
+      "vendor_name": "FERRETERIA ZAMORA HNOS",
+      "vendor_tax_id": "1998877667001",
+      "invoice_number": "001-002-000007001",
+      "issue_date": "2026-10-01",
+      "due_date": "2026-10-31",
       "currency": "USD",
-      "po_number": "OC-2026-0207",
+      "po_number": "OC-2026-0171",
       "line_items": [
         {
-          "description": "Soporte técnico (hora)",
-          "quantity": "5",
-          "unit_price": "25.00",
-          "total": "125.00"
-        },
-        {
-          "description": "Laptop 14\" Core i5 16 GB RAM",
-          "quantity": "11",
-          "unit_price": "689.00",
-          "total": "7579.00"
+          "description": "Pintura látex galón blanco",
+          "quantity": "7",
+          "unit_price": "17.80",
+          "total": "124.60"
         }
       ],
-      "subtotal": "7704.00",
-      "tax": "1155.60",
-      "total": "8859.60"
+      "subtotal": "124.60",
+      "tax": "18.69",
+      "total": "143.29"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "po_vendor_mismatch"
     ],
     "duplicate_of": null,
-    "notes": "La OC OC-2026-0207 pertenece a Ferretería Zamora Hermanos Cía. Ltda.."
+    "notes": "La OC OC-2026-0171 pertenece a Servicios de Limpieza Vilcabamba Cía. Ltda.."
   },
   {
     "file": "INV-045.pdf",
     "scenario": "over_limit",
     "split": "test",
-    "template": "ticket",
-    "render": "pdf_text",
+    "template": "ride",
+    "render": "pdf_scan",
     "extraction": {
       "vendor_name": "TecnoLoja Soluciones S.A.S.",
       "vendor_tax_id": "1192233441001",
-      "invoice_number": "001-002-000005126",
-      "issue_date": "2026-09-10",
-      "due_date": "2026-10-10",
+      "invoice_number": "001-001-000003368",
+      "issue_date": "2026-08-15",
+      "due_date": "2026-09-14",
       "currency": "USD",
-      "po_number": "OC-2026-0209",
+      "po_number": "OC-2026-0182",
       "line_items": [
         {
-          "description": "Monitor 24\" IPS Full HD",
-          "quantity": "11",
-          "unit_price": "149.50",
-          "total": "1644.50"
+          "description": "Switch 24 puertos gigabit",
+          "quantity": "13",
+          "unit_price": "214.90",
+          "total": "2793.70"
         },
         {
           "description": "Laptop 14\" Core i5 16 GB RAM",
-          "quantity": "8",
+          "quantity": "12",
           "unit_price": "689.00",
-          "total": "5512.00"
+          "total": "8268.00"
         }
       ],
-      "subtotal": "7156.50",
-      "tax": "1073.48",
-      "total": "8229.98"
+      "subtotal": "11061.70",
+      "tax": "1659.26",
+      "total": "12720.96"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2143,71 +2077,71 @@
     "scenario": "over_limit",
     "split": "dev",
     "template": "ride",
-    "render": "pdf_scan",
+    "render": "pdf_text",
     "extraction": {
-      "vendor_name": "TecnoLoja",
+      "vendor_name": "TecnoLoja Soluciones S.A.S.",
       "vendor_tax_id": "1192233441001",
-      "invoice_number": "001-002-5128",
-      "issue_date": "2026-09-11",
-      "due_date": "2026-10-11",
+      "invoice_number": "001001000003371",
+      "issue_date": "2026-08-09",
+      "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0216",
+      "po_number": "OC-2026-0191",
       "line_items": [
         {
-          "description": "Monitor 24\" IPS Full HD",
-          "quantity": "9",
-          "unit_price": "149.50",
-          "total": "1345.50"
+          "description": "Laptop 14\" Core i5 16 GB RAM",
+          "quantity": "10",
+          "unit_price": "689.00",
+          "total": "6890.00"
         },
+        {
+          "description": "Licencia antivirus anual",
+          "quantity": "8",
+          "unit_price": "32.00",
+          "total": "256.00"
+        }
+      ],
+      "subtotal": "7146.00",
+      "tax": "1071.90",
+      "total": "8217.90"
+    },
+    "expected_action": "human_review",
+    "expected_findings": [
+      "over_auto_approval_limit"
+    ],
+    "duplicate_of": null,
+    "notes": ""
+  },
+  {
+    "file": "INV-047.pdf",
+    "scenario": "over_limit",
+    "split": "test",
+    "template": "clasica",
+    "render": "pdf_scan",
+    "extraction": {
+      "vendor_name": "TecnoLoja Soluciones S.A.S.",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-002-000003375",
+      "issue_date": "2026-09-25",
+      "due_date": "2026-10-25",
+      "currency": "USD",
+      "po_number": "OC-2026-0192",
+      "line_items": [
         {
           "description": "Laptop 14\" Core i5 16 GB RAM",
           "quantity": "11",
           "unit_price": "689.00",
           "total": "7579.00"
-        }
-      ],
-      "subtotal": "8924.50",
-      "tax": "1338.68",
-      "total": "10263.18"
-    },
-    "expected_action": "human_review",
-    "expected_findings": [
-      "over_auto_approval_limit"
-    ],
-    "duplicate_of": null,
-    "notes": ""
-  },
-  {
-    "file": "INV-047.jpg",
-    "scenario": "over_limit",
-    "split": "test",
-    "template": "ride",
-    "render": "jpg",
-    "extraction": {
-      "vendor_name": "Servicios de Limpieza Vilcabamba Cía. Ltda.",
-      "vendor_tax_id": "1195544332001",
-      "invoice_number": "001-002-000005034",
-      "issue_date": "2026-08-25",
-      "due_date": "2026-09-24",
-      "currency": "USD",
-      "po_number": "OC-2026-0220",
-      "line_items": [
-        {
-          "description": "Servicio de limpieza de oficinas (mes)",
-          "quantity": "13",
-          "unit_price": "420.00",
-          "total": "5460.00"
         },
         {
-          "description": "Desinfección de áreas comunes",
-          "quantity": "11",
-          "unit_price": "95.00",
-          "total": "1045.00"
+          "description": "Soporte técnico (hora)",
+          "quantity": "13",
+          "unit_price": "25.00",
+          "total": "325.00"
         }
       ],
-      "subtotal": "6505.00",
-      "tax": "975.75",
-      "total": "7480.75"
+      "subtotal": "7904.00",
+      "tax": "1185.60",
+      "total": "9089.60"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2217,36 +2151,36 @@
     "notes": ""
   },
   {
-    "file": "INV-048.png",
+    "file": "INV-048.jpg",
     "scenario": "arithmetic_error",
     "split": "test",
-    "template": "ticket",
-    "render": "png",
+    "template": "moderna",
+    "render": "jpg",
     "extraction": {
       "vendor_name": "Ferretería Zamora",
       "vendor_tax_id": "1998877667001",
-      "invoice_number": "001-001-000008453",
-      "issue_date": "2026-08-25",
-      "due_date": "2026-09-24",
+      "invoice_number": "001-001-000007008",
+      "issue_date": "2026-08-24",
+      "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0222",
+      "po_number": "OC-2026-0196",
       "line_items": [
         {
           "description": "Juego de brocas para concreto",
-          "quantity": "12",
+          "quantity": "5",
           "unit_price": "22.40",
-          "total": "268.80"
+          "total": "112.00"
         },
         {
-          "description": "Pintura látex galón blanco",
+          "description": "Cemento Portland saco 50 kg",
           "quantity": "12",
-          "unit_price": "17.80",
-          "total": "213.60"
+          "unit_price": "8.45",
+          "total": "101.40"
         }
       ],
-      "subtotal": "482.40",
-      "tax": "72.36",
-      "total": "555.66"
+      "subtotal": "213.40",
+      "tax": "32.01",
+      "total": "246.31"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2259,33 +2193,33 @@
     "file": "INV-049.pdf",
     "scenario": "arithmetic_error",
     "split": "dev",
-    "template": "clasica",
+    "template": "ride",
     "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Café Podocarpus Catering S.A.",
-      "vendor_tax_id": "1191122336001",
-      "invoice_number": "001-001-000007159",
-      "issue_date": "2026-09-23",
-      "due_date": "2026-10-23",
+      "vendor_name": "TecnoLoja",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-002-000003379",
+      "issue_date": "2026-09-27",
+      "due_date": "2026-10-27",
       "currency": "USD",
-      "po_number": "OC-2026-0223",
+      "po_number": "OC-2026-0199",
       "line_items": [
         {
-          "description": "Servicio de meseros (hora)",
-          "quantity": "4",
-          "unit_price": "9.00",
-          "total": "36.00"
+          "description": "Monitor 24\" IPS Full HD",
+          "quantity": "2",
+          "unit_price": "149.50",
+          "total": "299.00"
         },
         {
-          "description": "Bebidas y agua (paquete)",
-          "quantity": "11",
-          "unit_price": "15.00",
-          "total": "165.00"
+          "description": "Licencia antivirus anual",
+          "quantity": "1",
+          "unit_price": "32.00",
+          "total": "32.00"
         }
       ],
-      "subtotal": "201.00",
-      "tax": "30.15",
-      "total": "241.15"
+      "subtotal": "331.00",
+      "tax": "49.65",
+      "total": "381.55"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2298,27 +2232,33 @@
     "file": "INV-050.jpg",
     "scenario": "unknown_vendor",
     "split": "test",
-    "template": "moderna",
+    "template": "ticket",
     "render": "jpg",
     "extraction": {
       "vendor_name": "Suministros Express del Pacífico",
       "vendor_tax_id": "1314567890001",
-      "invoice_number": "001002000002763",
-      "issue_date": "2026-08-18",
-      "due_date": "2026-09-17",
+      "invoice_number": "001-002-5363",
+      "issue_date": "2026-08-16",
+      "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-9339",
+      "po_number": "OC-2026-9588",
       "line_items": [
         {
           "description": "Equipo de protección personal (kit)",
-          "quantity": "2",
+          "quantity": "6",
           "unit_price": "54.00",
-          "total": "108.00"
+          "total": "324.00"
+        },
+        {
+          "description": "Guantes de nitrilo caja x100",
+          "quantity": "10",
+          "unit_price": "11.90",
+          "total": "119.00"
         }
       ],
-      "subtotal": "108.00",
-      "tax": "16.20",
-      "total": "124.20"
+      "subtotal": "443.00",
+      "tax": "66.45",
+      "total": "509.45"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2328,30 +2268,30 @@
     "notes": "Proveedor no registrado en el maestro."
   },
   {
-    "file": "INV-051.pdf",
+    "file": "INV-051.png",
     "scenario": "unknown_vendor",
     "split": "test",
-    "template": "clasica",
-    "render": "pdf_text",
+    "template": "ticket",
+    "render": "png",
     "extraction": {
       "vendor_name": "Comercializadora Nueva Era S.A.",
       "vendor_tax_id": "0991234578001",
-      "invoice_number": "001-001-000006836",
-      "issue_date": "2026-08-29",
-      "due_date": "2026-09-28",
+      "invoice_number": "001-001-000004402",
+      "issue_date": "2026-08-21",
+      "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-9428",
+      "po_number": "OC-2026-9544",
       "line_items": [
         {
-          "description": "Asesoría comercial (hora)",
-          "quantity": "9",
-          "unit_price": "60.00",
-          "total": "540.00"
+          "description": "Kit de herramientas importado",
+          "quantity": "8",
+          "unit_price": "129.00",
+          "total": "1032.00"
         }
       ],
-      "subtotal": "540.00",
-      "tax": "81.00",
-      "total": "621.00"
+      "subtotal": "1032.00",
+      "tax": "154.80",
+      "total": "1186.80"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2364,27 +2304,33 @@
     "file": "INV-052.pdf",
     "scenario": "missing_tax_id",
     "split": "dev",
-    "template": "moderna",
+    "template": "ride",
     "render": "pdf_scan",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
+      "vendor_name": "Ferretería Zamora Hermanos Cía. Ltda.",
       "vendor_tax_id": null,
-      "invoice_number": "001-001-000001280",
-      "issue_date": "2026-09-01",
-      "due_date": null,
+      "invoice_number": "001-002-000007017",
+      "issue_date": "2026-09-04",
+      "due_date": "2026-10-04",
       "currency": "USD",
-      "po_number": "OC-2026-0227",
+      "po_number": "OC-2026-0200",
       "line_items": [
         {
-          "description": "Instalación eléctrica (punto)",
-          "quantity": "5",
-          "unit_price": "42.00",
-          "total": "210.00"
+          "description": "Tubo PVC 110 mm x 3 m",
+          "quantity": "12",
+          "unit_price": "9.60",
+          "total": "115.20"
+        },
+        {
+          "description": "Juego de brocas para concreto",
+          "quantity": "10",
+          "unit_price": "22.40",
+          "total": "224.00"
         }
       ],
-      "subtotal": "210.00",
-      "tax": "31.50",
-      "total": "241.50"
+      "subtotal": "339.20",
+      "tax": "50.88",
+      "total": "390.08"
     },
     "expected_action": "request_info",
     "expected_findings": [
@@ -2397,33 +2343,27 @@
     "file": "INV-053.jpg",
     "scenario": "missing_tax_id",
     "split": "test",
-    "template": "ticket",
+    "template": "ride",
     "render": "jpg",
     "extraction": {
-      "vendor_name": "TecnoLoja Soluciones S.A.S.",
+      "vendor_name": "Transportes Catamayo Express S.A.",
       "vendor_tax_id": null,
-      "invoice_number": "001-002-000005137",
-      "issue_date": "2026-08-29",
-      "due_date": "2026-09-28",
+      "invoice_number": "001-001-000001736",
+      "issue_date": "2026-08-31",
+      "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0228",
+      "po_number": "OC-2026-0203",
       "line_items": [
         {
-          "description": "Licencia antivirus anual",
+          "description": "Estiba y desestiba",
           "quantity": "10",
-          "unit_price": "32.00",
-          "total": "320.00"
-        },
-        {
-          "description": "Switch 24 puertos gigabit",
-          "quantity": "8",
-          "unit_price": "214.90",
-          "total": "1719.20"
+          "unit_price": "35.00",
+          "total": "350.00"
         }
       ],
-      "subtotal": "2039.20",
-      "tax": "305.88",
-      "total": "2345.08"
+      "subtotal": "350.00",
+      "tax": "52.50",
+      "total": "402.50"
     },
     "expected_action": "request_info",
     "expected_findings": [
@@ -2433,36 +2373,48 @@
     "notes": ""
   },
   {
-    "file": "INV-054.pdf",
+    "file": "INV-054.png",
     "scenario": "payment_mismatch",
     "split": "test",
-    "template": "ride",
-    "render": "pdf_text",
+    "template": "moderna",
+    "render": "png",
     "extraction": {
-      "vendor_name": "Transportes Catamayo Express S.A.",
-      "vendor_tax_id": "1199080705001",
-      "invoice_number": "001001000004663",
-      "issue_date": "2026-09-22",
-      "due_date": null,
+      "vendor_name": "DISTRIBUIDORA ANDINA DEL SUR SA",
+      "vendor_tax_id": "1197654321001",
+      "invoice_number": "001-002-2533",
+      "issue_date": "2026-09-07",
+      "due_date": "2026-10-07",
       "currency": "USD",
-      "po_number": "OC-2026-0231",
+      "po_number": "OC-2026-0206",
       "line_items": [
         {
-          "description": "Flete Loja - Quito (tonelada)",
-          "quantity": "4",
-          "unit_price": "110.00",
-          "total": "440.00"
+          "description": "Caja de esferos azules x12",
+          "quantity": "2",
+          "unit_price": "5.75",
+          "total": "11.50"
         },
         {
-          "description": "Seguro de carga",
-          "quantity": "1",
-          "unit_price": "18.50",
-          "total": "18.50"
+          "description": "Archivador lomo ancho",
+          "quantity": "9",
+          "unit_price": "3.20",
+          "total": "28.80"
+        },
+        {
+          "description": "Cuaderno universitario 100 hojas",
+          "quantity": "11",
+          "unit_price": "1.95",
+          "total": "21.45"
+        },
+        {
+          "description": "Resma papel bond A4 75 g",
+          "quantity": "6",
+          "unit_price": "4.85",
+          "total": "29.10"
         }
       ],
-      "subtotal": "458.50",
-      "tax": "68.78",
-      "total": "527.28"
+      "subtotal": "90.85",
+      "tax": "13.63",
+      "total": "104.48"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2472,36 +2424,36 @@
     "notes": "El pago registrado no coincide con el total facturado."
   },
   {
-    "file": "INV-055.pdf",
+    "file": "INV-055.jpg",
     "scenario": "payment_mismatch",
     "split": "dev",
     "template": "ticket",
-    "render": "pdf_text",
+    "render": "jpg",
     "extraction": {
-      "vendor_name": "Café Podocarpus",
-      "vendor_tax_id": "1191122336001",
-      "invoice_number": "001002000007162",
-      "issue_date": "2026-09-13",
-      "due_date": "2026-10-13",
+      "vendor_name": "Transportes Catamayo Express S.A.",
+      "vendor_tax_id": "1199080705001",
+      "invoice_number": "001-001-000001744",
+      "issue_date": "2026-09-23",
+      "due_date": "2026-10-23",
       "currency": "USD",
-      "po_number": "OC-2026-0235",
+      "po_number": "OC-2026-0209",
       "line_items": [
         {
-          "description": "Servicio de meseros (hora)",
-          "quantity": "3",
-          "unit_price": "9.00",
-          "total": "27.00"
+          "description": "Estiba y desestiba",
+          "quantity": "8",
+          "unit_price": "35.00",
+          "total": "280.00"
         },
         {
-          "description": "Bebidas y agua (paquete)",
-          "quantity": "2",
-          "unit_price": "15.00",
-          "total": "30.00"
+          "description": "Flete Loja - Guayaquil (tonelada)",
+          "quantity": "4",
+          "unit_price": "85.00",
+          "total": "340.00"
         }
       ],
-      "subtotal": "57.00",
-      "tax": "8.55",
-      "total": "65.55"
+      "subtotal": "620.00",
+      "tax": "93.00",
+      "total": "713.00"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2511,30 +2463,30 @@
     "notes": "El pago registrado no coincide con el total facturado."
   },
   {
-    "file": "INV-056.pdf",
+    "file": "INV-056.jpg",
     "scenario": "double_payment",
     "split": "test",
     "template": "clasica",
-    "render": "pdf_scan",
+    "render": "jpg",
     "extraction": {
-      "vendor_name": "DIST. ANDINA DEL SUR",
-      "vendor_tax_id": "1197654321001",
-      "invoice_number": "001-001-000002509",
-      "issue_date": "2026-09-14",
-      "due_date": null,
+      "vendor_name": "Imprenta Saraguro Gráficas",
+      "vendor_tax_id": "1113456782001",
+      "invoice_number": "001001000007771",
+      "issue_date": "2026-08-19",
+      "due_date": "2026-09-18",
       "currency": "USD",
-      "po_number": "OC-2026-0237",
+      "po_number": "OC-2026-0213",
       "line_items": [
         {
-          "description": "Archivador lomo ancho",
+          "description": "Talonarios de recibos",
           "quantity": "12",
-          "unit_price": "3.20",
-          "total": "38.40"
+          "unit_price": "12.75",
+          "total": "153.00"
         }
       ],
-      "subtotal": "38.40",
-      "tax": "5.76",
-      "total": "44.16"
+      "subtotal": "153.00",
+      "tax": "22.95",
+      "total": "175.95"
     },
     "expected_action": "human_review",
     "expected_findings": [
@@ -2544,81 +2496,87 @@
     "notes": "La factura se pagó dos veces."
   },
   {
-    "file": "INV-057.jpg",
+    "file": "INV-057.pdf",
     "scenario": "duplicate_resend",
     "split": "test",
     "template": "ride",
-    "render": "jpg",
+    "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-002-1245",
-      "issue_date": "2026-09-11",
-      "due_date": null,
+      "vendor_name": "Café Podocarpus",
+      "vendor_tax_id": "1191122336001",
+      "invoice_number": "001-002-000006392",
+      "issue_date": "2026-09-02",
+      "due_date": "2026-10-02",
       "currency": "USD",
-      "po_number": "OC-2026-0154",
+      "po_number": "OC-2026-0112",
       "line_items": [
         {
-          "description": "Instalación eléctrica (punto)",
+          "description": "Servicio de meseros (hora)",
           "quantity": "7",
-          "unit_price": "42.00",
-          "total": "294.00"
+          "unit_price": "9.00",
+          "total": "63.00"
+        },
+        {
+          "description": "Bebidas y agua (paquete)",
+          "quantity": "7",
+          "unit_price": "15.00",
+          "total": "105.00"
         }
       ],
-      "subtotal": "294.00",
-      "tax": "44.10",
-      "total": "338.10"
+      "subtotal": "168.00",
+      "tax": "25.20",
+      "total": "193.20"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "duplicate_invoice"
     ],
-    "duplicate_of": "INV-018.pdf",
+    "duplicate_of": "INV-005.pdf",
     "notes": "El proveedor reenvió la misma factura en otro formato."
   },
   {
     "file": "INV-058.pdf",
     "scenario": "duplicate_resend",
     "split": "dev",
-    "template": "ride",
-    "render": "pdf_scan",
+    "template": "ticket",
+    "render": "pdf_text",
     "extraction": {
-      "vendor_name": "Constructora Malacatos Ingeniería S.A.",
-      "vendor_tax_id": "1196677883001",
-      "invoice_number": "001-002-000001241",
-      "issue_date": "2026-09-08",
-      "due_date": "2026-10-08",
+      "vendor_name": "PODOCARPUS CATERING",
+      "vendor_tax_id": "1191122336001",
+      "invoice_number": "001001000006404",
+      "issue_date": "2026-09-28",
+      "due_date": null,
       "currency": "USD",
       "po_number": "OC-2026-0137",
       "line_items": [
         {
-          "description": "Adecuación de oficinas (m2)",
-          "quantity": "1",
-          "unit_price": "68.00",
-          "total": "68.00"
+          "description": "Almuerzo ejecutivo por persona",
+          "quantity": "7",
+          "unit_price": "7.80",
+          "total": "54.60"
         },
         {
-          "description": "Cielo raso de gypsum (m2)",
-          "quantity": "5",
-          "unit_price": "24.50",
-          "total": "122.50"
+          "description": "Coffee break por persona",
+          "quantity": "4",
+          "unit_price": "4.50",
+          "total": "18.00"
         },
         {
-          "description": "Instalación eléctrica (punto)",
-          "quantity": "6",
-          "unit_price": "42.00",
-          "total": "252.00"
+          "description": "Servicio de meseros (hora)",
+          "quantity": "8",
+          "unit_price": "9.00",
+          "total": "72.00"
         }
       ],
-      "subtotal": "442.50",
-      "tax": "66.38",
-      "total": "508.88"
+      "subtotal": "144.60",
+      "tax": "21.69",
+      "total": "166.29"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "duplicate_invoice"
     ],
-    "duplicate_of": "INV-013.jpg",
+    "duplicate_of": "INV-022.pdf",
     "notes": "El proveedor reenvió la misma factura en otro formato."
   },
   {
@@ -2628,87 +2586,87 @@
     "template": "moderna",
     "render": "pdf_scan",
     "extraction": {
-      "vendor_name": "Café Podocarpus Catering S.A.",
-      "vendor_tax_id": "1191122336001",
-      "invoice_number": "001002000007136",
-      "issue_date": "2026-10-08",
-      "due_date": "2026-11-07",
+      "vendor_name": "Serv. Limpieza Vilcabamba",
+      "vendor_tax_id": "1195544332001",
+      "invoice_number": "001-001-6708",
+      "issue_date": "2026-08-11",
+      "due_date": null,
       "currency": "USD",
-      "po_number": "OC-2026-0133",
+      "po_number": "OC-2026-0119",
       "line_items": [
         {
-          "description": "Coffee break por persona",
-          "quantity": "7",
-          "unit_price": "4.50",
-          "total": "31.50"
+          "description": "Suministro de insumos de aseo",
+          "quantity": "3",
+          "unit_price": "64.30",
+          "total": "192.90"
         },
         {
-          "description": "Almuerzo ejecutivo por persona",
-          "quantity": "6",
-          "unit_price": "7.80",
-          "total": "46.80"
+          "description": "Servicio de limpieza de oficinas (mes)",
+          "quantity": "1",
+          "unit_price": "420.00",
+          "total": "420.00"
+        },
+        {
+          "description": "Limpieza de vidrios en altura",
+          "quantity": "7",
+          "unit_price": "180.00",
+          "total": "1260.00"
         }
       ],
-      "subtotal": "78.30",
-      "tax": "11.75",
-      "total": "90.05"
+      "subtotal": "1872.90",
+      "tax": "280.94",
+      "total": "2153.84"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "duplicate_invoice"
     ],
-    "duplicate_of": "INV-012.pdf",
+    "duplicate_of": "INV-009.pdf",
     "notes": "El proveedor reenvió la misma factura en otro formato."
   },
   {
-    "file": "INV-060.pdf",
+    "file": "INV-060.png",
     "scenario": "duplicate_resend",
     "split": "test",
-    "template": "ticket",
-    "render": "pdf_text",
+    "template": "clasica",
+    "render": "png",
     "extraction": {
-      "vendor_name": "DISTRIBUIDORA ANDINA DEL SUR SA",
-      "vendor_tax_id": "1197654321001",
-      "invoice_number": "001-001-000002486",
-      "issue_date": "2026-08-18",
-      "due_date": null,
+      "vendor_name": "TecnoLoja",
+      "vendor_tax_id": "1192233441001",
+      "invoice_number": "001-002-000003343",
+      "issue_date": "2026-09-12",
+      "due_date": "2026-10-12",
       "currency": "USD",
-      "po_number": "OC-2026-0116",
+      "po_number": "OC-2026-0125",
       "line_items": [
         {
-          "description": "Archivador lomo ancho",
-          "quantity": "7",
-          "unit_price": "3.20",
-          "total": "22.40"
-        },
-        {
-          "description": "Cuaderno universitario 100 hojas",
-          "quantity": "10",
-          "unit_price": "1.95",
-          "total": "19.50"
-        },
-        {
-          "description": "Tóner compatible HP 26A",
+          "description": "Soporte técnico (hora)",
           "quantity": "4",
-          "unit_price": "38.90",
-          "total": "155.60"
+          "unit_price": "25.00",
+          "total": "100.00"
         },
         {
-          "description": "Resma papel bond A4 75 g",
-          "quantity": "5",
-          "unit_price": "4.85",
-          "total": "24.25"
+          "description": "Switch 24 puertos gigabit",
+          "quantity": "9",
+          "unit_price": "214.90",
+          "total": "1934.10"
+        },
+        {
+          "description": "Licencia antivirus anual",
+          "quantity": "1",
+          "unit_price": "32.00",
+          "total": "32.00"
         }
       ],
-      "subtotal": "221.75",
-      "tax": "33.26",
-      "total": "255.01"
+      "subtotal": "2066.10",
+      "tax": "309.92",
+      "total": "2376.02"
     },
     "expected_action": "human_review",
     "expected_findings": [
       "duplicate_invoice"
     ],
-    "duplicate_of": "INV-005.pdf",
+    "duplicate_of": "INV-014.pdf",
     "notes": "El proveedor reenvió la misma factura en otro formato."
   }
 ]
