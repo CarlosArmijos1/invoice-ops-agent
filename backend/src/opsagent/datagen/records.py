@@ -74,4 +74,7 @@ class GroundTruth(BaseModel):
         description="Findings that must be raised; extra informational findings are allowed"
     )
     duplicate_of: str | None = None
+    # How the invoice reaches the company: dropped in the inbox folder, or published
+    # on the supplier's web portal (downloaded by the Playwright robot).
+    channel: str = "folder"
     notes: str = ""

@@ -114,6 +114,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -249,6 +250,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -366,6 +368,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -411,6 +414,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -450,6 +454,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -483,6 +488,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -516,6 +522,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -549,6 +556,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -594,6 +602,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -633,6 +642,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": ""
   },
   {
@@ -678,6 +688,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -723,6 +734,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -756,6 +768,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -801,6 +814,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -834,6 +848,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -885,6 +900,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -936,6 +952,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -987,6 +1004,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1020,6 +1038,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": ""
   },
   {
@@ -1053,6 +1072,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1092,6 +1112,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1137,6 +1158,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1188,6 +1210,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": ""
   },
   {
@@ -1227,6 +1250,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1266,6 +1290,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1305,6 +1330,7 @@
       "po_matched"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1344,6 +1370,7 @@
       "amount_within_tolerance"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": "Diferencia de centavos por redondeo del proveedor."
   },
   {
@@ -1389,6 +1416,7 @@
       "amount_within_tolerance"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": "Diferencia de centavos por redondeo del proveedor."
   },
   {
@@ -1428,6 +1456,7 @@
       "amount_within_tolerance"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Diferencia de centavos por redondeo del proveedor."
   },
   {
@@ -1467,6 +1496,7 @@
       "amount_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Factura cobra 3 unidades más que la OC."
   },
   {
@@ -1518,6 +1548,7 @@
       "amount_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Factura cobra 1 unidades más que la OC."
   },
   {
@@ -1569,6 +1600,7 @@
       "amount_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Factura cobra 3 unidades más que la OC."
   },
   {
@@ -1614,6 +1646,7 @@
       "amount_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Factura cobra 2 unidades más que la OC."
   },
   {
@@ -1659,6 +1692,7 @@
       "amount_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Factura cobra 2 unidades más que la OC."
   },
   {
@@ -1692,6 +1726,7 @@
       "po_missing"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1731,6 +1766,7 @@
       "po_missing"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1764,6 +1800,7 @@
       "po_missing"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1809,6 +1846,7 @@
       "po_inferred"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Sin OC impresa; coincide con OC-2026-0167 por proveedor y monto."
   },
   {
@@ -1848,6 +1886,7 @@
       "po_inferred"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": "Sin OC impresa; coincide con OC-2026-0168 por proveedor y monto."
   },
   {
@@ -1887,6 +1926,7 @@
       "po_not_found"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1920,6 +1960,7 @@
       "po_not_found"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1965,6 +2006,7 @@
       "po_not_found"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -1998,6 +2040,7 @@
       "po_vendor_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "La OC OC-2026-0169 pertenece a Café Podocarpus Catering S.A.."
   },
   {
@@ -2031,6 +2074,7 @@
       "po_vendor_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "La OC OC-2026-0171 pertenece a Servicios de Limpieza Vilcabamba Cía. Ltda.."
   },
   {
@@ -2070,6 +2114,7 @@
       "over_auto_approval_limit"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": ""
   },
   {
@@ -2109,6 +2154,7 @@
       "over_auto_approval_limit"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": ""
   },
   {
@@ -2148,6 +2194,7 @@
       "over_auto_approval_limit"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": ""
   },
   {
@@ -2187,6 +2234,7 @@
       "arithmetic_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "El total impreso no es subtotal + IVA."
   },
   {
@@ -2226,6 +2274,7 @@
       "arithmetic_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "portal",
     "notes": "El total impreso no es subtotal + IVA."
   },
   {
@@ -2265,6 +2314,7 @@
       "vendor_unknown"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Proveedor no registrado en el maestro."
   },
   {
@@ -2298,6 +2348,7 @@
       "vendor_unknown"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "Proveedor no registrado en el maestro."
   },
   {
@@ -2337,6 +2388,7 @@
       "tax_id_missing"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -2370,6 +2422,7 @@
       "tax_id_missing"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": ""
   },
   {
@@ -2421,6 +2474,7 @@
       "payment_amount_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "El pago registrado no coincide con el total facturado."
   },
   {
@@ -2460,6 +2514,7 @@
       "payment_amount_mismatch"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "El pago registrado no coincide con el total facturado."
   },
   {
@@ -2493,6 +2548,7 @@
       "multiple_payments"
     ],
     "duplicate_of": null,
+    "channel": "folder",
     "notes": "La factura se pagó dos veces."
   },
   {
@@ -2532,6 +2588,7 @@
       "duplicate_invoice"
     ],
     "duplicate_of": "INV-005.pdf",
+    "channel": "folder",
     "notes": "El proveedor reenvió la misma factura en otro formato."
   },
   {
@@ -2577,6 +2634,7 @@
       "duplicate_invoice"
     ],
     "duplicate_of": "INV-022.pdf",
+    "channel": "folder",
     "notes": "El proveedor reenvió la misma factura en otro formato."
   },
   {
@@ -2622,6 +2680,7 @@
       "duplicate_invoice"
     ],
     "duplicate_of": "INV-009.pdf",
+    "channel": "folder",
     "notes": "El proveedor reenvió la misma factura en otro formato."
   },
   {
@@ -2667,6 +2726,7 @@
       "duplicate_invoice"
     ],
     "duplicate_of": "INV-014.pdf",
+    "channel": "folder",
     "notes": "El proveedor reenvió la misma factura en otro formato."
   }
 ]

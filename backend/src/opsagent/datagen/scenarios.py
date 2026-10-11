@@ -31,6 +31,8 @@ AUTO_APPROVAL_LIMIT = Decimal("5000.00")
 # Ordinary invoices stay well below the limit so that only the `over_limit`
 # scenario exercises it (found by the oracle test: two labels were wrong).
 ORDINARY_MAX_TOTAL = Decimal("3500.00")
+# This supplier publishes its invoices on a web portal instead of emailing them.
+PORTAL_VENDOR = "TecnoLoja Soluciones S.A.S."
 
 F = FindingCode
 A = DecisionAction
@@ -501,6 +503,8 @@ class DatasetBuilder:
         )
 
     def ground_truth(self, file_names: list[str]) -> list[GroundTruth]:
+        in_duplicate_pair = {p.duplicate_of for p in self.invoices if p.duplicate_of is not None}
+        in_duplicate_pair |= {i for i, p in enumerate(self.invoices) if p.duplicate_of is not None}
         truths = []
         for i, (planned, name) in enumerate(zip(self.invoices, file_names, strict=True)):
             d = planned.draft
@@ -539,6 +543,12 @@ class DatasetBuilder:
                         file_names[planned.duplicate_of]
                         if planned.duplicate_of is not None
                         else None
+                    ),
+                    channel=(
+                        "portal"
+                        if planned.vendor_name_on_master == PORTAL_VENDOR
+                        and i not in in_duplicate_pair
+                        else "folder"
                     ),
                     notes=planned.notes,
                 )
